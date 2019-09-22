@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Payment Type</title>
+</h:head>
+<h:body>
+	<h1>CRUD - Payment Type</h1>
+
+
+	<h:form id="form1">
+		<p:panel header="Search">
+			<p:panelGrid columns="3">
+		    ID:
+		    <p:inputText value="#{paymentTypeBean.idSearch}" />
+				<p:commandButton value="Search" action="#{paymentTypeBean.searchId}"
+					update="form1" />
+
+			</p:panelGrid>
+		</p:panel>
+		<br />
+		<p:panel header="Infos Payment Types">
+			<p:panelGrid columns="2">
+	   
+		    ID:
+		    <p:outputLabel value="#{paymentTypeBean.paymentType.id}" />
+	
+	        LABEL:
+		    <p:inputText value="#{paymentTypeBean.paymentType.label}" />
+
+			</p:panelGrid>
+
+			<br />
+			<p:commandButton value="Create" action="#{paymentTypeBean.insert}"
+				update="form1,data1" />
+
+			<p:commandButton value="Update" action="#{paymentTypeBean.update}"
+				update="form1,data1" />
+
+			<p:commandButton value="Delete" action="#{paymentTypeBean.delete}"
+				update="form1,data1" />
+
+			<p:commandButton value="New" action="#{paymentTypeBean.newPaymentType}"
+				update="form1" />
+
+			<p:messages />
+		</p:panel>
+	</h:form>
+
+	<br />
+
+	<p:panel id="panel1" header="List All Payment Types">
+
+		<p:dataTable id="data1" var="pt" value="#{paymentTypeBean.paymentTypes}">
+			<p:column headerText="ID">
+				<h:outputText value="#{pt.id}" />
+			</p:column>
+
+			<p:column headerText="LABEL">
+				<h:outputText value="#{pt.label}" />
+			</p:column>
+		</p:dataTable>
+
+	</p:panel>
+
+
+</h:body>
+</html>

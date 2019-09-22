@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Customer</title>
+</h:head>
+<h:body>
+	<h1>CRUD - Customer</h1>
+
+
+	<h:form id="form1">
+		<p:panel header="Search">
+			<p:panelGrid columns="3">
+		    ID:
+		    <p:inputText value="#{customerBean.idSearch}" />
+				<p:commandButton value="Search" action="#{customerBean.searchId}"
+					update="form1" />
+
+			</p:panelGrid>
+		</p:panel>
+		<br />
+		<p:panel header="Infos Customers">
+			<p:panelGrid columns="2">
+	   
+		    ID:
+		    <p:outputLabel value="#{customerBean.customer.id}" />
+	
+	        NAME:
+		    <p:inputText value="#{customerBean.customer.nameCustomer}" />
+
+			EMAIL:
+		    <p:inputText value="#{customerBean.customer.email}" />
+		    
+			</p:panelGrid>
+
+			<br />
+			<p:commandButton value="Create" action="#{customerBean.insert}"
+				update="form1,data1" />
+
+			<p:commandButton value="Update" action="#{customerBean.update}"
+				update="form1,data1" />
+
+			<p:commandButton value="Delete" action="#{customerBean.delete}"
+				update="form1,data1" />
+
+			<p:commandButton value="New" action="#{customerBean.newCustomer}"
+				update="form1" />
+
+			<p:messages />
+		</p:panel>
+	</h:form>
+
+	<br />
+
+	<p:panel id="panel1" header="List All Customers">
+
+		<p:dataTable id="data1" var="c" value="#{customerBean.customers}">
+			<p:column headerText="ID">
+				<h:outputText value="#{c.id}" />
+			</p:column>
+
+			<p:column headerText="NAME">
+				<h:outputText value="#{c.nameCustomer}" />
+			</p:column>
+			
+			<p:column headerText="EMAIL">
+				<h:outputText value="#{c.email}" />
+			</p:column>
+		</p:dataTable>
+
+	</p:panel>
+
+
+</h:body>
+</html>
