@@ -1,0 +1,8 @@
+* Criar um Sistema Web baseado no Diagrama de Classe acima;
+* Fazer o CRUD da seguintes Classes: Pedido, Produto, Cliente, TipoPagamento e Pagamento
+* Criar os Menus de Navegação
+* Criar uma página de relatório que contenha todos as informações relecionadas ao Pedido
+* Todas as Telas deverá ser feitas com as Tags do PrimeFace
+* O Projeto deverá está no GitHub, por favor, enviar o link nesta Atividade
+* Dia 24.09.2019, vou avaliar cada projeto individualmente
+* Valor: 5.0 (2.5 para o Projeto e 2.5 avaliação individual)
