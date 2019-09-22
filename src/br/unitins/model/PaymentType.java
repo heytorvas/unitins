@@ -6,13 +6,14 @@ import java.lang.String;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "paymenttype")
 public class PaymentType implements Serializable {
 
-	   
 	@Id
 	@GeneratedValue
 	private Integer id;
 	
+	@Column
 	private String label;
 	private static final long serialVersionUID = 1L;
 

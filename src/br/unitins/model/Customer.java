@@ -7,13 +7,17 @@ import java.lang.String;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "customer")
 public class Customer implements Serializable {
 	
 	@Id
 	@GeneratedValue
 	private Integer id;
 	
+	@Column
 	private String nameCustomer;
+	
+	@Column
 	private String email;
 	private static final long serialVersionUID = 1L;
 
