@@ -15,7 +15,7 @@ import br.unitins.model.PaymentType;
 public class PaymentTypeBean {
 
 	@EJB
-	private PaymentTypeEJB paymentTypeEJB;
+	private PaymentTypeEJB paymentTypeEJB = new PaymentTypeEJB();
 
 	private PaymentType paymentType;
 
@@ -39,7 +39,7 @@ public class PaymentTypeBean {
 	}
 
 	public String delete() {
-		paymentTypeEJB.delete(paymentType);
+		paymentTypeEJB.delete(paymentTypeEJB.load(idSearch));
 		return null;
 	}
 
@@ -48,7 +48,7 @@ public class PaymentTypeBean {
 		return null;
 	}
 
-	public String newPaymentType() {
+	public String clean() {
 		paymentType = new PaymentType();
 		return null;
 	}

@@ -39,7 +39,7 @@ public class CustomerBean {
 	}
 
 	public String delete() {
-		customerEJB.delete(customer);
+		customerEJB.delete(customerEJB.load(idSearch));
 		return null;
 	}
 
@@ -48,7 +48,7 @@ public class CustomerBean {
 		return null;
 	}
 
-	public String newCustomer() {
+	public String clean() {
 		customer = new Customer();
 		return null;
 	}

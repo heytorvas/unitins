@@ -18,6 +18,7 @@ public class PaymentTypeEJB {
 	}
 
 	public void update(PaymentType paymentType) {
+		paymentType = load(paymentType.getId());
 		em.merge(paymentType);
 	}
 

@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import br.unitins.model.Payment;
+import br.unitins.model.PaymentType;
 
 @Stateful
 public class PaymentEJB {
@@ -14,7 +15,8 @@ public class PaymentEJB {
 	@PersistenceContext
 	private EntityManager em;
 
-	public void insert(Payment payment) {
+	public void insert(Payment payment, Integer idPaymentType) {
+		payment.setPaymentType(em.find(PaymentType.class, idPaymentType));
 		em.persist(payment);
 	}
 

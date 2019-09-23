@@ -39,7 +39,7 @@ public class ProductBean {
 	}
 
 	public String delete() {
-		productEJB.delete(product);
+		productEJB.delete(productEJB.load(idSearch));
 		return null;
 	}
 
@@ -48,7 +48,7 @@ public class ProductBean {
 		return null;
 	}
 
-	public String newProduct() {
+	public String clean() {
 		product = new Product();
 		return null;
 	}

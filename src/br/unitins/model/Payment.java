@@ -3,7 +3,8 @@ package br.unitins.model;
 import br.unitins.model.PaymentType;
 import java.io.Serializable;
 import java.lang.Integer;
-import java.sql.Date;
+import java.time.LocalDate;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,11 +12,12 @@ import javax.persistence.*;
 public class Payment implements Serializable {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	
 	@Column
-	private Date date;
+//	@Temporal(TemporalType.DATE)
+	private LocalDate date;
 	
 	@ManyToOne
 	@JoinColumn(name = "paymentType_id_fk")
@@ -33,11 +35,11 @@ public class Payment implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}   
-	public Date getDate() {
+	public LocalDate getDate() {
 		return this.date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}   
 	public PaymentType getPaymentType() {

@@ -11,7 +11,7 @@ import javax.persistence.*;
 public class Customer implements Serializable {
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	
 	@Column
