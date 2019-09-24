@@ -12,10 +12,12 @@ import br.unitins.bean.ejb.CustomerEJB;
 import br.unitins.bean.ejb.OrderEJB;
 import br.unitins.bean.ejb.PaymentEJB;
 import br.unitins.bean.ejb.PaymentTypeEJB;
+import br.unitins.bean.ejb.ProductEJB;
 import br.unitins.model.Customer;
 import br.unitins.model.OrderDB;
 import br.unitins.model.Payment;
 import br.unitins.model.PaymentType;
+import br.unitins.model.Product;
 
 @Named
 @RequestScoped
@@ -28,6 +30,9 @@ public class OrderBean {
 	
 	@EJB
 	private PaymentEJB paymentEJB;
+	
+	@EJB
+	private ProductEJB productEJB;
 
 	private OrderDB order;
 
@@ -36,6 +41,8 @@ public class OrderBean {
 	private Integer idCustomer;
 	
 	private Integer idPayment;
+	
+	private List<Product> products;
 
 	private List<OrderDB> orders;
 	
@@ -48,7 +55,23 @@ public class OrderBean {
 		orders = orderEJB.findAll();
 		setPayments(paymentEJB.findAll());
 		setCustomers(customerEJB.findAll());
+		setProducts(productEJB.findAll());
 	}
+	
+	public List<Product> getProducts() {
+		return products;
+	}
+
+	public void setProducts(List<Product> products) {
+		this.products = products;
+	}
+
+//	public String insert() {
+//		orderEJB.insert(order, idCustomer, idPayment, products);
+//		clean();
+//		Util.redirect("order.xhtml");
+//		return null;
+//	}
 	
 	public String insert() {
 		orderEJB.insert(order, idCustomer, idPayment);

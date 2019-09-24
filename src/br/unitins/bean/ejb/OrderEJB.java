@@ -10,6 +10,7 @@ import br.unitins.model.Customer;
 import br.unitins.model.OrderDB;
 import br.unitins.model.Payment;
 import br.unitins.model.PaymentType;
+import br.unitins.model.Product;
 
 @Stateful
 public class OrderEJB {
@@ -21,6 +22,13 @@ public class OrderEJB {
 		order.setPayment(em.find(Payment.class, idPayment));
 		em.persist(order);
 	}
+	
+//	public void insert(OrderDB order, Integer idCustomer, Integer idPayment, List<Product> products) {
+//		order.setCustomer(em.find(Customer.class, idCustomer));
+//		order.setPayment(em.find(Payment.class, idPayment));
+//		order.setProduct(em.find(Product.class, products));
+//		em.persist(order);
+//	}
 
 	public void update(OrderDB order) {
 		em.merge(order);

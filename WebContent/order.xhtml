@@ -30,7 +30,7 @@
 	        		DATE:
 		    		<p:inputText type="date" value="#{orderBean.order.date}"
 						pattern="yyyy-MM-dd">
-						<f:convertDateTime type="localDate" pattern="dd-MM-yyyy" />
+						<f:convertDateTime type="localDate" pattern="yyyy-MM-dd" />
 					</p:inputText>
 
 					CUSTOMER:
@@ -40,13 +40,19 @@
 							itemValue="#{c.id}" itemLabel="#{c.nameCustomer}" />
 					</p:selectOneMenu>
 					
-					PAYMENTS:
+					PRODUCTS:
+					<h:selectManyCheckbox value="#{orderBean.order.product}">
+						<f:selectItems value="#{productBean.products}" var="p"
+							itemValue="#{p.id}" itemLabel="#{p.nameProduct}" />
+					</h:selectManyCheckbox>
+					
+					PAYMENT:
 					<p:selectOneMenu value="#{orderBean.idPayment}">
 						<f:selectItem itemLabel="Select One" noSelectionOption="true" />
 						<f:selectItems value="#{paymentBean.payments}" var="c"
 							itemValue="#{c.id}" itemLabel="#{c.id}" />
 					</p:selectOneMenu>
-					
+
 				</p:panelGrid>
 
 				<br />
@@ -88,11 +94,18 @@
 				<p:column headerText="CUSTOMER">
 					<h:outputText value="#{c.customer.nameCustomer}" />
 				</p:column>
-				
+
 				<p:column headerText="PAYMENT DATE">
 					<h:outputText value="#{c.payment.date}" />
 				</p:column>
-				
+
+				<p:column headerText="PRODUCTS">
+					<h:selectOneMenu value="#{c.product}">
+						<f:selectItems value="#{orderBean.order.product}" var="p"
+							itemLabel="#{p.nameProduct}" />
+					</h:selectOneMenu>
+				</p:column>
+
 			</p:dataTable>
 		</p:panel>
 	</ui:define>
