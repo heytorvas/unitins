@@ -101,7 +101,7 @@
 
 				<p:column headerText="PRODUCTS">
 					<h:selectOneMenu value="#{c.product}">
-						<f:selectItems value="#{orderBean.order.product}" var="p"
+						<f:selectItems value="#{orderBean.products}" var="p"
 							itemLabel="#{p.nameProduct}" />
 					</h:selectOneMenu>
 				</p:column>

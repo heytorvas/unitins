@@ -17,18 +17,18 @@ public class OrderEJB {
 	@PersistenceContext
 	private EntityManager em;
 
-	public void insert(OrderDB order, Integer idCustomer, Integer idPayment) {
-		order.setCustomer(em.find(Customer.class, idCustomer));
-		order.setPayment(em.find(Payment.class, idPayment));
-		em.persist(order);
-	}
-	
-//	public void insert(OrderDB order, Integer idCustomer, Integer idPayment, List<Product> products) {
+//	public void insert(OrderDB order, Integer idCustomer, Integer idPayment) {
 //		order.setCustomer(em.find(Customer.class, idCustomer));
 //		order.setPayment(em.find(Payment.class, idPayment));
-//		order.setProduct(em.find(Product.class, products));
 //		em.persist(order);
 //	}
+	
+	public void insert(OrderDB order, Integer idCustomer, Integer idPayment, List<Product> products) {
+		order.setCustomer(em.find(Customer.class, idCustomer));
+		order.setPayment(em.find(Payment.class, idPayment));
+		order.setProduct(products);
+		em.persist(order);
+	}
 
 	public void update(OrderDB order) {
 		em.merge(order);

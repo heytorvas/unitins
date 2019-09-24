@@ -66,19 +66,19 @@ public class OrderBean {
 		this.products = products;
 	}
 
-//	public String insert() {
-//		orderEJB.insert(order, idCustomer, idPayment, products);
-//		clean();
-//		Util.redirect("order.xhtml");
-//		return null;
-//	}
-	
 	public String insert() {
-		orderEJB.insert(order, idCustomer, idPayment);
+		orderEJB.insert(order, idCustomer, idPayment, products);
 		clean();
 		Util.redirect("order.xhtml");
 		return null;
 	}
+	
+//	public String insert() {
+//		orderEJB.insert(order, idCustomer, idPayment);
+//		clean();
+//		Util.redirect("order.xhtml");
+//		return null;
+//	}
 
 	public String update() {
 		order.setId(getIdSearch());
