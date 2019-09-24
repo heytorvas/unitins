@@ -7,6 +7,7 @@ import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
+import br.unitins.application.Util;
 import br.unitins.bean.ejb.CustomerEJB;
 import br.unitins.model.Customer;
 
@@ -30,16 +31,23 @@ public class CustomerBean {
 
 	public String insert() {
 		customerEJB.insert(customer);
+		clean();
+		Util.redirect("customer.xhtml");
 		return null;
 	}
 
 	public String update() {
+		customer.setId(getIdSearch());
 		customerEJB.update(customer);
+		clean();
+		Util.redirect("customer.xhtml");
 		return null;
 	}
 
 	public String delete() {
 		customerEJB.delete(customerEJB.load(idSearch));
+		clean();
+		Util.redirect("customer.xhtml");
 		return null;
 	}
 

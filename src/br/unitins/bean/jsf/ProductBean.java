@@ -7,6 +7,7 @@ import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
+import br.unitins.application.Util;
 import br.unitins.bean.ejb.ProductEJB;
 import br.unitins.model.Product;
 
@@ -30,16 +31,23 @@ public class ProductBean {
 
 	public String insert() {
 		productEJB.insert(product);
+		clean();
+		Util.redirect("product.xhtml");
 		return null;
 	}
 
 	public String update() {
+		product.setId(getIdSearch());
 		productEJB.update(product);
+		clean();
+		Util.redirect("product.xhtml");
 		return null;
 	}
 
 	public String delete() {
 		productEJB.delete(productEJB.load(idSearch));
+		clean();
+		Util.redirect("product.xhtml");
 		return null;
 	}
 

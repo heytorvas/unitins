@@ -7,6 +7,7 @@ import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
+import br.unitins.application.Util;
 import br.unitins.bean.ejb.PaymentEJB;
 import br.unitins.bean.ejb.PaymentTypeEJB;
 import br.unitins.model.Payment;
@@ -40,16 +41,23 @@ public class PaymentBean {
 
 	public String insert() {
 		paymentEJB.insert(payment, idPaymentType);
+		clean();
+		Util.redirect("payment.xhtml");
 		return null;
 	}
 
 	public String update() {
+		payment.setId(getIdSearch());
 		paymentEJB.update(payment);
+		clean();
+		Util.redirect("payment.xhtml");
 		return null;
 	}
 
 	public String delete() {
 		paymentEJB.delete(paymentEJB.load(idSearch));
+		clean();
+		Util.redirect("payment.xhtml");
 		return null;
 	}
 

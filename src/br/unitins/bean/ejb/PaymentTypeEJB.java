@@ -10,23 +10,23 @@ import br.unitins.model.PaymentType;
 
 @Stateful
 public class PaymentTypeEJB {
+	
 	@PersistenceContext
 	private EntityManager em;
-
+	
 	public void insert(PaymentType paymentType) {
 		em.persist(paymentType);
 	}
-
+	
 	public void update(PaymentType paymentType) {
-		paymentType = load(paymentType.getId());
 		em.merge(paymentType);
 	}
-
+	
 	public void delete(PaymentType paymentType) {
 		paymentType = load(paymentType.getId());
 		em.remove(paymentType);
 	}
-
+	
 	public PaymentType load(Integer id) {
 		return em.find(PaymentType.class, id);
 	}

@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class PaymentType implements Serializable {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue
 	private Integer id;
 	
 	@Column
