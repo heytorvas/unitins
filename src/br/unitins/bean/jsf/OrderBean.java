@@ -1,5 +1,6 @@
 package br.unitins.bean.jsf;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -42,6 +43,8 @@ public class OrderBean {
 	
 	private Integer idPayment;
 	
+	private List<Integer> idProduto = new ArrayList<>();
+	
 	private List<Product> products;
 
 	private List<OrderDB> orders;
@@ -68,8 +71,7 @@ public class OrderBean {
 	}
 
 	public String insert() {
-		orderEJB.totalPrice(order, getProducts());
-		orderEJB.insert(order, idCustomer, idPayment, products);
+		orderEJB.insert(order, idCustomer, idPayment, idProduto);
 		clean();
 		Util.redirect("order.xhtml");
 		return null;
@@ -162,5 +164,15 @@ public class OrderBean {
 
 	public void setPayments(List<Payment> payments) {
 		this.payments = payments;
+	}
+
+
+	public List<Integer> getIdProduto() {
+		return idProduto;
+	}
+
+
+	public void setIdProduto(List<Integer> idProduto) {
+		this.idProduto = idProduto;
 	}
 }

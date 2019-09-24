@@ -30,7 +30,7 @@ public class OrderDB implements Serializable {
 	@JoinColumn(name = "customer_id_fk")
 	private Customer customer;
 	
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "order_product", 
 	joinColumns = { @JoinColumn(name = "id_order") }, 
 	inverseJoinColumns = {@JoinColumn(name = "id_product") })
