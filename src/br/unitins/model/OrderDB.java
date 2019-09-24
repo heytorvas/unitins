@@ -47,7 +47,8 @@ public class OrderDB implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}   
+	}
+	
 	public Double getTotalPrice() {
 		return this.totalPrice;
 	}

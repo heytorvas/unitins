@@ -58,6 +58,7 @@ public class OrderBean {
 		setProducts(productEJB.findAll());
 	}
 	
+	
 	public List<Product> getProducts() {
 		return products;
 	}
@@ -67,6 +68,7 @@ public class OrderBean {
 	}
 
 	public String insert() {
+		orderEJB.totalPrice(order, getProducts());
 		orderEJB.insert(order, idCustomer, idPayment, products);
 		clean();
 		Util.redirect("order.xhtml");

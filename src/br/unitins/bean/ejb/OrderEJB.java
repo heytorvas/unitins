@@ -22,7 +22,16 @@ public class OrderEJB {
 //		order.setPayment(em.find(Payment.class, idPayment));
 //		em.persist(order);
 //	}
-	
+
+	public Double totalPrice(OrderDB order, List<Product> products) {
+		Double p1 = 0.0;
+		for (Product product : products) {
+			p1 += product.getPrice();
+		}
+		order.setTotalPrice(p1);
+		return p1;
+	}
+
 	public void insert(OrderDB order, Integer idCustomer, Integer idPayment, List<Product> products) {
 		order.setCustomer(em.find(Customer.class, idCustomer));
 		order.setPayment(em.find(Payment.class, idPayment));
