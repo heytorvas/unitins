@@ -10,9 +10,11 @@ import javax.inject.Named;
 import br.unitins.application.Util;
 import br.unitins.bean.ejb.CustomerEJB;
 import br.unitins.bean.ejb.OrderEJB;
+import br.unitins.bean.ejb.PaymentEJB;
 import br.unitins.bean.ejb.PaymentTypeEJB;
 import br.unitins.model.Customer;
 import br.unitins.model.OrderDB;
+import br.unitins.model.Payment;
 import br.unitins.model.PaymentType;
 
 @Named
@@ -23,25 +25,33 @@ public class OrderBean {
 	
 	@EJB
 	private CustomerEJB customerEJB;
+	
+	@EJB
+	private PaymentEJB paymentEJB;
 
 	private OrderDB order;
 
 	private Integer idSearch;
 	
 	private Integer idCustomer;
+	
+	private Integer idPayment;
 
 	private List<OrderDB> orders;
 	
 	private List<Customer> customers;
 	
+	private List<Payment> payments;
+	
 	@PostConstruct
 	public void init() {
 		orders = orderEJB.findAll();
-		//setCustomers(orderEJB.findAll());
+		setPayments(paymentEJB.findAll());
+		setCustomers(customerEJB.findAll());
 	}
 	
 	public String insert() {
-		orderEJB.insert(order);
+		orderEJB.insert(order, idCustomer, idPayment);
 		clean();
 		Util.redirect("order.xhtml");
 		return null;
@@ -111,5 +121,21 @@ public class OrderBean {
 
 	public void setCustomers(List<Customer> customers) {
 		this.customers = customers;
+	}
+
+	public Integer getIdPayment() {
+		return idPayment;
+	}
+
+	public void setIdPayment(Integer idPayment) {
+		this.idPayment = idPayment;
+	}
+
+	public List<Payment> getPayments() {
+		return payments;
+	}
+
+	public void setPayments(List<Payment> payments) {
+		this.payments = payments;
 	}
 }

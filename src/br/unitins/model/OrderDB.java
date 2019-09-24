@@ -22,7 +22,9 @@ public class OrderDB implements Serializable {
 	@Column
 	private LocalDate date;
 	
-//	private Payment payment;
+	@OneToOne
+	@JoinColumn(name = "payment_id_fk")
+	private Payment payment;
 	
 	@ManyToOne
 	@JoinColumn(name = "customer_id_fk")
@@ -69,13 +71,13 @@ public class OrderDB implements Serializable {
 		this.customer = customer;
 	}  
 	
-//	public Payment getPayment() {
-//		return this.payment;
-//	}
-//
-//	public void setPayment(Payment payment) {
-//		this.payment = payment;
-//	}   	
+	public Payment getPayment() {
+		return this.payment;
+	}
+
+	public void setPayment(Payment payment) {
+		this.payment = payment;
+	}   	
 	public List<Product> getProduct() {
 		return this.product;
 	}
