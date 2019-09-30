@@ -19,6 +19,10 @@ public class Payment implements Serializable {
 //	@Temporal(TemporalType.DATE)
 	private LocalDate date;
 	
+	@OneToOne
+	@JoinColumn(name = "order_id_fk")
+	private OrderDB orderDB;
+
 	@ManyToOne
 	@JoinColumn(name = "paymentType_id_fk")
 	private PaymentType paymentType;
@@ -49,5 +53,12 @@ public class Payment implements Serializable {
 	public void setPaymentType(PaymentType paymentType) {
 		this.paymentType = paymentType;
 	}
-   
+	
+	public OrderDB getOrderDB() {
+		return orderDB;
+	}
+	
+	public void setOrderDB(OrderDB orderDB) {
+		this.orderDB = orderDB;
+	}
 }

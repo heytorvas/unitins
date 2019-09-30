@@ -24,7 +24,14 @@
 	   
 		    		ID:
 		   			<p:outputLabel value="#{paymentBean.payment.id}" />
-	
+		   			
+		   			ORDER:
+					<p:selectOneMenu value="#{paymentBean.idOrder}">
+						<f:selectItem itemLabel="Select One" noSelectionOption="true" />
+						<f:selectItems value="#{orderBean.orders}" var="c"
+							itemValue="#{c.id}" itemLabel="#{c.id}" />
+					</p:selectOneMenu>
+					
 	        		DATE:
 		    		<p:inputText type="date" value="#{paymentBean.payment.date}"
 						pattern="yyyy-MM-dd">
@@ -63,6 +70,10 @@
 			<p:dataTable id="data1" var="pay" value="#{paymentBean.payments}">
 				<p:column headerText="ID">
 					<h:outputText value="#{pay.id}" />
+				</p:column>
+				
+				<p:column headerText="ORDER">
+					<h:outputText value="#{pay.orderDB.id}" />
 				</p:column>
 
 				<p:column headerText="DATE">

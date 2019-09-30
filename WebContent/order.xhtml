@@ -2,8 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
 <ui:composition template="/index.xhtml">
 	<ui:define name="main">
@@ -46,13 +46,6 @@
 							itemValue="#{p.id}" itemLabel="#{p.nameProduct}" />
 					</h:selectManyCheckbox>
 					
-					PAYMENT:
-					<p:selectOneMenu value="#{orderBean.idPayment}">
-						<f:selectItem itemLabel="Select One" noSelectionOption="true" />
-						<f:selectItems value="#{paymentBean.payments}" var="c"
-							itemValue="#{c.id}" itemLabel="#{c.id}" />
-					</p:selectOneMenu>
-
 				</p:panelGrid>
 
 				<br />
@@ -95,10 +88,6 @@
 					<h:outputText value="#{c.customer.nameCustomer}" />
 				</p:column>
 
-				<p:column headerText="PAYMENT DATE">
-					<h:outputText value="#{c.payment.date}" />
-				</p:column>
-
 				<p:column headerText="PRODUCTS">
 					<h:selectOneMenu value="#{c.product}">
 						<f:selectItems value="#{c.product}" var="p"
@@ -108,6 +97,6 @@
 
 			</p:dataTable>
 		</p:panel>
-	</ui:define>
+</ui:define>
 </ui:composition>
 </html>

@@ -9,8 +9,6 @@ import javax.persistence.PersistenceContext;
 
 import br.unitins.model.Customer;
 import br.unitins.model.OrderDB;
-import br.unitins.model.Payment;
-import br.unitins.model.PaymentType;
 import br.unitins.model.Product;
 
 @Stateful
@@ -24,20 +22,19 @@ public class OrderEJB {
 //		em.persist(order);
 //	}
 
-	public void insert(OrderDB order, Integer idCustomer, Integer idPayment, List<Integer> idProduto) {
+	public void insert(OrderDB order, Integer idCustomer, List<Integer> idProduct) {
 		order.setCustomer(em.find(Customer.class, idCustomer));
-		order.setPayment(em.find(Payment.class, idPayment));
 		
 		em.persist(order);
 		
-		List<Product> listaProduto = new ArrayList<>();
+		List<Product> productList = new ArrayList<>();
 		Double p1 = 0.0;
-		for (int i = 0; i < idProduto.size(); i++) {
-			listaProduto.add(em.find(Product.class, idProduto.get(i)));
-			p1 += listaProduto.get(i).getPrice();
+		for (int i = 0; i < idProduct.size(); i++) {
+			productList.add(em.find(Product.class, idProduct.get(i)));
+			p1 += productList.get(i).getPrice();
 		}
 		order.setTotalPrice(p1);
-		order.setProduct(listaProduto);
+		order.setProduct(productList);
 		
 	}
 
@@ -56,5 +53,5 @@ public class OrderEJB {
 
 	public List<OrderDB> findAll() {
 		return em.createQuery("select o from OrderDB o", OrderDB.class).getResultList();
-	}
+}
 }

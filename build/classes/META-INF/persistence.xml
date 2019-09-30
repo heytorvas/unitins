@@ -3,9 +3,12 @@
 	<persistence-unit name="ProvaA1">
 		<jta-data-source>jdbc/PostgresqlDS</jta-data-source>
 		<class>br.unitins.model.Customer</class>
+		<class>br.unitins.model.OrderDB</class>
 		<class>br.unitins.model.Payment</class>
 		<class>br.unitins.model.PaymentType</class>
 		<class>br.unitins.model.Product</class>
-		<class>br.unitins.model.OrderDB</class>
+		<properties>
+			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+		</properties>
 	</persistence-unit>
 </persistence>

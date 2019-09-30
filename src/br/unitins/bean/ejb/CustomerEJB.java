@@ -32,5 +32,5 @@ public class CustomerEJB {
 
 	public List<Customer> findAll() {
 		return em.createQuery("select c from Customer c", Customer.class).getResultList();
-	}
+}
 }

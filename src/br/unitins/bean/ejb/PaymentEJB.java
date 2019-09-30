@@ -6,6 +6,7 @@ import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import br.unitins.model.OrderDB;
 import br.unitins.model.Payment;
 import br.unitins.model.PaymentType;
 
@@ -15,8 +16,9 @@ public class PaymentEJB {
 	@PersistenceContext
 	private EntityManager em;
 
-	public void insert(Payment payment, Integer idPaymentType) {
+	public void insert(Payment payment, Integer idOrder, Integer idPaymentType) {
 		payment.setPaymentType(em.find(PaymentType.class, idPaymentType));
+		payment.setOrderDB(em.find(OrderDB.class, idOrder));
 		em.persist(payment);
 	}
 

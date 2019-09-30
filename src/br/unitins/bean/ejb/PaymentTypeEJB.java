@@ -10,7 +10,6 @@ import br.unitins.model.PaymentType;
 
 @Stateful
 public class PaymentTypeEJB {
-	
 	@PersistenceContext
 	private EntityManager em;
 	
@@ -33,5 +32,5 @@ public class PaymentTypeEJB {
 
 	public List<PaymentType> findAll() {
 		return em.createQuery("select pt from PaymentType pt", PaymentType.class).getResultList();
-	}
+}
 }
