@@ -6,7 +6,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-//		menu();
+		menu();
 
 
 
@@ -16,19 +16,11 @@ public class Principal {
 
 
 
-		CMD.executar("mkdir pasta1.txt");
 
-//		cmd.executar("echo hello world > teste1.txt");
 
-//		cmd.executar("del teste1.txt");
 
-//		cmd.executar("rmdir pasta1");
 
-//		cmd.executar("rename teste1.txt teste15.txt");
 
-//		cmd.executar("rename pasta1 pasta15");
-
-//		cmd.executar("move teste15.txt \"C:\\Users\\NIT5\\Desktop\"");
 	}
 
 	public static void menu() {
@@ -102,13 +94,30 @@ public class Principal {
 	}
 
 	public static void criar() {
-		System.out.println("\tCRIAR");
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("\tCRIAR\n");
+		System.out.println("\tDESEJA CRIAR UMA PASTA OU ARQUIVO?");
+		System.out.println("\t1- PASTA\n\t2- ARQUIVO");
+		int i = scanner.nextInt();
+		scanner.nextLine();
+		if (i == 1) {
+			System.out.println("\tDIGITE O NOME DA PASTA: ");
+			String pasta = scanner.nextLine();
+			CMD.executar("mkdir " + pasta);
+		}
+		if (i == 2) {
+			System.out.println("\tDIGITE O NOME DO ARQUIVO: ");
+			String arquivo = scanner.nextLine();
+			System.out.println("\tDIGITE O CONTEUDO DO ARQUIVO: ");
+			String conteudo = scanner.nextLine();
+			CMD.executar("echo " + conteudo + " > " + arquivo);
+		}
 	}
 
 	public static void listar() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("\tLISTAR\n");
-		System.out.println("\tDESEJA LISTAR O CONTEÚDO DESTA PASTA OU DE OUTRA? ");
+		System.out.println("\tDESEJA LISTAR O CONTEUDO DESTA PASTA OU DE OUTRA? ");
 		System.out.println("\t1- DESTA PASTA\n\t2- OUTRA PASTA");
 		int i = scanner.nextInt();
 		scanner.nextLine();
@@ -122,22 +131,70 @@ public class Principal {
 			CMD.executar("dir " + pasta);
 			System.out.println();
 		}
-		scanner.close();
 	}
 
 	public static void apagar() {
-		System.out.println("\tAPAGAR");
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("\tAPAGAR\n");
+		System.out.println("\tDESEJA APAGAR UMA PASTA OU ARQUIVO? ");
+		System.out.println("\t1- PASTA\n\t2- ARQUIVO");
+		int i = scanner.nextInt();
+		scanner.nextLine();
+		if (i == 1) {
+			System.out.println("\tDIGITE O NOME DA PASTA: ");
+			String pasta = scanner.nextLine();
+			CMD.executar("rmdir " + pasta);
+			System.out.println();
+		}
+		if (i == 2) {
+			System.out.println("\tDIGITE O NOME DO ARQUIVO: ");
+			String arquivo = scanner.nextLine();
+			CMD.executar("del " + arquivo);
+			System.out.println();
+		}		
 	}
 
 	public static void renomear() {
-		System.out.println("\tRENOMEAR");
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("\tRENOMEAR\n");
+		System.out.println("\tDIGITE O NOME DO ARQUIVO/PASTA A SER RENOMEADO: ");
+		String original = scanner.nextLine();
+		System.out.println("\tDIGITE O NOVO NOME DO ARQUIVO/PASTA: ");
+		String fim = scanner.nextLine();
+		CMD.executar("rename " + original + " " + fim);
+		System.out.println();
 	}
 
 	public static void mover() {
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("\tMOVER");
+		System.out.println("\tDIGITE O NOME DO ARQUIVO/PASTA A SER MOVIDO: ");
+		String arquivo = scanner.nextLine();
+		System.out.println("\tDIGITE O CAMINHO DO DIRETÓRIO: ");
+		String diretorio = scanner.nextLine();
+		CMD.executar("move " + arquivo + " \"" + diretorio + "\"");
+		System.out.println();
 	}
 	public static void deletar() {
-		System.out.println("\tDELETAR");
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("\tDELETAR\n");
+		System.out.println("\tDESEJA DELETAR PASTA OU ARQUIVO? ");
+		System.out.println("\t1- PASTA\n\t2- ARQUIVO");
+		int i = scanner.nextInt();
+		scanner.nextLine();
+		if (i == 1) {
+			System.out.println("\tDIGITE O NOME DA PASTA A SER DELETADA: ");
+			String pasta = scanner.nextLine();
+			CMD.executar("rmdir " + pasta);
+			System.out.println();
+		}
+		if (i == 2) {
+			System.out.println("\tDIGITE O NOME DO ARQUIVO A SER DELETADO: ");
+			String arquivo = scanner.nextLine();
+			CMD.executar("del " + arquivo);
+			System.out.println();
+		}
+		
 	}
 
 	public static void ajuda() {
@@ -161,7 +218,9 @@ public class Principal {
 		System.out.println();
 	}
 	public static void limpa() {
-		System.out.println("\tLIMPA");
+		for (int i = 0; i < 1000; i++) {
+			System.out.println("");
+		}
 	}
 	public static void sair() {
 		System.out.println("\tSAIR");
