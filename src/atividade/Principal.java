@@ -6,17 +6,17 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		menu();
+//		menu();
 
-//		cmd.executar("ver");
 
-//		cmd.executar("dir");
 
-//		cmd.executar("date /t");
+		
 
-//		cmd.executar("time /t");
 
-//		cmd.executar("mkdir pasta1");
+
+
+
+		CMD.executar("mkdir pasta1.txt");
 
 //		cmd.executar("echo hello world > teste1.txt");
 
@@ -43,18 +43,17 @@ public class Principal {
 			System.out.println();
 			System.out.println("Digite o comando: ");
 			System.out.println("\t1- CRIAR");
-			System.out.println("\t2- INSERIR");
-			System.out.println("\t3- LISTAR");
-			System.out.println("\t4- APAGAR");
-			System.out.println("\t5- RENOMEAR");
-			System.out.println("\t6- MOVER");
-			System.out.println("\t7- DELETAR");
-			System.out.println("\t8- AJUDA");
-			System.out.println("\t9- VER");
-			System.out.println("\t10- DATA");
-			System.out.println("\t11- HORA");
-			System.out.println("\t12- LIMPA");
-			System.out.println("\t13- SAIR");
+			System.out.println("\t2- LISTAR");
+			System.out.println("\t3- APAGAR");
+			System.out.println("\t4- RENOMEAR");
+			System.out.println("\t5- MOVER");
+			System.out.println("\t6- DELETAR");
+			System.out.println("\t7- AJUDA");
+			System.out.println("\t8- VER");
+			System.out.println("\t9- DATA");
+			System.out.println("\t10- HORA");
+			System.out.println("\t11- LIMPA");
+			System.out.println("\t12- SAIR");
 			System.out.println("==============================================");
 
 			entrada = scanner.nextInt();
@@ -64,60 +63,66 @@ public class Principal {
 				criar();
 			}
 			if (entrada == 2) {
-				inserir();
-			}
-			if (entrada == 3) {
 				listar();
 			}
-			if (entrada == 4) {
+			if (entrada == 3) {
 				apagar();
 			}
-			if (entrada == 5) {
+			if (entrada == 4) {
 				renomear();
 			}
-			if (entrada == 6) {
+			if (entrada == 5) {
 				mover();
 			}
-			if (entrada == 7) {
+			if (entrada == 6) {
 				deletar();
 			}
-			if (entrada == 8) {
+			if (entrada == 7) {
 				ajuda();
 			}
-			if (entrada == 9) {
+			if (entrada == 8) {
 				ver();
 			}
-			if (entrada == 10) {
+			if (entrada == 9) {
 				data();
 			}
-			if (entrada == 11) {
+			if (entrada == 10) {
 				hora();
 			}
-			if (entrada == 12) {
+			if (entrada == 11) {
 				limpa();
 			}
-			if (entrada == 13) {
+			if (entrada == 12) {
 				sair();
-			}
-			if (entrada == 13) {
-				System.out.println("caiu aqui");
+				System.out.println("\nLOGOUT REALIZADO COM SUCESSO!");
 				menu = false;
 				break;
 			}
 		}
-
 	}
 
 	public static void criar() {
-		CMD cmd = new CMD();
 		System.out.println("\tCRIAR");
 	}
 
-	public static void inserir() {
-		System.out.println("\tINSERIR");
-	}
 	public static void listar() {
-		System.out.println("\tLISTAR");
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("\tLISTAR\n");
+		System.out.println("\tDESEJA LISTAR O CONTEÚDO DESTA PASTA OU DE OUTRA? ");
+		System.out.println("\t1- DESTA PASTA\n\t2- OUTRA PASTA");
+		int i = scanner.nextInt();
+		scanner.nextLine();
+		if (i == 1) {
+			CMD.executar("dir");
+			System.out.println();
+		}
+		if (i == 2) {
+			System.out.println("\tINFORME O NOME DA PASTA: ");
+			String pasta = scanner.nextLine();
+			CMD.executar("dir " + pasta);
+			System.out.println();
+		}
+		scanner.close();
 	}
 
 	public static void apagar() {
@@ -140,14 +145,20 @@ public class Principal {
 	}
 
 	public static void ver() {
-		System.out.println("\tVER");
+		System.out.println("\tVER\n");
+		CMD.executar("ver");
+		System.out.println();
 	}
 
 	public static void data() {
-		System.out.println("\tDATA");
+		System.out.println("\tDATA\n");
+		CMD.executar("date /t");
+		System.out.println();
 	}
 	public static void hora() {
-		System.out.println("\tHORA");
+		System.out.println("\tHORA\n");
+		CMD.executar("time /t");
+		System.out.println();
 	}
 	public static void limpa() {
 		System.out.println("\tLIMPA");
@@ -155,8 +166,6 @@ public class Principal {
 	public static void sair() {
 		System.out.println("\tSAIR");
 	}
-	
 
-	
 
 }

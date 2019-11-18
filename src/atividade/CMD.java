@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class CMD {
 	
-	public void executar(String comando) {
+	public static void executar(String comando) {
 		
 		ProcessBuilder pb = new ProcessBuilder();
 		
