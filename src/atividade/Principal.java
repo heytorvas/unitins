@@ -1,25 +1,82 @@
 package atividade;
 
+import java.awt.print.Printable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Principal {
 
 	public static void main(String[] args) {
-
-		menu();
-
-
-
 		
+		boolean i = true;
+		while(i == true) {
+			
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("comando: ");
+			String comando = scanner.nextLine();
 
+			List<String> lista = new ArrayList<String>();
+			String[] vetor = comando.split(" ");
 
+			for (String string : vetor) {
+				lista.add(string);
+				System.out.println(string);
+			}
 
-
-
-
-
-
-
+			//CRIAR
+			if (lista.get(0).equalsIgnoreCase("criar")) {
+				
+				if (lista.get(1).equalsIgnoreCase("-d")) {
+					System.out.println("DIRETORIO");
+				}
+				
+				if (lista.get(1).equalsIgnoreCase("-a")) {
+					System.out.println("ARQUIVO");
+				}
+				
+			}
+			
+			//LISTAR
+			if (lista.get(0).equalsIgnoreCase("listar")) {
+				
+				if (lista.size() > 1) {
+					System.out.println("CAIU AQUI");
+				}
+				else {
+					System.out.println("DEBUG");
+				}
+				
+			}
+			
+			//VER
+			if (lista.get(0).equalsIgnoreCase("ver")) {
+				
+			}
+			
+			//DATA
+			if (lista.get(0).equalsIgnoreCase("data")) {
+				
+			}
+			
+			//HORA
+			if (lista.get(0).equalsIgnoreCase("hora")) {
+				
+			}
+			
+			//LIMPAR
+			if (lista.get(0).equalsIgnoreCase("limpar")) {
+				
+			}
+			
+			// SAIR
+			if (lista.get(0).equalsIgnoreCase("sair")) {
+				System.out.println("LOGOUT");
+				i = false;
+				break;
+			}
+			
+		}
 
 	}
 
@@ -151,7 +208,7 @@ public class Principal {
 			String arquivo = scanner.nextLine();
 			CMD.executar("del " + arquivo);
 			System.out.println();
-		}		
+		}
 	}
 
 	public static void renomear() {
@@ -175,6 +232,7 @@ public class Principal {
 		CMD.executar("move " + arquivo + " \"" + diretorio + "\"");
 		System.out.println();
 	}
+
 	public static void deletar() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("\tDELETAR\n");
@@ -194,7 +252,7 @@ public class Principal {
 			CMD.executar("del " + arquivo);
 			System.out.println();
 		}
-		
+
 	}
 
 	public static void ajuda() {
@@ -212,19 +270,21 @@ public class Principal {
 		CMD.executar("date /t");
 		System.out.println();
 	}
+
 	public static void hora() {
 		System.out.println("\tHORA\n");
 		CMD.executar("time /t");
 		System.out.println();
 	}
+
 	public static void limpa() {
 		for (int i = 0; i < 1000; i++) {
 			System.out.println("");
 		}
 	}
+
 	public static void sair() {
 		System.out.println("\tSAIR");
 	}
-
 
 }
