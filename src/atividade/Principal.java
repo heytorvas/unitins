@@ -14,7 +14,7 @@ public class Principal {
 		while(i == true) {
 			
 			Scanner scanner = new Scanner(System.in);
-			System.out.print("comando: $ ");
+			System.out.print("$ ");
 			String comando = scanner.nextLine();
 
 			List<String> lista = new ArrayList<String>();
@@ -44,8 +44,8 @@ public class Principal {
 			
 			//INSERIR
 			if (lista.get(0).equalsIgnoreCase("inserir")) {
-				
-				System.out.println("INSERIR");
+				CMD.executar("echo >>" + lista.get(2) + " " + lista.get(1));
+				System.out.println();
 				
 			}
 			
@@ -66,38 +66,47 @@ public class Principal {
 			//APAGAR
 			if (lista.get(0).equalsIgnoreCase("apagar")) {
 				
+				if (lista.get(1).equalsIgnoreCase("-d")) {
+					//System.out.println("DIRETORIO");
+					CMD.executar("rmdir " + lista.get(2));
+					System.out.println();
+				}
+				
+				if (lista.get(1).equalsIgnoreCase("-a")) {
+					//System.out.println("ARQUIVO");
+					CMD.executar("del " + lista.get(2));
+					System.out.println();
+				}
+				
 			}
 			
 			//RENOMEAR
 			if (lista.get(0).equalsIgnoreCase("renomear")) {
-				
+				CMD.executar("ren " + lista.get(1) + " " + lista.get(2));
+				System.out.println();
 			}
 			
 			//MOVER
 			if (lista.get(0).equalsIgnoreCase("mover")) {
-				
-			}
-			
-			//DELETAR
-			if (lista.get(0).equalsIgnoreCase("deletar")) {
-				
+				CMD.executar("move " + lista.get(1) + " \"" + lista.get(2) + "\"");
+				System.out.println();
 			}
 			
 			//AJUDA
 			if (lista.get(0).equalsIgnoreCase("ajuda")) {
 				System.out.println("\tAJUDA\n");
-				System.out.println("CRIAR -> Cria um arquivo ou diretorio");
-				System.out.println("INSERIR -> Insere um texto em um arquivo");
-				System.out.println("LISTAR -> Lista arquivos e diretorios da pasta");
-				System.out.println("APAGAR -> Apaga um arquivo ou diretorio");
-				System.out.println("MOVER -> Move um arquivo ou diretorio");
-				System.out.println("DELETAR -> Deleta um arquivo ou diretorio");
-				System.out.println("AJUDA -> Lista todos os comandos desta tabela juntamente com descricoes");
-				System.out.println("VER -> Imprime a versão do sistema operacional");
-				System.out.println("DATA -> Imprime a data do sistema operacional");
-				System.out.println("HORA -> Imprime a hora do sistema operacional");
-				System.out.println("LIMPA -> Limpa o conteudo atual da tela");
-				System.out.println("SAIR -> Finaliza o programa");
+				System.out.println("CRIAR -> Cria um arquivo ou diretorio | CRIAR -d pasta_1");
+				System.out.println("INSERIR -> Insere um texto em um arquivo | INSERIR \"Texto ...\"arquivo_1");
+				System.out.println("LISTAR -> Lista arquivos e diretorios da pasta | LISTAR pasta_1");
+				System.out.println("APAGAR -> Apaga um arquivo ou diretorio | APAGAR -d pasta_1");
+				System.out.println("RENOMEAR -> Renomeia um arquivo ou diretorio | RENOMEAR pasta_1 pasta_2");
+				System.out.println("MOVER -> Move um arquivo ou diretorio | MOVER pasta_2 pasta_3");
+				System.out.println("AJUDA -> Lista todos os comandos desta tabela juntamente com descricoes | AJUDA");
+				System.out.println("VER -> Imprime a versão do sistema operacional | VER");
+				System.out.println("DATA -> Imprime a data do sistema operacional | DATA");
+				System.out.println("HORA -> Imprime a hora do sistema operacional | HORA");
+				System.out.println("LIMPAR -> Limpa o conteudo atual da tela | LIMPAR");
+				System.out.println("SAIR -> Finaliza o programa | SAIR");
 				System.out.println();
 			}
 			
