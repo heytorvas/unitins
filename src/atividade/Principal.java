@@ -21,7 +21,7 @@ public class Principal {
 
 			for (String string : vetor) {
 				lista.add(string);
-				System.out.println(string);
+				//System.out.println(string);
 			}
 
 			//CRIAR
@@ -37,6 +37,13 @@ public class Principal {
 				
 			}
 			
+			//INSERIR
+			if (lista.get(0).equalsIgnoreCase("inserir")) {
+				
+				System.out.println("INSERIR");
+				
+			}
+			
 			//LISTAR
 			if (lista.get(0).equalsIgnoreCase("listar")) {
 				
@@ -49,24 +56,70 @@ public class Principal {
 				
 			}
 			
+			//APAGAR
+			if (lista.get(0).equalsIgnoreCase("apagar")) {
+				
+			}
+			
+			//RENOMEAR
+			if (lista.get(0).equalsIgnoreCase("renomear")) {
+				
+			}
+			
+			//MOVER
+			if (lista.get(0).equalsIgnoreCase("mover")) {
+				
+			}
+			
+			//DELETAR
+			if (lista.get(0).equalsIgnoreCase("deletar")) {
+				
+			}
+			
+			//AJUDA
+			if (lista.get(0).equalsIgnoreCase("ajuda")) {
+				System.out.println("\tAJUDA\n");
+				System.out.println("CRIAR -> Cria um arquivo ou diretorio");
+				System.out.println("INSERIR -> Insere um texto em um arquivo");
+				System.out.println("LISTAR -> Lista arquivos e diretorios da pasta");
+				System.out.println("APAGAR -> Apaga um arquivo ou diretorio");
+				System.out.println("MOVER -> Move um arquivo ou diretorio");
+				System.out.println("DELETAR -> Deleta um arquivo ou diretorio");
+				System.out.println("AJUDA -> Lista todos os comandos desta tabela juntamente com descricoes");
+				System.out.println("VER -> Imprime a versão do sistema operacional");
+				System.out.println("DATA -> Imprime a data do sistema operacional");
+				System.out.println("HORA -> Imprime a hora do sistema operacional");
+				System.out.println("LIMPA -> Limpa o conteudo atual da tela");
+				System.out.println("SAIR -> Finaliza o programa");
+				System.out.println();
+			}
+			
 			//VER
 			if (lista.get(0).equalsIgnoreCase("ver")) {
-				
+				System.out.println("\tVER\n");
+				CMD.executar("ver");
+				System.out.println();
 			}
 			
 			//DATA
 			if (lista.get(0).equalsIgnoreCase("data")) {
-				
+				System.out.println("\tDATA\n");
+				CMD.executar("date /t");
+				System.out.println();
 			}
 			
 			//HORA
 			if (lista.get(0).equalsIgnoreCase("hora")) {
-				
+				System.out.println("\tHORA\n");
+				CMD.executar("time /t");
+				System.out.println();
 			}
 			
 			//LIMPAR
 			if (lista.get(0).equalsIgnoreCase("limpar")) {
-				
+				for (int j = 0; j < 1000; j++) {
+					System.out.println("");
+				}
 			}
 			
 			// SAIR
