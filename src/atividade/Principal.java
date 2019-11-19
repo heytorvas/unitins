@@ -13,7 +13,7 @@ public class Principal {
 		while(i == true) {
 			
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("comando: ");
+			System.out.print("comando: $ ");
 			String comando = scanner.nextLine();
 
 			List<String> lista = new ArrayList<String>();
@@ -28,11 +28,13 @@ public class Principal {
 			if (lista.get(0).equalsIgnoreCase("criar")) {
 				
 				if (lista.get(1).equalsIgnoreCase("-d")) {
-					System.out.println("DIRETORIO");
+					//System.out.println("DIRETORIO");
+					CMD.executar("mkdir " + lista.get(2));
 				}
 				
 				if (lista.get(1).equalsIgnoreCase("-a")) {
-					System.out.println("ARQUIVO");
+					//System.out.println("ARQUIVO");
+					CMD.executar("rem/ > " + lista.get(2));
 				}
 				
 			}
