@@ -10,6 +10,7 @@ public class Principal {
 	public static void main(String[] args) {
 		
 		boolean i = true;
+		
 		while(i == true) {
 			
 			Scanner scanner = new Scanner(System.in);
@@ -30,11 +31,13 @@ public class Principal {
 				if (lista.get(1).equalsIgnoreCase("-d")) {
 					//System.out.println("DIRETORIO");
 					CMD.executar("mkdir " + lista.get(2));
+					System.out.println();
 				}
 				
 				if (lista.get(1).equalsIgnoreCase("-a")) {
 					//System.out.println("ARQUIVO");
 					CMD.executar("rem/ > " + lista.get(2));
+					System.out.println();
 				}
 				
 			}
@@ -50,10 +53,12 @@ public class Principal {
 			if (lista.get(0).equalsIgnoreCase("listar")) {
 				
 				if (lista.size() > 1) {
-					System.out.println("CAIU AQUI");
+					CMD.executar("dir " + lista.get(1));
+					System.out.println();
 				}
 				else {
-					System.out.println("DEBUG");
+					CMD.executar("dir");
+					System.out.println();
 				}
 				
 			}
