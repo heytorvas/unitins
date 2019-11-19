@@ -1,6 +1,6 @@
 package atividade;
 
-import java.awt.print.Printable;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -8,11 +8,13 @@ import java.util.Scanner;
 public class Principal {
 
 	public static void main(String[] args) {
-		
+
+		String diretorio = "C:\\Users\\NIT5\\Desktop\\SysOp-CMD";
+
 		boolean i = true;
-		
-		while(i == true) {
-			
+
+		while (i == true) {
+
 			Scanner scanner = new Scanner(System.in);
 			System.out.print("$ ");
 			String comando = scanner.nextLine();
@@ -22,78 +24,88 @@ public class Principal {
 
 			for (String string : vetor) {
 				lista.add(string);
-				//System.out.println(string);
+				// System.out.println(string);
 			}
 
-			//CRIAR
+			// CRIAR
 			if (lista.get(0).equalsIgnoreCase("criar")) {
-				
+
 				if (lista.get(1).equalsIgnoreCase("-d")) {
-					//System.out.println("DIRETORIO");
-					CMD.executar("mkdir " + lista.get(2));
-					System.out.println();
+					// System.out.println("DIRETORIO");
+					if (CMD.verificar(diretorio, lista.get(2)))
+						CMD.executar("mkdir " + lista.get(2));
+
+					else
+						System.out.println("\tPASTA " + lista.get(2) + " JA EXISTE!");
+
 				}
-				
 				if (lista.get(1).equalsIgnoreCase("-a")) {
-					//System.out.println("ARQUIVO");
-					CMD.executar("rem/ > " + lista.get(2));
+					// System.out.println("ARQUIVO");
+					if (CMD.verificar(diretorio, lista.get(2)))
+						CMD.executar("rem/ > " + lista.get(2));
+
+					else
+						System.out.println("\tARQUIVO " + lista.get(2) + " JA EXISTE!");
+
 					System.out.println();
 				}
-				
 			}
-			
-			//INSERIR
-			if (lista.get(0).equalsIgnoreCase("inserir")) {
+
+			// INSERIR
+			else if (lista.get(0).equalsIgnoreCase("inserir")) {
 				CMD.executar("echo >>" + lista.get(2) + " " + lista.get(1));
 				System.out.println();
-				
+
 			}
-			
-			//LISTAR
-			if (lista.get(0).equalsIgnoreCase("listar")) {
-				
+
+			// LISTAR
+			else if (lista.get(0).equalsIgnoreCase("listar")) {
+
 				if (lista.size() > 1) {
-					CMD.executar("dir " + lista.get(1));
+					if (CMD.verificar(diretorio, lista.get(1)))
+						CMD.executar("dir " + lista.get(1));
+					
+					else
+						System.out.println("");
 					System.out.println();
-				}
-				else {
+				} else {
 					CMD.executar("dir");
 					System.out.println();
 				}
-				
+
 			}
-			
-			//APAGAR
-			if (lista.get(0).equalsIgnoreCase("apagar")) {
-				
+
+			// APAGAR
+			else if (lista.get(0).equalsIgnoreCase("apagar")) {
+
 				if (lista.get(1).equalsIgnoreCase("-d")) {
-					//System.out.println("DIRETORIO");
+					// System.out.println("DIRETORIO");
 					CMD.executar("rmdir " + lista.get(2));
 					System.out.println();
 				}
-				
+
 				if (lista.get(1).equalsIgnoreCase("-a")) {
-					//System.out.println("ARQUIVO");
+					// System.out.println("ARQUIVO");
 					CMD.executar("del " + lista.get(2));
 					System.out.println();
 				}
-				
+
 			}
-			
-			//RENOMEAR
-			if (lista.get(0).equalsIgnoreCase("renomear")) {
+
+			// RENOMEAR
+			else if (lista.get(0).equalsIgnoreCase("renomear")) {
 				CMD.executar("ren " + lista.get(1) + " " + lista.get(2));
 				System.out.println();
 			}
-			
-			//MOVER
-			if (lista.get(0).equalsIgnoreCase("mover")) {
+
+			// MOVER
+			else if (lista.get(0).equalsIgnoreCase("mover")) {
 				CMD.executar("move " + lista.get(1) + " \"" + lista.get(2) + "\"");
 				System.out.println();
 			}
-			
-			//AJUDA
-			if (lista.get(0).equalsIgnoreCase("ajuda")) {
+
+			// AJUDA
+			else if (lista.get(0).equalsIgnoreCase("ajuda")) {
 				System.out.println("\tAJUDA\n");
 				System.out.println("CRIAR -> Cria um arquivo ou diretorio | CRIAR -d pasta_1");
 				System.out.println("INSERIR -> Insere um texto em um arquivo | INSERIR \"Texto ...\"arquivo_1");
@@ -109,42 +121,46 @@ public class Principal {
 				System.out.println("SAIR -> Finaliza o programa | SAIR");
 				System.out.println();
 			}
-			
-			//VER
-			if (lista.get(0).equalsIgnoreCase("ver")) {
+
+			// VER
+			else if (lista.get(0).equalsIgnoreCase("ver")) {
 				System.out.println("\tVER\n");
 				CMD.executar("ver");
 				System.out.println();
 			}
-			
-			//DATA
-			if (lista.get(0).equalsIgnoreCase("data")) {
+
+			// DATA
+			else if (lista.get(0).equalsIgnoreCase("data")) {
 				System.out.println("\tDATA\n");
 				CMD.executar("date /t");
 				System.out.println();
 			}
-			
-			//HORA
-			if (lista.get(0).equalsIgnoreCase("hora")) {
+
+			// HORA
+			else if (lista.get(0).equalsIgnoreCase("hora")) {
 				System.out.println("\tHORA\n");
 				CMD.executar("time /t");
 				System.out.println();
 			}
-			
-			//LIMPAR
-			if (lista.get(0).equalsIgnoreCase("limpar")) {
+
+			// LIMPAR
+			else if (lista.get(0).equalsIgnoreCase("limpar")) {
 				for (int j = 0; j < 1000; j++) {
 					System.out.println("");
 				}
 			}
-			
+
 			// SAIR
-			if (lista.get(0).equalsIgnoreCase("sair")) {
+			else if (lista.get(0).equalsIgnoreCase("sair")) {
 				System.out.println("LOGOUT");
 				i = false;
 				break;
 			}
-			
+
+			else {
+				System.out.println("\tCOMANDO NAO EXISTE!");
+			}
+
 		}
 
 	}
