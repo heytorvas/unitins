@@ -32,7 +32,7 @@ public class Principal {
 
 				if (lista.get(1).equalsIgnoreCase("-d")) {
 					// System.out.println("DIRETORIO");
-					if (CMD.verificar(diretorio, lista.get(2)))
+					if (CMD.verificarCriar(diretorio, lista.get(2)))
 						CMD.executar("mkdir " + lista.get(2));
 
 					else
@@ -41,7 +41,7 @@ public class Principal {
 				}
 				if (lista.get(1).equalsIgnoreCase("-a")) {
 					// System.out.println("ARQUIVO");
-					if (CMD.verificar(diretorio, lista.get(2)))
+					if (CMD.verificarCriar(diretorio, lista.get(2)))
 						CMD.executar("rem/ > " + lista.get(2));
 
 					else
@@ -62,13 +62,15 @@ public class Principal {
 			else if (lista.get(0).equalsIgnoreCase("listar")) {
 
 				if (lista.size() > 1) {
+					
 					if (CMD.verificar(diretorio, lista.get(1)))
 						CMD.executar("dir " + lista.get(1));
-					
 					else
-						System.out.println("");
+						System.out.println("\tDIRETORIO " + lista.get(1) + " NAO ENCONTRADO!");
 					System.out.println();
-				} else {
+				}
+
+				else {
 					CMD.executar("dir");
 					System.out.println();
 				}
@@ -80,13 +82,22 @@ public class Principal {
 
 				if (lista.get(1).equalsIgnoreCase("-d")) {
 					// System.out.println("DIRETORIO");
-					CMD.executar("rmdir " + lista.get(2));
+
+					if (CMD.verificar(diretorio, lista.get(2)))
+						CMD.executar("rmdir " + lista.get(2));
+					else
+						System.out.println("\tDIRETORIO " + lista.get(2) + "NAO ENCONTRADO!");
+					
 					System.out.println();
 				}
 
 				if (lista.get(1).equalsIgnoreCase("-a")) {
 					// System.out.println("ARQUIVO");
-					CMD.executar("del " + lista.get(2));
+					if (CMD.verificar(diretorio, lista.get(2)))
+						CMD.executar("del " + lista.get(2));
+					else
+						System.out.println("\tARQUIVO " + lista.get(2) + "NAO ENCONTRADO!");
+					
 					System.out.println();
 				}
 
@@ -152,7 +163,7 @@ public class Principal {
 
 			// SAIR
 			else if (lista.get(0).equalsIgnoreCase("sair")) {
-				System.out.println("LOGOUT");
+				System.out.println("\tLOGOUT");
 				i = false;
 				break;
 			}
