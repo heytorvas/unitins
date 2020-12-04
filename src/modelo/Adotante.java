@@ -1,7 +1,16 @@
 package modelo;
 
 public class Adotante extends Pessoa implements Interface {
+	private int id;
 	private Endereco endereco;
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public Endereco getEndereco() {
 		if (endereco == null)
@@ -17,9 +26,10 @@ public class Adotante extends Pessoa implements Interface {
 	public Adotante() {
 	}
 
-	public Adotante(String nome, String cpf, Sexo sexo, String email, String senha, Telefone telefone, 
+	public Adotante(int id, String nome, String cpf, Sexo sexo, String email, String senha, Telefone telefone, 
 					Endereco endereco) {
 		super(nome, cpf, sexo, email, senha, telefone);
+		this.id = id;
 		this.endereco = endereco;
 	}
 	
@@ -27,7 +37,7 @@ public class Adotante extends Pessoa implements Interface {
 	@Override
 	public String toString() {
 		return "Adotante ["
-				+ "nome=" + getNome() + ", cpf=" + getCpf() + ", sexo=" + getSexo() + ", email=" + getEmail() + 
+				+ "id=" + id + ", nome=" + getNome() + ", cpf=" + getCpf() + ", sexo=" + getSexo() + ", email=" + getEmail() + 
 				", senha=" + getSenha() + ", codigoArea=" + getTelefone().getCodigoArea() + 
 				", numero=" + getTelefone().getNumero() + ", rua=" + endereco.getRua() +
 				", numero=" + endereco.getNumero() + ", bairro=" + endereco.getBairro() +
