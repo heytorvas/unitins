@@ -4,7 +4,7 @@ from util import query_string
 app = Flask(__name__)
 
 @app.route("/")
-def sum():
+def times():
     args = query_string()
     return f'{int(args[0]) * int(args[1])}'
 
