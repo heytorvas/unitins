@@ -3,31 +3,47 @@ import java.io.InputStreamReader;
 import java.net.URL;
 
 public class Main {
+	
+	public static int times(int n1, int n2) throws Exception {
+		URL content = new URL("http://localhost:5000/?n1="+n1+"&n2="+n2);
+		BufferedReader in = new BufferedReader(new InputStreamReader(content.openStream()));
+		
+		String inputLine;
+		String var = "";
+		while ((inputLine = in.readLine()) != null) {
+		    if(var.isEmpty()) 
+		    	var = inputLine;
+		}
+		in.close();
+		
+		return Integer.parseInt(var);
+	}
+	
+	public static int sum(int n1, int n2) throws Exception {
+		URL content = new URL("http://localhost:5000/?n1="+n1+"&n2="+n2);
+		BufferedReader in = new BufferedReader(new InputStreamReader(content.openStream()));
+		
+		String inputLine;
+		String var = "";
+		while ((inputLine = in.readLine()) != null) {
+		    if(var.isEmpty()) 
+		    	var = inputLine;
+		}
+		in.close();
+		
+		return Integer.parseInt(var);
+	}
 
 	 public static void main(String[] args) throws Exception {
-		URL content1 = new URL("http://127.0.0.1:5000/?n1=5&n2=2");
-		BufferedReader in1 = new BufferedReader(new InputStreamReader(content1.openStream()));
-		String inputLineA;
-		String varA = "";
-		while ((inputLineA = in1.readLine()) != null) {
-		    if(varA.isEmpty()) 
-		    	varA = inputLineA;
-		}
-		in1.close();
+		int n1 = 3;
+		int n2 = 2;
 		
-		URL content2 = new URL("http://127.0.0.2:5000/?n1=5&n2=2");
-		BufferedReader in2 = new BufferedReader(new InputStreamReader(content2.openStream()));
-		String inputLineB;
-		String varB = "";
-		while ((inputLineB = in2.readLine()) != null) {
-		    if(varB.isEmpty()) 
-		    	varB = inputLineB;
-		}
-		in2.close();
-		    
+		int varA = sum(n1, n2);
+		int varB = times(n1, n2);
 		System.out.println("variavel A = " + varA);
 		System.out.println("variavel B = " + varB);
-		int result = Integer.parseInt(varA) + Integer.parseInt(varB);
-		System.out.println("\nsoma das variaveis = " + result);  
+		
+		int result = varA + varB;
+		System.out.println("\nsoma das variaveis = " + result);     
 	 }     
 }
