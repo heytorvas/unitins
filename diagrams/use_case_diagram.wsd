@@ -1,0 +1,19 @@
+@startuml
+
+(Realizar login) ..> (Cadastrar avaliador) : <<extend>>
+
+:Avaliador: -- (Cadastrar examinado)
+(Cadastrar examinado) ..> (Realizar login) : <<include>>
+:Avaliador: -- (Cadastrar teste palográfico)
+(Cadastrar teste palográfico) ..> (Realizar login) : <<include>>
+:Avaliador: -- (Permitir upload de imagem)
+(Permitir upload de imagem) ..> (Realizar login) : <<include>>
+
+:Sistema: -- (Realizar pré-processamento da imagem)
+(Realizar pré-processamento da imagem) ..> (Permitir upload de imagem) : <<include>>
+:Sistema: -- (Identificar e realizar análises nos palos)
+(Identificar e realizar análises nos palos) ..> (Realizar pré-processamento da imagem) : <<include>>
+:Sistema: -- (Retornar relatório com as informações obtidas)
+(Retornar relatório com as informações obtidas) ..> (Identificar e realizar análises nos palos) : <<include>>
+
+@enduml

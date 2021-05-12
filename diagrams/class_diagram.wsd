@@ -9,7 +9,7 @@ class Person {
     'data de nascimento da pessoa
 }
 
-class Evaluator {
+class Psychologist {
     email : String
     'email da pessoa
     password : String
@@ -21,14 +21,13 @@ class Examining {
 }
 
 enum Schooling {
-    FUNDAMENTAL_INCOMPLETO : int
-    FUNDAMENTAL_COMPLETO : int
-    MEDIO : int
-    SUPERIOR : int
-    ESPECIALIZACAO : int
-    MESTRADO : int
-    DOUTORADO : int
-    POS_DOUTORADO : int
+    ELEMENTARY_SCHOOL : int
+    MIDDLE_SCHOOL : int
+    HIGH_SCHOOL : int
+    BACHELORS_DEGREE : int
+    MASTERS_DEGREE : int
+    DOCTORATE : int
+    POST_DOCTORAL : int
 }
 
 class City {
@@ -99,14 +98,14 @@ esta classe não foram aplicadas)
 end note
 
 Person "*" --> "1" City : "natureless"
-Person "1" <-- "1" Evaluator
+Person "1" <-- "1" Psychologist
 Person "1" <-- "1" Examining
 
 Examining "*" --> "1" Gender
 Examining "*" --> "1" Schooling
 
 Palographic "*" o-down-> "1" Examining
-Palographic "*" o-down-> "1" Evaluator
+Palographic "*" o-down-> "1" Psychologist
 Palographic "1" o-down-> "*" Interval
 Palographic "1" *-down-> "*" Row
 Palographic "*" --> "1" Schooling : "examining_schooling"

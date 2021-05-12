@@ -1,0 +1,17 @@
+@startuml
+(*) --> "Selecionar examinado"
+
+if "Existe examinado cadastrado?" then
+    --> [existe] "Selecionar data de aplicação"
+
+else
+    --> [não existe] "Cadastrar examinado"
+    "Cadastrar examinado" -right-> "Selecionar examinado"
+endif
+
+"Selecionar data de aplicação" --> "Selecionar escolaridade"
+"Selecionar escolaridade" --> "Enviar imagem do teste"
+
+"Enviar imagem do teste" --> (*)
+
+@enduml
