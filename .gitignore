@@ -1,10 +1,13 @@
 *.pyc
 __pycache__/
 
-tests/scanner/tmp/sof
-images/tmp/sof
+# tests/scanner/tmp/sof
+# images/tmp/sof
 
 *.py
-api/
-images/
-tests/
+# api/
+# images/
+# tests/
+
+/api/detection/
+/api/model/
