@@ -10,4 +10,3 @@ __pycache__/
 # tests/
 
 /api/detection/
-/api/model/
