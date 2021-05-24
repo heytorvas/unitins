@@ -227,7 +227,7 @@ class DocScanner():
     def scan(self, image_path):
 
         RESCALED_HEIGHT = 500.0
-        OUTPUT_DIR = 'tests/pencil/scanner'
+        OUTPUT_DIR = '/home/cobaia/Desktop/frite/api/tests/pencil/scanner'
 
         # load the image and compute the ratio of the old height
         # to the new height, clone it, and resize it
@@ -265,7 +265,8 @@ class DocScanner():
 
 
 if __name__ == "__main__":
-    im_file_path = 'tests/pencil/original/pencil-without_flash-normal_quality-normal_size.jpg'
+    #im_file_path = 'tests/pencil/original/pencil-without_flash-normal_quality-normal_size.jpg'
+    im_file_path = '/home/cobaia/Desktop/frite/api/tests/pencil/original/pencil_lina.jpg'
 
     scanner = DocScanner()
     scanner.scan(im_file_path)
