@@ -25,6 +25,10 @@ def calculate_distance(x1,y1,x2,y2):
 def calculate_area(w, h):
 	return w * h
 
+def calculate_mm(pixels):
+	DPI = 96
+	return (pixels * 25.4) / DPI
+
 def sort_contours(cnts, method="left-to-right"):
 	reverse = False
 	i = 0
@@ -56,7 +60,7 @@ def contour_filter(thresh):
 				cX = int(M["m10"] / M["m00"])
 				cY = int(M["m01"] / M["m00"])
 
-				p = Palo(x, y, w, h, base, cX, cY, x + w, y + h, calculate_distance(0,0, cX, cY), calculate_distance(cX, cY, 0, cY), calculate_distance(cX, cY, WIDTH, cY))
+				p = Palo(None, x, y, w, h, base, cX, cY, x + w, y + h, calculate_distance(0,0, cX, cY), calculate_distance(cX, cY, 0, cY), calculate_distance(cX, cY, WIDTH, cY))
 				palos_list.append(p)
 
 	return palos_list
@@ -127,6 +131,7 @@ def set_palographic_test(row_list):
 				a[palo].cX, a[palo].cY, a[palo].x + a[palo].w, a[palo].y + a[palo].h, 
 				a[palo].margin_left, a[palo].margin_right, a[palo].area))
 				#print(sort_list[palo].distance)
+			a[palo].roi = palo_counter
 			palo_counter += 1
 			palographic_test.append(a[palo])
 
@@ -206,6 +211,57 @@ row_list = set_rows(sort_list)
 
 palographic_test = set_palographic_test(row_list)
 intervals_list = set_intervals(palographic_test)
+
+
+def get_palos_size(intervals_list):
+	size_palos = {}
+	ma_palo = []
+	mi_palo = []
+	for interval in range(len(intervals_list)):
+		major_palo = 0
+		minor_palo = 0
+		for palo in intervals_list[interval]:
+			if major_palo == 0 and minor_palo == 0:
+				major_palo = palo
+				minor_palo = palo
+
+			elif palo.h > major_palo.h:
+				major_palo = palo
+
+			elif palo.h < minor_palo.h:
+				minor_palo = palo
+			
+			else:
+				pass
+
+		ma_palo.append(major_palo)
+		mi_palo.append(minor_palo)
+		print('intervalo {} - maior: {} | tamanho: {}'.format(interval+1, major_palo.roi, calculate_mm(major_palo.h)))
+		print('intervalo {} - menor: {} | tamanho: {}'.format(interval+1, minor_palo.roi, calculate_mm(minor_palo.h)))
+
+
+	size_palos.update({'major': ma_palo, 'minor': mi_palo})
+	return size_palos
+
+size_palos = get_palos_size(intervals_list)
+
+def get_major_palo_test(size_palos):
+	palo = max(size_palos['major'], key=lambda x: calculate_mm(x.h))
+	return palo
+
+def get_minor_palo_test(size_palos):
+	palo = min(size_palos['minor'], key=lambda x: calculate_mm(x.h))
+	return palo
+
+def get_size_palos_interval(size_palos):
+	sum_major = (sum(map(lambda x: calculate_mm(x.h), size_palos['major']))) / 5
+	sum_minor = (sum(map(lambda x: calculate_mm(x.h), size_palos['minor']))) / 5
+	return (sum_major + sum_minor) / 2
+
+size_palos_interval = get_size_palos_interval(size_palos)
+impulsivity = get_major_palo_test(size_palos) - get_minor_palo_test(size_palos)
+
+print('impulsividade: ', impulsivity)
 
 palos_per_interval = set_plot_yield(intervals_list)
 print(palos_per_interval)

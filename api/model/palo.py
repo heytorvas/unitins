@@ -1,6 +1,7 @@
 class Palo:
 
-    def __init__(self, x, y, w, h, area, cX, cY, baseX, baseY, distance, margin_left, margin_right):
+    def __init__(self, roi, x, y, w, h, area, cX, cY, baseX, baseY, distance, margin_left, margin_right):
+        self.roi = roi
         self.x = x
         self.y = y
         self.w = w
