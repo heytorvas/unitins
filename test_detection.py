@@ -1,9 +1,18 @@
-import cv2, math
-import numpy as np
+import cv2, math, os
 import matplotlib.pyplot as plt
-from PIL import Image
 from api.model.palo import Palo
-from PIL.ExifTags import TAGS 
+
+def crop_image_header_footer(image_path):
+	OUTPUT_DIR = '/home/cobaia/Desktop/frite/api/tests/v2/crop_header_footer'
+	basename = os.path.basename(image_path)
+	image = cv2.imread(image_path)
+
+	WIDTH = image.shape[1]
+	TOP_CROP = 220
+	BOTTOM_CROP = 2050
+	crop_image = image[TOP_CROP:BOTTOM_CROP, 0:WIDTH]
+
+	cv2.imwrite(OUTPUT_DIR + '/' + basename, crop_image)
 
 def process_image(image):
 	dst = cv2.fastNlMeansDenoisingColored(image,None,10,10,7,21)
@@ -29,6 +38,19 @@ def calculate_mm(pixels):
 	DPI = 96
 	return (pixels * 25.4) / DPI
 
+def crop_image(image, image_name, sort_list, HEIGHT, WIDTH):
+	horizontal_lines = []
+	for palo in sort_list:
+		if palo.w > palo.h:
+			horizontal_lines.append(palo)
+
+	train_line = max(horizontal_lines, key=lambda x: x.area)
+	crop_line = train_line.y+train_line.h-20
+
+	crop_image = image[crop_line:HEIGHT, 0:WIDTH]
+	cv2.imwrite('{}/{}.jpg'.format('/home/cobaia/Desktop/frite/api/tests/v2/crop', image_name), crop_image)
+	#cv2.imwrite(OUTPUT_DIR + '/' + image_, crop_image)
+
 def sort_contours(cnts, method="left-to-right"):
 	reverse = False
 	i = 0
@@ -44,24 +66,26 @@ def sort_contours(cnts, method="left-to-right"):
 
 	return (cnts, boundingBoxes)
 
-def contour_filter(thresh):
-	cnts = cv2.findContours(thresh, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+def contour_filter(thresh, HEIGHT, WIDTH):
+	cnts = cv2.findContours(thresh, cv2.RETR_LIST,cv2.CHAIN_APPROX_NONE)
 	cnts = cnts[0] if len(cnts) == 2 else cnts[1]
 	(cnts, boundingBoxes) = sort_contours(cnts, method="top-to-bottom")
+	#cv2.drawContours()
 	palos_list = []
 
 	for c in cnts:
 		x,y,w,h = cv2.boundingRect(c)
 		if checkBorderXY(x, y) and h < 500 and y < HEIGHT - 20:
 			base = calculate_area(w, h)
-			if base > 300:
+			if base > 200:
 
 				M = cv2.moments(c)
 				cX = int(M["m10"] / M["m00"])
 				cY = int(M["m01"] / M["m00"])
 
 				p = Palo(None, x, y, w, h, base, cX, cY, x + w, y + h, calculate_distance(0,0, cX, cY), calculate_distance(cX, cY, 0, cY), calculate_distance(cX, cY, WIDTH, cY))
-				palos_list.append(p)
+				if p.margin_right > 21 or p.margin_left > 21:
+					palos_list.append(p)
 
 	return palos_list
 
@@ -118,15 +142,18 @@ def set_rows(sort_list):
 
 	return row_list
 
-def set_palographic_test(row_list):
+def set_palographic_test(row_list, image, image_name, FONT, FONT_SCALE, COLOR, THICKNESS):
 	palographic_test = []
 	palo_counter = 0
 	for a in row_list:
 		a.sort(key=lambda x: x.margin_left, reverse=False)
 		for palo in range(len(a)):
+			cv2.circle(image, (a[palo].x, a[palo].y), 7, (255, 0, 255), -1) #top
+			cv2.circle(image, (a[palo].x + a[palo].w, a[palo].y + a[palo].h), 7, (0, 0, 255), -1) #base
+			cv2.circle(image, (a[palo].cX, a[palo].cY), 5, (255, 0, 0), -1) #centroid
 			cv2.rectangle(image, (a[palo].x, a[palo].y), (a[palo].x + a[palo].w, a[palo].y + a[palo].h), (36,255,12), 2)
-			cv2.putText(image, str(palo_counter), (a[palo].x, a[palo].y), font, fontScale, color, thickness, cv2.LINE_AA, False)
-			print('{}: top: ({},{}) | width: {} | height: {} | centroid: ({},{}) | base: ({},{}) | margin-right: {} | margin-left: {} | area: {}'
+			cv2.putText(image, str(palo_counter), (a[palo].x, a[palo].y), FONT, FONT_SCALE, COLOR, THICKNESS, cv2.LINE_AA, False)
+			print('{}: top: ({},{}) | width: {} | height: {} | centroid: ({},{}) | base: ({},{}) | margin-left: {} | margin-right: {} | area: {}'
 				.format(palo_counter, a[palo].x, a[palo].y, a[palo].w, a[palo].h, 
 				a[palo].cX, a[palo].cY, a[palo].x + a[palo].w, a[palo].y + a[palo].h, 
 				a[palo].margin_left, a[palo].margin_right, a[palo].area))
@@ -134,6 +161,72 @@ def set_palographic_test(row_list):
 			a[palo].roi = palo_counter
 			palo_counter += 1
 			palographic_test.append(a[palo])
+
+	cv2.imwrite(f'/home/cobaia/Desktop/frite/api/tests/v2/sof/{image_name}.jpg', image)
+	return palographic_test
+
+# def set_palographic_test_test(row_list):
+# 	palographic_test = []
+# 	palo_counter = 0
+# 	for a in row_list:
+# 		a.sort(key=lambda x: x.margin_left, reverse=False)
+# 		for palo in range(len(a)):
+# 			try:
+# 				if a[palo+1].x - a[palo].x <= 10 and a[palo+1].y < a[palo].y:
+# 					palo1 = [a[palo].x, a[palo].y, a[palo].w, a[palo].h]
+# 					palo2 = [a[palo+1].x, a[palo+1].y, a[palo+1].w, a[palo+1].h]
+# 					x, y, w, h = rect_union(palo1, palo2)
+# 					area = calculate_area(w, h)
+
+# 					p = Palo(None, x, y, w, h, area, None, None, x + w, y + h, None, None, None)
+# 					cv2.rectangle(image, (p.x, p.y), (p.x + p.w, p.y + p.h), (36,255,12), 2)
+# 					cv2.putText(image, str(palo_counter), (p.x, p.y), font, fontScale, color, thickness, cv2.LINE_AA, False)
+
+# 					print('try,if | {}: top: ({},{}) | width: {} | height: {} | centroid: ({},{}) | base: ({},{}) | margin-left: {} | margin-right: {} | area: {}'
+# 						.format(palo_counter, p.x, p.y, p.w, p.h, 
+# 						p.cX, p.cY, p.x + p.w, p.y + p.h, 
+# 						p.margin_left, p.margin_right, p.area))
+# 						#print(sort_list[palo].distance)
+
+# 					#palo 
+# 					p.roi = palo_counter
+# 					palo_counter += 1
+# 					palographic_test.append(p)
+# 					a.pop(palo+1)
+
+# 				else:
+# 					cv2.circle(image, (a[palo].x, a[palo].y), 7, (255, 0, 255), -1) #top
+# 					cv2.circle(image, (a[palo].x + a[palo].w, a[palo].y + a[palo].h), 7, (0, 0, 255), -1) #base
+# 					cv2.circle(image, (a[palo].cX, a[palo].cY), 5, (255, 0, 0), -1) #centroid
+# 					cv2.rectangle(image, (a[palo].x, a[palo].y), (a[palo].x + a[palo].w, a[palo].y + a[palo].h), (36,255,12), 2)
+# 					cv2.putText(image, str(palo_counter), (a[palo].x, a[palo].y), font, fontScale, color, thickness, cv2.LINE_AA, False)
+# 					print('try,else,else | {}: top: ({},{}) | width: {} | height: {} | centroid: ({},{}) | base: ({},{}) | margin-left: {} | margin-right: {} | area: {}'
+# 						.format(palo_counter, a[palo].x, a[palo].y, a[palo].w, a[palo].h, 
+# 						a[palo].cX, a[palo].cY, a[palo].x + a[palo].w, a[palo].y + a[palo].h, 
+# 						a[palo].margin_left, a[palo].margin_right, a[palo].area))
+# 						#print(sort_list[palo].distance)
+# 					a[palo].roi = palo_counter
+# 					palo_counter += 1
+# 					palographic_test.append(a[palo])
+
+# 			except:
+# 				try:
+# 					cv2.circle(image, (a[palo].x, a[palo].y), 7, (255, 0, 255), -1) #top
+# 					cv2.circle(image, (a[palo].x + a[palo].w, a[palo].y + a[palo].h), 7, (0, 0, 255), -1) #base
+# 					cv2.circle(image, (a[palo].cX, a[palo].cY), 5, (255, 0, 0), -1) #centroid
+# 					cv2.rectangle(image, (a[palo].x, a[palo].y), (a[palo].x + a[palo].w, a[palo].y + a[palo].h), (36,255,12), 2)
+# 					cv2.putText(image, str(palo_counter), (a[palo].x, a[palo].y), font, fontScale, color, thickness, cv2.LINE_AA, False)
+# 					print('except | {}: top: ({},{}) | width: {} | height: {} | centroid: ({},{}) | base: ({},{}) | margin-left: {} | margin-right: {} | area: {}'
+# 						.format(palo_counter, a[palo].x, a[palo].y, a[palo].w, a[palo].h, 
+# 						a[palo].cX, a[palo].cY, a[palo].x + a[palo].w, a[palo].y + a[palo].h, 
+# 						a[palo].margin_left, a[palo].margin_right, a[palo].area))
+# 						#print(sort_list[palo].distance)
+# 					a[palo].roi = palo_counter
+# 					palo_counter += 1
+# 					palographic_test.append(a[palo])
+# 				except:
+# 					pass
+			
 
 	return palographic_test
 
@@ -187,32 +280,6 @@ def set_plot_yield(intervals_list):
 
 	return palos_per_interval
 
-
-image_name = 'pencil-without_flash-normal_quality-normal_size.jpg'
-# image_name = 'pencil_lina.jpg'
-# image_name = 'pencil_janio.JPG'
-
-image = cv2.imread('api/tests/pencil/scanner/{}'.format(image_name))
-thresh = process_image(image)
-
-HEIGHT = image.shape[0]
-WIDTH = image.shape[1]
-font = cv2.FONT_HERSHEY_SIMPLEX
-fontScale = 1
-color = (255, 0, 0)
-thickness = 2
-
-print('Altura da imagem: {} | Largura da imagem: {}'.format(HEIGHT, WIDTH))
-
-palos_list = contour_filter(thresh)
-
-sort_list = sort_contours_left_to_right(palos_list)
-row_list = set_rows(sort_list)
-
-palographic_test = set_palographic_test(row_list)
-intervals_list = set_intervals(palographic_test)
-
-
 def get_palos_size(intervals_list):
 	size_palos = {}
 	ma_palo = []
@@ -243,8 +310,6 @@ def get_palos_size(intervals_list):
 	size_palos.update({'major': ma_palo, 'minor': mi_palo})
 	return size_palos
 
-size_palos = get_palos_size(intervals_list)
-
 def get_major_palo_test(size_palos):
 	palo = max(size_palos['major'], key=lambda x: calculate_mm(x.h))
 	return palo
@@ -258,20 +323,82 @@ def get_size_palos_interval(size_palos):
 	sum_minor = (sum(map(lambda x: calculate_mm(x.h), size_palos['minor']))) / 5
 	return (sum_major + sum_minor) / 2
 
-size_palos_interval = get_size_palos_interval(size_palos)
-impulsivity = get_major_palo_test(size_palos) - get_minor_palo_test(size_palos)
+def rect_union(a,b):
+	x = min(a[0], b[0])
+	y = min(a[1], b[1])
+	w = max(a[0]+a[2], b[0]+b[2]) - x
+	h = max(a[1]+a[3], b[1]+b[3]) - y
+	return (x, y, w, h)
 
-print('impulsividade: ', impulsivity)
+def set_rect_centroid(x1, x2, y1, y2):
+	return (int((x1+x2)/2), int((y1+y2)/2))
 
-palos_per_interval = set_plot_yield(intervals_list)
-print(palos_per_interval)
+#HEIGHT = image.shape[0]
+# image_name = 'IMG_6971.jpg'
 
-sum_diff = get_sum_diff(intervals_list)
-total_palos = get_total_palos(intervals_list)
+# image = cv2.imread('api/tests/pencil/scanner/{}'.format(image_name))
+# thresh = process_image(image)
 
-print('total de palos: {}'.format(total_palos))
-print('soma das diferencas: {}'.format(sum_diff))
-print('NOR: {}'.format(calculate_nor(sum_diff, total_palos)))
+
+# font = cv2.FONT_HERSHEY_SIMPLEX
+# fontScale = 1
+# color = (255, 0, 0)
+# thickness = 2
+
+# palos_list = contour_filter(thresh)
+# sort_list = sort_contours_left_to_right(palos_list)
+# crop_image(image_name, sort_list)
+
+# print('crop image')
+
+# image = cv2.imread('{}'.format(image_name))
+# thresh = process_image(image)
+
+# HEIGHT = image.shape[0]
+# WIDTH = image.shape[1]
+# font = cv2.FONT_HERSHEY_SIMPLEX
+# fontScale = 1
+# color = (255, 0, 0)
+# thickness = 2
+
+# print('Altura da imagem: {} | Largura da imagem: {}'.format(HEIGHT, WIDTH))
+
+
+# palos_list = contour_filter(thresh)
+# sort_list = sort_contours_left_to_right(palos_list)
+# row_list = set_rows(sort_list)
+# palographic_test = set_palographic_test(row_list)
+
+
+# intervals_list = set_intervals(palographic_test)
+
+# size_palos = get_palos_size(intervals_list)
+
+# size_palos_interval = get_size_palos_interval(size_palos)
+# impulsivity = get_major_palo_test(size_palos).h - get_minor_palo_test(size_palos).h
+
+# print('impulsividade: {}'.format(impulsivity))
+
+# palos_per_interval = set_plot_yield(intervals_list)
+# print(palos_per_interval)
+
+# sum_diff = get_sum_diff(intervals_list)
+# total_palos = get_total_palos(intervals_list)
+
+# print('total de palos: {}'.format(total_palos))
+# print('soma das diferencas: {}'.format(sum_diff))
+# print('NOR: {}'.format(calculate_nor(sum_diff, total_palos)))
+
+#cv2.imwrite('api/tests/scanner/tmp/sof_crop_{}'.format(image_name), image)
+
+
+
+
+
+
+
+
+
 
 #cv2.putText(image, ROI_number, (x, y), font, fontScale, color, thickness, cv2.LINE_AA, False)
 
@@ -307,18 +434,8 @@ print('NOR: {}'.format(calculate_nor(sum_diff, total_palos)))
 # print(median_area)
 
 
-
-
-
-
-
-
 #cv2.circle(image, (palo.x, palo.y), 7, (255, 0, 255), -1) #top
 #break
-
-
-
-# 
 
 # for i in palos_list:
 # 	print('ROI: {} | Top: ({},{}) | Width: {} | Height: {} | Centroid: ({},{}) | Base: ({},{})'.format(ROI_number, i.x, i.y, i.w, i.h, i.cX, i.cY, i.x + i.w, i.y + i.h))
@@ -328,7 +445,6 @@ print('NOR: {}'.format(calculate_nor(sum_diff, total_palos)))
 # 	cv2.rectangle(image, (i.x, i.y), (i.x + i.w, i.y + i.h), (36,255,12), 2)
 # 	cv2.putText(image, str(ROI_number), (i.x, i.y), font, fontScale, color, thickness, cv2.LINE_AA, False)
 # 	ROI_number += 1
-
 
 # p_list = []
 # for p in palos_list:
@@ -353,5 +469,5 @@ print('NOR: {}'.format(calculate_nor(sum_diff, total_palos)))
 # max_height = max(height_list)
 # min_height = min(height_list)
 		
-cv2.imwrite('api/tests/scanner/tmp/sof_{}'.format(image_name), image)
+
 # cv2.imwrite('crop_image.jpg', img_crop)
