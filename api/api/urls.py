@@ -18,6 +18,10 @@ from django.db.models import base
 from django.urls import path, include
 
 from rest_framework.routers import DefaultRouter
+from rest_framework import permissions
+
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
 
 from examining.views import ExaminingViewSet
 from psychologist.views import PsychologistViewSet, UserRegistrationView
@@ -26,10 +30,22 @@ router = DefaultRouter()
 router.register(r"examining", ExaminingViewSet)
 router.register(r"psychologist", PsychologistViewSet)
 
+schema_view = get_schema_view(
+    openapi.Info(
+        title="API Docs",
+        default_version="v1",
+        description="API Documentation for FRITE",
+    ),
+    public=True,
+    permission_classes=(permissions.AllowAny, ),
+)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('api/v1/', include(router.urls)),
 
     path('api/v1/', include('psychologist.urls')),
+
+    path('api/docs/', schema_view.with_ui('swagger', cache_timeout=0))
 ]
