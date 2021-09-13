@@ -5,9 +5,12 @@ def resize_image(path):
 	OUTPUT_DIR = '/home/cobaia/Desktop/frite/detection/images/resize'
 	basename = os.path.basename(path)
 	img = cv2.imread(path, cv2.IMREAD_UNCHANGED)
-	width = img.shape[1]
 
 	height = 2250
+	width = img.shape[1]
+	if img.shape[1] < 1300:
+		width = img.shape[1] * 2
+	
 	dim = (width, height)
  
 	resized = cv2.resize(img, dim, interpolation = cv2.INTER_AREA)
@@ -74,7 +77,7 @@ def crop_image(path):
         return aux[2]
 
     middle_line = max(rect_list, key=middle)
-    crop_line = middle_line[1] + middle_line[3]-20
+    crop_line = middle_line[1] + middle_line[3]-7
     crop_image = image[crop_line:height, 0:width]
 
     ########### BLANK SPACE ###########
@@ -96,5 +99,5 @@ def crop_image(path):
         return aux[1]
 
     last_palo = max(rect_list, key=last)
-    crop_image_blank = crop_image[:(last_palo[1]+last_palo[3])+75,30:width-15]	
+    crop_image_blank = crop_image[:(last_palo[1]+last_palo[3])+75,30:width-29]	
     cv2.imwrite(OUTPUT_DIR + '/' + basename, crop_image_blank)
