@@ -1,25 +1,15 @@
 import cv2, os
 import numpy as np
 from model.palo import Palo
-from image import calculate_distance
+from util import calculate_distance, calculate_area
 
 BASE_LIMIT = 120
 WIDTH_LIMIT = 200
 HEIGHT_LIMIT = 140
 
-
 # sort rowboxes on y coordinate
 def take_second(elem):
     return elem[1]
-
-def check_border_xy(x, y):
-    if x > 15 and y > 10:
-        return True
-    else:
-        return False
-
-def calculate_area(w, h):
-    return w * h
 
 def check_palo(x, y, w, h):
     base = calculate_area(w, h)

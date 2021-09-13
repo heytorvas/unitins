@@ -1,9 +1,5 @@
 import matplotlib.pyplot as plt
-from image import calculate_distance
-
-def calculate_mm(pixels):
-	DPI = 96
-	return (pixels * 25.4) / DPI
+from util import calculate_distance, calculate_mm
 
 def set_intervals(palographic_test):
 	intervals = []
@@ -46,9 +42,6 @@ def get_sum_diff(intervals_list):
 			break
 
 	return sum(diff_list)
-
-def calculate_nor(sum_diff, total_palos):
-	return (sum_diff * 100) / total_palos
 
 def get_palos_size(intervals_list):
 	size_palos = {}

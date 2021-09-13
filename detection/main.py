@@ -2,6 +2,7 @@ from scanner.scanner import DocScanner
 from image import resize_image, crop_image_header_footer, crop_image
 from ordination import set_ordination
 from analytics import *
+from util import calculate_nor
 
 image_name = 'IMG_6971'
 
