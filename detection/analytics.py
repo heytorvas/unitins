@@ -105,8 +105,8 @@ def calculate_size_palos(size_palos):
 
     return result
 
-#TODO:
 def get_distance_between_palos(intervals_list):
+	result = []
 	for interval in intervals_list:
 		count = 0
 		initial = interval[0]
@@ -131,13 +131,12 @@ def get_distance_between_palos(intervals_list):
 				# print('distance: ', distance)
 				count += distance
 				
+		distance_mm = calculate_mm(count)
+		#print('distancia por intervalo: ', calculate_mm(count))
+		result.append({'distance': distance_mm, 'size': len(interval), 'dist/size': distance_mm/len(interval)})
 
-		print('distancia por intervalo: ', calculate_mm(count))
-		
-
-
-		# for palo in interval:
-		# 	if palo.is_last_row:
-		# 		distance = calculate_distance(initial.cX, initial.cY, palo.cX, palo.cY)
-		# 		count = count + distance
-				
+	print(result)
+	sum_distance = sum(map(lambda x: x['dist/size'], result))
+	print('SOMA DA DISTANCIA: ', sum_distance)
+	distance_palo = sum_distance / 5
+	return distance_palo

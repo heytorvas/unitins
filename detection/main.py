@@ -29,25 +29,24 @@ def main():
 
     ########### ANALYTICS ###########
     total_palos = len(palographic_test)-5
-    print('produtividade: ', total_palos)
+    print('\nPRODUTIVIDADE: ', total_palos, '\n')
 
     intervals_list = set_intervals(palographic_test)
-    get_distance_between_palos(intervals_list)
-
+    dist_palo = get_distance_between_palos(intervals_list)
+    print('E/5: ', dist_palo, '\n')
 
     palos_by_interval = set_plot_yield(intervals_list)
-    print('palos por intervalo: ', palos_by_interval)
+    print('PALOS POR INTERVALO: ', palos_by_interval, '\n')
 
     sum_diff = get_sum_diff(intervals_list)
-    print('soma das diferenças: ', sum_diff)
-
+    print('SOMA DAS DIFERENÇAS: ', sum_diff)
     nor = calculate_nor(sum_diff, total_palos)
-    print('NOR: ', nor)
+    print('NOR: ', nor, '\n')
 
     size_palos = get_palos_size(intervals_list)
     impulsivity = get_major_palo_test(size_palos).h - get_minor_palo_test(size_palos).h
-    print('impulsividade: {}'.format(impulsivity))
+    print('IMPULSIVIDADE: ', impulsivity, '\n')
 
-    print('tamanho dos palos: {}'.format(calculate_size_palos(size_palos)))
+    print('TAMANHO DOS PALOS: ', calculate_size_palos(size_palos), '\n')
 
 main()
