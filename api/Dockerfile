@@ -3,6 +3,9 @@
 FROM python:3.9
 ENV PYTHONUNBUFFERED=1
 
+RUN apt-get update
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+
 RUN mkdir /usr/src/frite/
 WORKDIR /usr/src/frite/api
 

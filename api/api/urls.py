@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.db.models import base
 from django.urls import path, include
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 from rest_framework.routers import DefaultRouter
 from rest_framework import permissions
 
@@ -25,10 +28,14 @@ from drf_yasg.views import get_schema_view
 
 from examining.views import ExaminingViewSet
 from psychologist.views import PsychologistViewSet, UserRegistrationView
+from palographic.views import PalographicViewSet
+from analysis.views import AnalysisViewSet
 
 router = DefaultRouter()
 router.register(r"examining", ExaminingViewSet)
 router.register(r"psychologist", PsychologistViewSet)
+router.register(r"palographic", PalographicViewSet)
+router.register(r"analysis", AnalysisViewSet)
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -48,4 +55,4 @@ urlpatterns = [
     path('api/v1/', include('psychologist.urls')),
 
     path('api/docs/', schema_view.with_ui('swagger', cache_timeout=0))
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,7 +1,7 @@
 import cv2, os
 import numpy as np
-from model.palo import Palo
-from util import calculate_distance, calculate_area
+from detection.model.palo import Palo
+from detection.util import calculate_distance, calculate_area
 
 BASE_LIMIT = 120
 WIDTH_LIMIT = 200
@@ -67,7 +67,7 @@ def get_box_palito_line(row):
     return bboxes
 
 def set_ordination(img_path):
-    OUTPUT_DIR = '/home/cobaia/Desktop/frite/detection/images/sof'
+    OUTPUT_DIR = '/usr/src/frite/api/detection/images/sof'
     basename = os.path.basename(img_path)
         
     img = cv2.imread(img_path,0)

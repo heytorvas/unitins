@@ -1,5 +1,5 @@
-import matplotlib.pyplot as plt
-from util import calculate_distance, calculate_mm
+# import matplotlib.pyplot as plt
+from detection.util import calculate_distance, calculate_mm
 
 def set_intervals(palographic_test):
 	intervals = []
@@ -22,13 +22,16 @@ def set_plot_yield(intervals_list):
 	count_intervals = list(palos_per_interval.keys())
 	count_intervals_palos = list(palos_per_interval.values())
 
-	plt.plot(count_intervals, count_intervals_palos)
-	plt.title('Quantidade de Palos por Intervalo')
-	plt.xlabel('Intervalo')
-	plt.ylabel('Palos')
-	plt.show()
+	# plt.plot(count_intervals, count_intervals_palos)
+	# plt.title('Quantidade de Palos por Intervalo')
+	# plt.xlabel('Intervalo')
+	# plt.ylabel('Palos')
+	# plt.show()
 
-	return palos_per_interval
+	obj = str(palos_per_interval)
+	obj = obj.replace('{', '').replace('}', '').replace(':', '-').strip()
+
+	return obj
 
 def get_sum_diff(intervals_list):
 	diff_list = []
@@ -133,3 +136,4 @@ def get_distance_between_palos(intervals_list):
 	print('SOMA DA DISTANCIA: ', sum_distance)
 	distance_palo = sum_distance / 5
 	return distance_palo
+

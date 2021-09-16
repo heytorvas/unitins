@@ -3,3 +3,12 @@ djangorestframework
 psycopg2
 djangorestframework-jwt
 drf-yasg
+Pillow
+
+pysld
+ocrd-fork-pylsd==0.0.3
+opencv-python
+numpy
+scipy
+
+requests

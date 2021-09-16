@@ -1,8 +1,8 @@
 import cv2, os
-from ordination import check_palo
+from detection.ordination import check_palo
 
 def resize_image(path):
-	OUTPUT_DIR = '/home/cobaia/Desktop/frite/detection/images/resize'
+	OUTPUT_DIR = '/usr/src/frite/api/detection/images/resize'
 	basename = os.path.basename(path)
 	img = cv2.imread(path, cv2.IMREAD_UNCHANGED)
 
@@ -17,7 +17,7 @@ def resize_image(path):
 	cv2.imwrite(OUTPUT_DIR + '/' + basename, resized)
 
 def crop_image_header_footer(image_path):
-	OUTPUT_DIR = '/home/cobaia/Desktop/frite/detection/images/crop_header_footer'
+	OUTPUT_DIR = '/usr/src/frite/api/detection/images/crop_header_footer'
 	basename = os.path.basename(image_path)
 	image = cv2.imread(image_path)
 
@@ -57,7 +57,7 @@ def checkBorderXY(x, y):
 		return False
 
 def crop_image(path):
-    OUTPUT_DIR = '/home/cobaia/Desktop/frite/detection/images/crop'
+    OUTPUT_DIR = '/usr/src/frite/api/detection/images/crop'
     basename = os.path.basename(path)
     image = cv2.imread(path)
 
@@ -77,7 +77,7 @@ def crop_image(path):
         return aux[2]
 
     middle_line = max(rect_list, key=middle)
-    crop_line = middle_line[1] + middle_line[3]-7
+    crop_line = middle_line[1] + middle_line[3]-15
     crop_image = image[crop_line:height, 0:width]
 
     ########### BLANK SPACE ###########

@@ -1,5 +1,5 @@
-from scanner.transform import *
-from imutils import *
+from detection.scanner.transform import *
+from detection.scanner.imutils import *
 from scipy.spatial import distance as dist
 import numpy as np
 import itertools, math, cv2
@@ -227,7 +227,7 @@ class DocScanner():
     def scan(self, image_path):
 
         RESCALED_HEIGHT = 500.0
-        OUTPUT_DIR = '/home/cobaia/Desktop/frite/detection/images/scanner'
+        OUTPUT_DIR = '/usr/src/frite/api/detection/images/scanner'
 
         # load the image and compute the ratio of the old height
         # to the new height, clone it, and resize it
@@ -266,8 +266,8 @@ class DocScanner():
 
 # if __name__ == "__main__":
 #     #im_file_path = 'tests/pencil/original/pencil-without_flash-normal_quality-normal_size.jpg'
-#     #im_file_path = '/home/cobaia/Desktop/frite/api/tests/pencil/original/pencil_orig_heytor2.jpg'
-#     im_file_path = '/home/cobaia/Desktop/frite/api/images/vetor_exames/IMG_6971.jpg'
+#     #im_file_path = '/usr/src/frite/api/api/tests/pencil/original/pencil_orig_heytor2.jpg'
+#     im_file_path = '/usr/src/frite/api/api/images/vetor_exames/IMG_6971.jpg'
 
 #     scanner = DocScanner()
 #     scanner.scan(im_file_path)
