@@ -1,6 +1,7 @@
 
 import 'package:frite/pages/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:frite/pages/main_menu.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,8 +25,8 @@ class MyApp extends StatelessWidget {
           bodyText1: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w400, color: Colors.redAccent)
         ),
       ),
-      // home: MyHomePage(title: 'Flutter Demo Home Page'),
       home: LoginPage(),
+      //home: MainMenu(),
     );
   }
 }

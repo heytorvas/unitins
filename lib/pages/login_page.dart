@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frite/models/login.dart';
+import 'package:frite/pages/main_menu.dart';
 import 'package:frite/pages/register_psychologist_page.dart';
 import 'package:frite/services/login_service.dart';
 
@@ -25,23 +26,35 @@ class _LoginPageState extends State<LoginPage> {
     return null;
   }
 
-  String apiValidator(int statusCode) {
-    if (statusCode == 200) {
-      return '';
-    } else if (statusCode == 400) {
-      return 'Email e/ou senha incorreta!';
-    } else {
-      return 'Erro no sistema. Aguarde um momento.';
+  apiValidator(int statusCode) {
+    print(statusCode);
+    if (statusCode == 200 || statusCode == 201) {
+      print('caiu verdade');
+      return true;
+    }
+    else {
+      print('caiu falso');
+      return false;
     }
   }
 
-  login() async {
+  login(BuildContext context) async {
     var service = LoginService();
     var model =
         Login(email: emailController.text, password: passwordController.text);
     print(model);
     var response = await service.login(model);
-    print(response.data);
+    var validate = apiValidator(response.statusCode);
+    
+    if (validate == false){
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Email e/ou senha incorretos.')),
+      );
+    }
+    else {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => MainMenu()));
+    }
   }
 
   @override
@@ -148,7 +161,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           onPressed: () {
                             if (globalFormKey.currentState!.validate()) {
-                              login();
+                              login(context);
                             }
                           },
                           child: Text("Entrar",
