@@ -1,20 +1,22 @@
+import 'package:flutter/rendering.dart';
+
 class Psychologist {
-  final int? id;
-  final String name;
-  final String cpf;
-  final String birthDate;
-  final String email;
-  final String password;
-  final DateTime? createdAt;
-  final DateTime? updatedAt;
+  int? id;
+  String? name;
+  String? cpf;
+  String? birthDate;
+  String? email;
+  String? password;
+  DateTime? createdAt;
+  DateTime? updatedAt;
 
   Psychologist(
-    {this.id, required this.name, required this.cpf, required this.birthDate, required this.email, required this.password, this.createdAt, this.updatedAt}
+    {this.id, this.name, this.cpf, this.birthDate, this.email, this.password, this.createdAt, this.updatedAt}
   );
 
   @override
   String toString() {
-    return 'Psychologist {id: $id, name: $name, cpf: $cpf, birthDate: $birthDate, email: $email, password: $password, createdAt: $createdAt, updatedAt: $updatedAt}';
+    return '{id: $id, name: $name, cpf: $cpf, birthDate: $birthDate, email: $email, password: $password, createdAt: $createdAt, updatedAt: $updatedAt}';
   }
   
   Map<String, dynamic> toJson() {
@@ -27,18 +29,16 @@ class Psychologist {
     };
   }
 
-  fromJson(Map<String, dynamic> parsedJson) {
-    print(DateTime.parse(parsedJson['birth_date']));
-    return Psychologist(
-      id: parsedJson['id'],
-      name: parsedJson['name'],
-      cpf: parsedJson['cpf'],
-      // birthDate: DateTime.parse(parsedJson['birth_date']),
-      birthDate: parsedJson['birth_date'],
-      email: parsedJson['email'],
-      password : parsedJson['password'],
-      createdAt: DateTime.parse(parsedJson['created_at']),
-      updatedAt: DateTime.parse(parsedJson['updated_at'])
-    );
+  static fromJson(parsedJson) {
+    Psychologist p = new Psychologist();
+    p.id = parsedJson['id'];
+    p.name = parsedJson['name'];
+    p.cpf = parsedJson['cpf'];
+    p.birthDate = parsedJson['birth_date'];
+    p.email = parsedJson['email'];
+    p.password = parsedJson['password'] ?? null;
+    p.createdAt = DateTime.parse(parsedJson['created_at']);
+    p.updatedAt = DateTime.parse(parsedJson['updated_at']);
+    return p;
   }
 }

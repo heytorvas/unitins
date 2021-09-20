@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:frite/main.dart';
 import 'package:frite/models/psychologist.dart';
 import 'package:frite/pages/login_page.dart';
+import 'package:frite/pages/main_menu.dart';
 import 'package:frite/services/register_psychologist.dart';
 
 class RegisterPsychologist extends StatefulWidget {
@@ -11,6 +13,8 @@ class RegisterPsychologist extends StatefulWidget {
 }
 
 class _RegisterPsychologistState extends State<RegisterPsychologist> {
+  var page;
+
   final scaffoldKey = GlobalKey<ScaffoldState>();
   GlobalKey<FormState> globalFormKey = new GlobalKey<FormState>();
   bool hidePassword = true;
@@ -199,12 +203,12 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                             padding: EdgeInsets.symmetric(
                                 vertical: 12, horizontal: 68),
                           ),
-                          onPressed: () {
+                          onPressed: ()  {
                             register();
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => LoginPage()));
+                                    builder: (context) => MainMenu()));
                           },
                           child: Text("Cadastrar",
                               style: TextStyle(color: Colors.white)),

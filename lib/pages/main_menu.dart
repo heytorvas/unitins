@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:frite/pages/psychologist_list.dart';
+import 'package:frite/services/psychologist_service.dart';
 
 class MainMenu extends StatefulWidget {
   const MainMenu({ Key? key }) : super(key: key);
@@ -50,7 +52,11 @@ class _MainMenuState extends State<MainMenu> {
                             padding: EdgeInsets.symmetric(
                                 vertical: 12, horizontal: 68),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context, 
+                              MaterialPageRoute(builder: (context) => PsychologistList()));
+                          },
                           child: Text("Psicólogo",
                             style: Theme.of(context).textTheme.headline2
                           ),

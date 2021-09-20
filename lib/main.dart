@@ -1,13 +1,14 @@
 
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:frite/pages/login_page.dart';
 import 'package:flutter/material.dart';
-import 'package:frite/pages/main_menu.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  static var storage = new FlutterSecureStorage();
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

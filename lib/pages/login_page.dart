@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frite/main.dart';
 import 'package:frite/models/login.dart';
 import 'package:frite/pages/main_menu.dart';
 import 'package:frite/pages/register_psychologist_page.dart';
@@ -12,6 +13,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+
   TextEditingController emailController = new TextEditingController();
   TextEditingController passwordController = new TextEditingController();
 
@@ -45,13 +47,14 @@ class _LoginPageState extends State<LoginPage> {
     print(model);
     var response = await service.login(model);
     var validate = apiValidator(response.statusCode);
-    
+
     if (validate == false){
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Email e/ou senha incorretos.')),
       );
     }
     else {
+      await MyApp.storage.write(key: 'jwt', value: response.data['token']);
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => MainMenu()));
     }
