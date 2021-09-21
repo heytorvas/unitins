@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frite/pages/analytics_list.dart';
 import 'package:frite/pages/examining_list.dart';
 import 'package:frite/pages/palographic_list.dart';
 import 'package:frite/pages/psychologist_list.dart';
@@ -116,7 +117,11 @@ class _MainMenuState extends State<MainMenu> {
                             padding: EdgeInsets.symmetric(
                                 vertical: 12, horizontal: 68),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context, 
+                              MaterialPageRoute(builder: (context) => AnalyticsList()));
+                          },
                           child: Text("Análise",
                             style: Theme.of(context).textTheme.headline2
                           ),
