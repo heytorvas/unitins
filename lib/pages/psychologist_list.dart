@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:frite/components/psy_tile.dart';
 import 'package:frite/components/psychologist_tile.dart';
 import 'package:frite/models/psychologist.dart';
-import 'package:frite/pages/register_psychologist_page.dart';
+import 'package:frite/pages/save_psychologist_page.dart';
 import 'package:frite/services/psychologist_service.dart';
 
 class PsychologistList extends StatefulWidget {
@@ -23,7 +24,6 @@ class _PsychologistListState extends State<PsychologistList> {
     });
     //return await List<Psychologist> PsychologistService().findAll();
   }
-
   
   @override
   void initState() {
@@ -31,8 +31,6 @@ class _PsychologistListState extends State<PsychologistList> {
 
     getPsychologistList();
   }
-
-  
 
   GlobalKey<FormState> globalFormKey = new GlobalKey<FormState>();
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -44,8 +42,10 @@ class _PsychologistListState extends State<PsychologistList> {
       body: ListView.builder(
             itemCount: psychologists.length,
             itemBuilder: (context, index) => Card(
-              child: PsychologistTile(psychologists[index])      
+              // child: PsychologistTile(psychologists[index])      
+              child: PsyTile(psychologist: psychologists[index],),
             ),
+            
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

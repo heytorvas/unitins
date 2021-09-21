@@ -1,20 +1,21 @@
 import 'package:dio/dio.dart';
 import 'package:frite/main.dart';
-import 'package:frite/models/psychologist.dart';
+import 'package:frite/models/examining.dart';
+import 'package:frite/pages/save_examining_page.dart';
 import 'package:frite/utils/const.dart';
 
-class PsychologistService {
-  
+class ExaminingService {
+    
   static findAll() async {
     Dio dio = Dio();
     var token = await MyApp.storage.read(key: 'jwt');
     print(token);
     dio.options.headers['Authorization'] = 'Bearer $token';
-    var response = await dio.get("$API/psychologist/");
+    var response = await dio.get("$API/examining/");
 
-    List<Psychologist> lists = [];
+    List<Examining> lists = [];
     for (var item in response.data) {
-      lists.add(Psychologist.fromJson(item));
+      lists.add(Examining.fromJson(item));
     }
     
     return lists;
@@ -25,17 +26,20 @@ class PsychologistService {
     var token = await MyApp.storage.read(key: 'jwt');
     print(token);
     dio.options.headers['Authorization'] = 'Bearer $token';
-    var response = await dio.delete("$API/psychologist/$id/");
+    var response = await dio.delete("$API/examining/$id/");
     print(response);
     return response.statusCode;
   }
 
-  Future<int?> registerPsychologist(Psychologist psychologist) async {
+  Future<int?> registerExamining(Examining examining) async {
     Dio dio = Dio();
+    var token = await MyApp.storage.read(key: 'jwt');
+    print(token);
+    dio.options.headers['Authorization'] = 'Bearer $token';
     try {
-      print(psychologist.toJson());
+      print(examining.toJson());
       var response =
-          await dio.post("$API/signup/", data: psychologist.toJson());
+          await dio.post("$API/examining/", data: examining.toJson());
       print(response);
       if (response.statusCode == 201) {
         return response.statusCode;
@@ -47,4 +51,5 @@ class PsychologistService {
       return 0;
     }
   }
+  
 }

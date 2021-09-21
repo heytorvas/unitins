@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:frite/main.dart';
 import 'package:frite/models/psychologist.dart';
-import 'package:frite/pages/login_page.dart';
 import 'package:frite/pages/main_menu.dart';
-import 'package:frite/services/register_psychologist.dart';
+import 'package:frite/services/psychologist_service.dart';
 
 class RegisterPsychologist extends StatefulWidget {
   const RegisterPsychologist({Key? key}) : super(key: key);
@@ -13,7 +11,6 @@ class RegisterPsychologist extends StatefulWidget {
 }
 
 class _RegisterPsychologistState extends State<RegisterPsychologist> {
-  var page;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
   GlobalKey<FormState> globalFormKey = new GlobalKey<FormState>();
@@ -26,7 +23,7 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
   TextEditingController passwordController = new TextEditingController();
 
   register() {
-    var service = RegisterPsychologistService();
+    var service = PsychologistService();
     var model = Psychologist(
         name: nameController.text,
         cpf: cpfController.text,
@@ -77,7 +74,7 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                     child: Column(
                       children: <Widget>[
                         SizedBox(height: 25),
-                        Text("Cadastro do Psicólogo",
+                        Text("Psicólogo",
                             style: Theme.of(context).textTheme.headline2),
 
                         // NAME
@@ -121,22 +118,34 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
 
                         // BIRTH DATE
                         SizedBox(height: 20),
-                        new TextFormField(
-                            controller: birthDateController,
-                            keyboardType: TextInputType.datetime,
-                            decoration: new InputDecoration(
-                              hintText: "Insira sua data de nascimento",
-                              enabledBorder: UnderlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Theme.of(context)
-                                          .accentColor
-                                          .withOpacity(0.2))),
-                              focusedBorder: UnderlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Theme.of(context).accentColor)),
-                              prefixIcon: Icon(Icons.calendar_today_rounded,
-                                  color: Theme.of(context).accentColor),
-                            )),
+                          new TextFormField(
+                          controller: birthDateController,
+                          keyboardType: TextInputType.datetime,
+                          decoration: new InputDecoration(
+                            hintText: "Insira a data de nascimento",
+                            enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Theme.of(context)
+                                        .accentColor
+                                        .withOpacity(0.2))),
+                            focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Theme.of(context).accentColor)),
+                            prefixIcon: Icon(Icons.calendar_today_rounded,
+                                color: Theme.of(context).accentColor),
+                          ),
+                          onTap: () async {
+                            FocusScope.of(context).requestFocus(new FocusNode());
+                            DateTime? date = DateTime(1900);
+                            date = await showDatePicker(
+                              context: context, 
+                              initialDate:DateTime.now(),
+                              firstDate:DateTime(1900),
+                              lastDate: DateTime(2100)
+                            );
+                            birthDateController.text = "${date?.year}-${date?.month}-${date?.day}";
+                          },
+                        ),
 
                         // EMAIL
                         SizedBox(height: 20),
@@ -204,13 +213,16 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                                 vertical: 12, horizontal: 68),
                           ),
                           onPressed: ()  {
-                            register();
-                            Navigator.push(
+                            if (globalFormKey.currentState!.validate()) {
+                              register();
+                              Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => MainMenu()));
+                            }
+                            
                           },
-                          child: Text("Cadastrar",
+                          child: Text("Salvar",
                               style: TextStyle(color: Colors.white)),
                         ),
                       ],

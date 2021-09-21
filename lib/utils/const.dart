@@ -1,1 +1,1 @@
-const API = 'http://172.19.176.116:8000/api/v1';
+const API = 'http://172.31.83.2:8000/api/v1';

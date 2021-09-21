@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:frite/main.dart';
 import 'package:frite/models/login.dart';
 import 'package:frite/pages/main_menu.dart';
-import 'package:frite/pages/register_psychologist_page.dart';
+import 'package:frite/pages/save_psychologist_page.dart';
 import 'package:frite/services/login_service.dart';
+import 'package:frite/utils/utils.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -20,13 +21,6 @@ class _LoginPageState extends State<LoginPage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   GlobalKey<FormState> globalFormKey = new GlobalKey<FormState>();
   bool hidePassword = true;
-
-  formValidator(value) {
-    if (value == null || value.isEmpty) {
-      return 'Insira algum valor';
-    }
-    return null;
-  }
 
   apiValidator(int statusCode) {
     print(statusCode);
