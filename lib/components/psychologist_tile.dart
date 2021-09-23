@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frite/models/psychologist.dart';
+import 'package:frite/pages/update_psychologist_page.dart';
 import 'package:frite/services/psychologist_service.dart';
 
 class PsychologistTile extends StatelessWidget {
@@ -19,7 +20,10 @@ class PsychologistTile extends StatelessWidget {
             IconButton(
               icon: Icon(Icons.edit),
               color: Colors.orange,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => UpdatePsychologist(psychologist: psychologist)));
+              },
             ),
             IconButton(
               icon: Icon(Icons.delete),

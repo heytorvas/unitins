@@ -27,6 +27,15 @@ class Psychologist {
     };
   }
 
+  Map<String, dynamic> toJsonPass() {
+    return {
+      "name": this.name,
+      "cpf": this.cpf,
+      "birth_date": this.birthDate,
+      "email": this.email
+    };
+  }
+
   static fromJson(parsedJson) {
     Psychologist p = new Psychologist();
     p.id = parsedJson['id'];

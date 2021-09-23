@@ -3,6 +3,7 @@ import 'package:frite/components/palographic_tile.dart';
 import 'package:frite/models/palographic.dart';
 import 'package:frite/pages/save_palographic_page.dart';
 import 'package:frite/services/palographic_service.dart';
+import 'package:frite/utils/utils.dart';
 
 class PalographicList extends StatefulWidget {
   const PalographicList({ Key? key }) : super(key: key);
@@ -35,6 +36,7 @@ class _PalographicListState extends State<PalographicList> {
     final scaffoldKey = GlobalKey<ScaffoldState>();
 
     return Scaffold(
+      appBar: appBar(context),
       key: scaffoldKey,
       backgroundColor: Theme.of(context).accentColor,
       body: ListView.builder(

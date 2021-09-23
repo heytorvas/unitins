@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:frite/models/psychologist.dart';
-import 'package:frite/pages/login_page.dart';
+import 'package:frite/pages/psychologist_list.dart';
 import 'package:frite/services/psychologist_service.dart';
 import 'package:frite/utils/utils.dart';
 
-class RegisterPsychologist extends StatefulWidget {
-  const RegisterPsychologist({Key? key}) : super(key: key);
+class UpdatePsychologist extends StatefulWidget {
+  final Psychologist psychologist;
+  const UpdatePsychologist({Key? key, required this.psychologist})
+      : super(key: key);
 
   @override
-  _RegisterPsychologistState createState() => _RegisterPsychologistState();
+  _UpdatePsychologistState createState() => _UpdatePsychologistState();
 }
 
-class _RegisterPsychologistState extends State<RegisterPsychologist> {
-
+class _UpdatePsychologistState extends State<UpdatePsychologist> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   GlobalKey<FormState> globalFormKey = new GlobalKey<FormState>();
   bool hidePassword = true;
@@ -21,19 +22,29 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
   TextEditingController cpfController = new TextEditingController();
   TextEditingController birthDateController = new TextEditingController();
   TextEditingController emailController = new TextEditingController();
-  TextEditingController passwordController = new TextEditingController();
 
-  register() {
+  update() async {
     var service = PsychologistService();
     var model = Psychologist(
-        name: nameController.text,
-        cpf: cpfController.text,
-        birthDate: birthDateController.text,
-        email: emailController.text,
-        password: passwordController.text);
+      name: nameController.text,
+      cpf: cpfController.text,
+      birthDate: birthDateController.text,
+      email: emailController.text,
+    );
     print(model);
-    var token = service.registerPsychologist(model);
+    var token = await service.update(widget.psychologist.id!, model);
     print(token);
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => PsychologistList()));
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    nameController.text = widget.psychologist.name!;
+    cpfController.text = widget.psychologist.cpf!;
+    birthDateController.text = widget.psychologist.birthDate!;
+    emailController.text = widget.psychologist.email!;
   }
 
   @override
@@ -48,7 +59,7 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
               Container(
                 child: Align(
                   alignment: Alignment.center,
-                  child: Text("FRITE",
+                  child: Text("Psicólogo",
                       style: TextStyle(
                         color: Theme.of(context).primaryColor,
                         fontSize: 40.0,
@@ -86,7 +97,7 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                             controller: nameController,
                             keyboardType: TextInputType.name,
                             decoration: new InputDecoration(
-                              hintText: "Insira seu nome",
+                              hintText: "Insira o nome",
                               enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
                                       color: Theme.of(context)
@@ -102,11 +113,10 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                         // CPF
                         SizedBox(height: 20),
                         new TextFormField(
-                            validator: (value) => formValidator(value),
                             controller: cpfController,
                             keyboardType: TextInputType.name,
                             decoration: new InputDecoration(
-                              hintText: "Insira seu CPF",
+                              hintText: "Insira o CPF",
                               enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
                                       color: Theme.of(context)
@@ -122,8 +132,7 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
 
                         // BIRTH DATE
                         SizedBox(height: 20),
-                          new TextFormField(
-                          validator: (value) => formValidator(value),
+                        new TextFormField(
                           controller: birthDateController,
                           keyboardType: TextInputType.datetime,
                           decoration: new InputDecoration(
@@ -140,35 +149,33 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                                 color: Theme.of(context).accentColor),
                           ),
                           onTap: () async {
-                            FocusScope.of(context).requestFocus(new FocusNode());
+                            FocusScope.of(context)
+                                .requestFocus(new FocusNode());
                             DateTime? date = DateTime(1900);
                             date = await showDatePicker(
-                              context: context, 
-                              
-                              initialDate:DateTime.now(),
-                              firstDate:DateTime(1900),
-                              lastDate: DateTime(2100)
-                            );
+                                context: context,
+                                initialDate: DateTime.now(),
+                                firstDate: DateTime(1900),
+                                lastDate: DateTime(2100));
                             if (date == null) {
                               date = DateTime.now();
-                              birthDateController.text = "${date.year}-${date.month}-${date.day}";
+                              birthDateController.text =
+                                  "${date.year}-${date.month}-${date.day}";
+                            } else {
+                              birthDateController.text =
+                                  "${date.year}-${date.month}-${date.day}";
                             }
-                            else {
-                              birthDateController.text = "${date.year}-${date.month}-${date.day}";
-                            }
-                            
                           },
                         ),
 
                         // EMAIL
                         SizedBox(height: 20),
                         new TextFormField(
-                          validator: (value) => formValidator(value),
                           controller: emailController,
                           keyboardType: TextInputType.emailAddress,
                           //validator: (input)=> !input.contains("@") ? "Email should be valid" : null,
                           decoration: new InputDecoration(
-                            hintText: "Insira seu email",
+                            hintText: "Insira o email",
                             enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
                                     color: Theme.of(context)
@@ -182,42 +189,6 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                           ),
                         ),
 
-                        // PASSWORD
-                        SizedBox(height: 20),
-                        new TextFormField(
-                          validator: (value) => formValidator(value),
-                          controller: passwordController,
-                          keyboardType: TextInputType.text,
-                          // validator: (input)=> input.length < 3 ? "Password invalid" : null,
-                          obscureText: hidePassword,
-                          decoration: new InputDecoration(
-                            hintText: "Insira sua senha",
-                            enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Theme.of(context)
-                                        .accentColor
-                                        .withOpacity(0.2))),
-                            focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Theme.of(context).accentColor)),
-                            prefixIcon: Icon(Icons.password,
-                                color: Theme.of(context).accentColor),
-                            suffixIcon: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  hidePassword = !hidePassword;
-                                });
-                              },
-                              color: Theme.of(context)
-                                  .accentColor
-                                  .withOpacity(0.4),
-                              icon: Icon(hidePassword
-                                  ? Icons.visibility_off
-                                  : Icons.visibility),
-                            ),
-                          ),
-                        ),
-
                         // SAVE BUTTON
                         SizedBox(height: 30),
                         TextButton(
@@ -227,15 +198,10 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                             padding: EdgeInsets.symmetric(
                                 vertical: 12, horizontal: 68),
                           ),
-                          onPressed: ()  {
+                          onPressed: () {
                             if (globalFormKey.currentState!.validate()) {
-                              register();
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginPage()));
+                              update();
                             }
-                            
                           },
                           child: Text("Salvar",
                               style: TextStyle(color: Colors.white)),

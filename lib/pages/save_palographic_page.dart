@@ -1,13 +1,11 @@
-import 'dart:io' as io;
-
 import 'package:flutter/material.dart';
 import 'package:frite/models/examining.dart';
-import 'package:frite/models/palographic.dart';
 import 'package:frite/models/psychologist.dart';
 import 'package:frite/pages/main_menu.dart';
 import 'package:frite/services/examining_service.dart';
 import 'package:frite/services/palographic_service.dart';
 import 'package:frite/services/psychologist_service.dart';
+import 'package:frite/utils/utils.dart';
 import 'package:image_picker/image_picker.dart';
 
 class RegisterPalographic extends StatefulWidget {
@@ -21,10 +19,17 @@ class _RegisterPalographicState extends State<RegisterPalographic> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   GlobalKey<FormState> globalFormKey = new GlobalKey<FormState>();
 
-  final schooling = ['Fundamental', 'Ensino Médio', 'Graduação', 'Mestrado', 'Doutorado', 'Pós-Doutorado'];
+  final schooling = [
+    'Fundamental',
+    'Ensino Médio',
+    'Graduação',
+    'Mestrado',
+    'Doutorado',
+    'Pós-Doutorado'
+  ];
   String? _currentSchooling = 'Fundamental';
 
-  late XFile _image;
+  XFile? _image;
 
   Future _getImage() async {
     var image = await ImagePicker().pickImage(source: ImageSource.gallery);
@@ -32,10 +37,9 @@ class _RegisterPalographicState extends State<RegisterPalographic> {
       _image = image!;
     });
   }
- 
 
   List<Examining> examining = [];
-  late Examining _currentExamining;
+  Examining? _currentExamining;
 
   getExaminingList() async {
     List<Examining> list = await ExaminingService.findAll();
@@ -47,7 +51,7 @@ class _RegisterPalographicState extends State<RegisterPalographic> {
   }
 
   List<Psychologist> psychologist = [];
-  late Psychologist _currentPsychologist;
+  Psychologist? _currentPsychologist;
 
   getPsychologistList() async {
     List<Psychologist> list = await PsychologistService.findAll();
@@ -63,15 +67,13 @@ class _RegisterPalographicState extends State<RegisterPalographic> {
     super.initState();
     getExaminingList();
     getPsychologistList();
-  }  
+  }
 
   TextEditingController birthDateController = new TextEditingController();
 
   register() {
-    PalographicService.createPalographic(
-      _image, _currentExamining, _currentPsychologist, 
-      birthDateController.text, _currentSchooling
-    );
+    PalographicService.createPalographic(_image!, _currentExamining!,
+        _currentPsychologist!, birthDateController.text, _currentSchooling);
   }
 
   @override
@@ -119,94 +121,105 @@ class _RegisterPalographicState extends State<RegisterPalographic> {
                       SizedBox(height: 20),
                       new DropdownButtonFormField<Examining>(
                         decoration: new InputDecoration(
-                            labelText: "Escolha o examinado",
-                            enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Theme.of(context)
-                                        .accentColor
-                                        .withOpacity(0.2))),
-                            focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Theme.of(context).accentColor)),
-                            prefixIcon: Icon(Icons.person,
-                                color: Theme.of(context).accentColor),
+                          labelText: "Escolha o examinado",
+                          enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Theme.of(context)
+                                      .accentColor
+                                      .withOpacity(0.2))),
+                          focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Theme.of(context).accentColor)),
+                          prefixIcon: Icon(Icons.person,
+                              color: Theme.of(context).accentColor),
                         ),
-                        items: examining.map((map) => 
-                          DropdownMenuItem(
-                            child: Text(map.name!),
-                            value: map,
-                          ),
-                        ).toList(),
+                        items: examining
+                            .map(
+                              (map) => DropdownMenuItem(
+                                child: Text(map.name!),
+                                value: map,
+                              ),
+                            )
+                            .toList(),
                         value: _currentExamining,
                         onChanged: (val) {
                           setState(() {
                             _currentExamining = val!;
                             print(_currentExamining);
                           });
-                        } ,
+                        },
                       ),
 
                       // PSICOLOGO
                       SizedBox(height: 20),
                       new DropdownButtonFormField<Psychologist>(
                         decoration: new InputDecoration(
-                            labelText: "Escolha o psicólogo",
-                            enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Theme.of(context)
-                                        .accentColor
-                                        .withOpacity(0.2))),
-                            focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Theme.of(context).accentColor)),
-                            prefixIcon: Icon(Icons.health_and_safety,
-                                color: Theme.of(context).accentColor),
+                          labelText: "Escolha o psicólogo",
+                          enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Theme.of(context)
+                                      .accentColor
+                                      .withOpacity(0.2))),
+                          focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Theme.of(context).accentColor)),
+                          prefixIcon: Icon(Icons.health_and_safety,
+                              color: Theme.of(context).accentColor),
                         ),
-                        items: psychologist.map((map) => 
-                          DropdownMenuItem(
-                            child: Text(map.name!),
-                            value: map,
-                          ),
-                        ).toList(),
+                        items: psychologist
+                            .map(
+                              (map) => DropdownMenuItem(
+                                child: Text(map.name!),
+                                value: map,
+                              ),
+                            )
+                            .toList(),
                         value: _currentPsychologist,
                         onChanged: (val) {
                           setState(() {
                             _currentPsychologist = val!;
                             print(_currentPsychologist);
                           });
-                        } ,
+                        },
                       ),
 
                       // BIRTH DATE
-                        SizedBox(height: 20),
-                        new TextFormField(
-                          controller: birthDateController,
-                          keyboardType: TextInputType.datetime,
-                          decoration: new InputDecoration(
-                            hintText: "Insira a data do teste",
-                            enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Theme.of(context)
-                                        .accentColor
-                                        .withOpacity(0.2))),
-                            focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Theme.of(context).accentColor)),
-                            prefixIcon: Icon(Icons.calendar_today_rounded,
-                                color: Theme.of(context).accentColor),
-                          ),
-                          onTap: () async {
-                            FocusScope.of(context).requestFocus(new FocusNode());
-                            DateTime? date = DateTime(1900);
-                            date = await showDatePicker(
-                              context: context, 
-                              initialDate:DateTime.now(),
-                              firstDate:DateTime(1900),
-                              lastDate: DateTime(2100)
-                            );
-                            birthDateController.text = "${date?.year}-${date?.month}-${date?.day}";
-                          },
+                      SizedBox(height: 20),
+                      new TextFormField(
+                        validator: (value) => formValidator(value),
+                        controller: birthDateController,
+                        keyboardType: TextInputType.datetime,
+                        decoration: new InputDecoration(
+                          hintText: "Insira a data do teste",
+                          enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Theme.of(context)
+                                      .accentColor
+                                      .withOpacity(0.2))),
+                          focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Theme.of(context).accentColor)),
+                          prefixIcon: Icon(Icons.calendar_today_rounded,
+                              color: Theme.of(context).accentColor),
                         ),
+                        onTap: () async {
+                          FocusScope.of(context).requestFocus(new FocusNode());
+                          DateTime? date = DateTime(1900);
+                          date = await showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(1900),
+                              lastDate: DateTime(2100));
+                          if (date == null) {
+                            date = DateTime.now();
+                            birthDateController.text =
+                                "${date.year}-${date.month}-${date.day}";
+                          } else {
+                            birthDateController.text =
+                                "${date.year}-${date.month}-${date.day}";
+                          }
+                        },
+                      ),
                       // SCHOOLING
                       SizedBox(height: 20),
                       new DropdownButtonFormField<String>(
@@ -234,29 +247,31 @@ class _RegisterPalographicState extends State<RegisterPalographic> {
                           setState(() {
                             _currentSchooling = val;
                           });
-                        } ,
+                        },
                       ),
 
                       SizedBox(height: 20),
                       new TextButton(
-                        style: TextButton.styleFrom(
-                          backgroundColor: Colors.orangeAccent,
-                          // shape: StadiumBorder(),
-                          padding: EdgeInsets.symmetric(
-                              vertical: 12, horizontal: 68),
-                        ),
-                        onPressed: _getImage,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(Icons.camera_alt, color: Colors.white),
-                            Text("Selecione a foto", style: TextStyle(color: Colors.white),)
-                          ],
-                        )
-                      ),
+                          style: TextButton.styleFrom(
+                            backgroundColor: Colors.orangeAccent,
+                            // shape: StadiumBorder(),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 12, horizontal: 68),
+                          ),
+                          onPressed: _getImage,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.camera_alt, color: Colors.white),
+                              Text(
+                                "Selecione a foto",
+                                style: TextStyle(color: Colors.white),
+                              )
+                            ],
+                          )),
 
-                    // SAVE BUTTON
+                      // SAVE BUTTON
                       SizedBox(height: 30),
                       TextButton(
                         style: TextButton.styleFrom(
@@ -265,15 +280,21 @@ class _RegisterPalographicState extends State<RegisterPalographic> {
                           padding: EdgeInsets.symmetric(
                               vertical: 12, horizontal: 68),
                         ),
-                        onPressed: ()  {
+                        onPressed: () {
                           if (globalFormKey.currentState!.validate()) {
-                            register();
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => MainMenu()));
+                            if (_image == null) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                    content: Text('Palográfico não enviado')),
+                              );
+                            } else {
+                              register();
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => MainMenu()));
+                            }
                           }
-                          
                         },
                         child: Text("Salvar",
                             style: TextStyle(color: Colors.white)),
@@ -282,5 +303,4 @@ class _RegisterPalographicState extends State<RegisterPalographic> {
           ])
         ])));
   }
-
 }

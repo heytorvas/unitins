@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frite/models/palographic.dart';
+import 'package:frite/pages/palographic_list.dart';
+import 'package:frite/services/palographic_service.dart';
 
 class PalographicTile extends StatefulWidget {
   final Palographic palographic;
@@ -10,6 +12,12 @@ class PalographicTile extends StatefulWidget {
 }
 
 class _PalographicTileState extends State<PalographicTile> {
+  delete() async {
+    await PalographicService.delete(widget.palographic.id!);
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => PalographicList()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -41,44 +49,40 @@ class _PalographicTileState extends State<PalographicTile> {
         );
       },
       trailing: Container(
-        width: 100,
-        child: Row(
-          children: <Widget>[
-            IconButton(
-              icon: Icon(Icons.edit),
-              color: Colors.orange,
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(Icons.delete),
-              color: Colors.red,
-              onPressed: () {
-                showDialog(
-                  context: context, 
-                  builder: (ctx) => AlertDialog(
-                    title: Text('Excluir Palográfico'),
-                    content: Text('Tem certeza?'),
-                    actions: <Widget>[
-                      TextButton(
-                        onPressed: () => Navigator.of(context).pop(false), 
-                        child: Text('Não'),
-                      ),
-                      TextButton(
-                        onPressed: () => Navigator.of(context).pop(true), 
-                        child: Text('Sim'),
-                      ),
-                    ],
-                  )
-                ).then((confirmed) {
-                  if (confirmed) {
-                    print('F');
-                  }
-                });
-              },
-            )
-          ],
-        ),
-      ) 
+          width: 50,
+          child: Row(
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.delete),
+                color: Colors.red,
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (ctx) => AlertDialog(
+                            title: Text('Excluir Palográfico'),
+                            content: Text('Tem certeza?'),
+                            actions: <Widget>[
+                              TextButton(
+                                onPressed: () =>
+                                    Navigator.of(context).pop(false),
+                                child: Text('Não'),
+                              ),
+                              TextButton(
+                                onPressed: () =>
+                                    Navigator.of(context).pop(true),
+                                child: Text('Sim'),
+                              ),
+                            ],
+                          )).then((confirmed) {
+                    if (confirmed) {
+                      delete();
+                    }
+                  });
+                },
+              )
+            ],
+          ),
+        )
     ); 
   }
 }

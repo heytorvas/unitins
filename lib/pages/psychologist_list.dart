@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:frite/components/psy_tile.dart';
-import 'package:frite/components/psychologist_tile.dart';
 import 'package:frite/models/psychologist.dart';
-import 'package:frite/pages/save_psychologist_page.dart';
 import 'package:frite/services/psychologist_service.dart';
+import 'package:frite/utils/utils.dart';
 
 class PsychologistList extends StatefulWidget {
   const PsychologistList({ Key? key }) : super(key: key);
@@ -37,6 +36,7 @@ class _PsychologistListState extends State<PsychologistList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: appBar(context),
       key: scaffoldKey,
       backgroundColor: Theme.of(context).accentColor,
       body: ListView.builder(
@@ -47,17 +47,17 @@ class _PsychologistListState extends State<PsychologistList> {
             ),
             
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) =>
-                    RegisterPsychologist()));
-        },
-        child: const Icon(Icons.add, color: Colors.red),
-        backgroundColor: Colors.white,
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     Navigator.push(
+      //       context,
+      //       MaterialPageRoute(
+      //           builder: (context) =>
+      //               RegisterPsychologist()));
+      //   },
+      //   child: const Icon(Icons.add, color: Colors.red),
+      //   backgroundColor: Colors.white,
+      // ),
     );
   }
 }

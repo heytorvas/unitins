@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frite/models/psychologist.dart';
 import 'package:frite/pages/psychologist_list.dart';
+import 'package:frite/pages/update_psychologist_page.dart';
 import 'package:frite/services/psychologist_service.dart';
 
 class PsyTile extends StatefulWidget {
@@ -58,7 +59,10 @@ class _PsyTileState extends State<PsyTile> {
             IconButton(
               icon: Icon(Icons.edit),
               color: Colors.orange,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => UpdatePsychologist(psychologist: widget.psychologist)));
+              },
             ),
             IconButton(
               icon: Icon(Icons.delete),

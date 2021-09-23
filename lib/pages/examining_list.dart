@@ -3,6 +3,7 @@ import 'package:frite/components/examining_tile.dart';
 import 'package:frite/models/examining.dart';
 import 'package:frite/pages/save_examining_page.dart';
 import 'package:frite/services/examining_service.dart';
+import 'package:frite/utils/utils.dart';
 
 class ExaminingList extends StatefulWidget {
   const ExaminingList({ Key? key }) : super(key: key);
@@ -34,6 +35,7 @@ class _ExaminingListState extends State<ExaminingList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: appBar(context),
       key: scaffoldKey,
       backgroundColor: Theme.of(context).accentColor,
       body: ListView.builder(

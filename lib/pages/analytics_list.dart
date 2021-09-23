@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:frite/components/analytics_tile.dart';
 import 'package:frite/models/analytics.dart';
 import 'package:frite/services/analytics_service.dart';
+import 'package:frite/utils/utils.dart';
 
 class AnalyticsList extends StatefulWidget {
   const AnalyticsList({ Key? key }) : super(key: key);
@@ -27,14 +28,13 @@ class _AnalyticsListState extends State<AnalyticsList> {
     super.initState();
     getAnalyticsList();
   } 
-
-  @override
-  GlobalKey<FormState> globalFormKey = new GlobalKey<FormState>();
+  
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: appBar(context),
       key: scaffoldKey,
       backgroundColor: Theme.of(context).accentColor,
       body: ListView.builder(

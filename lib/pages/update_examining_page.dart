@@ -1,38 +1,57 @@
 import 'package:flutter/material.dart';
-import 'package:frite/models/psychologist.dart';
-import 'package:frite/pages/login_page.dart';
-import 'package:frite/services/psychologist_service.dart';
+import 'package:frite/models/examining.dart';
+import 'package:frite/pages/examining_list.dart';
+import 'package:frite/services/examining_service.dart';
 import 'package:frite/utils/utils.dart';
 
-class RegisterPsychologist extends StatefulWidget {
-  const RegisterPsychologist({Key? key}) : super(key: key);
+class UpdateExamining extends StatefulWidget {
+  final Examining examining;
+  const UpdateExamining({ Key? key, required this.examining }) : super(key: key);
 
   @override
-  _RegisterPsychologistState createState() => _RegisterPsychologistState();
+  _UpdateExaminingState createState() => _UpdateExaminingState();
 }
 
-class _RegisterPsychologistState extends State<RegisterPsychologist> {
-
+class _UpdateExaminingState extends State<UpdateExamining> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   GlobalKey<FormState> globalFormKey = new GlobalKey<FormState>();
-  bool hidePassword = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _currentGender = widget.examining.gender;
+    _currentSchooling = widget.examining.schooling;
+    nameController.text = widget.examining.name!;
+    cpfController.text = widget.examining.cpf!;
+    birthDateController.text = widget.examining.birthDate!;
+    cityController.text = widget.examining.city!;
+    stateController.text = widget.examining.state!;
+  }
+
+  final genders = ['Feminino', 'Masculino'];
+  String? _currentGender = 'Feminino';
+
+  final schooling = ['Fundamental', 'Ensino Médio', 'Graduação', 'Mestrado', 'Doutorado', 'Pós-Doutorado'];
+  String? _currentSchooling = 'Fundamental';
 
   TextEditingController nameController = new TextEditingController();
   TextEditingController cpfController = new TextEditingController();
   TextEditingController birthDateController = new TextEditingController();
-  TextEditingController emailController = new TextEditingController();
-  TextEditingController passwordController = new TextEditingController();
+  TextEditingController cityController = new TextEditingController();
+  TextEditingController stateController = new TextEditingController();
 
-  register() {
-    var service = PsychologistService();
-    var model = Psychologist(
+  update() {
+    var model = Examining(
         name: nameController.text,
         cpf: cpfController.text,
         birthDate: birthDateController.text,
-        email: emailController.text,
-        password: passwordController.text);
+        city: cityController.text,
+        state: stateController.text,
+        gender: _currentGender,
+        schooling: _currentSchooling
+    );
     print(model);
-    var token = service.registerPsychologist(model);
+    var token = ExaminingService.update(widget.examining.id!, model);
     print(token);
   }
 
@@ -76,7 +95,7 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                     child: Column(
                       children: <Widget>[
                         SizedBox(height: 25),
-                        Text("Psicólogo",
+                        Text("Examinado",
                             style: Theme.of(context).textTheme.headline2),
 
                         // NAME
@@ -86,7 +105,7 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                             controller: nameController,
                             keyboardType: TextInputType.name,
                             decoration: new InputDecoration(
-                              hintText: "Insira seu nome",
+                              hintText: "Insira o nome",
                               enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
                                       color: Theme.of(context)
@@ -106,7 +125,7 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                             controller: cpfController,
                             keyboardType: TextInputType.name,
                             decoration: new InputDecoration(
-                              hintText: "Insira seu CPF",
+                              hintText: "Insira o CPF",
                               enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
                                       color: Theme.of(context)
@@ -122,8 +141,7 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
 
                         // BIRTH DATE
                         SizedBox(height: 20),
-                          new TextFormField(
-                          validator: (value) => formValidator(value),
+                        new TextFormField(
                           controller: birthDateController,
                           keyboardType: TextInputType.datetime,
                           decoration: new InputDecoration(
@@ -144,31 +162,22 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                             DateTime? date = DateTime(1900);
                             date = await showDatePicker(
                               context: context, 
-                              
                               initialDate:DateTime.now(),
                               firstDate:DateTime(1900),
                               lastDate: DateTime(2100)
                             );
-                            if (date == null) {
-                              date = DateTime.now();
-                              birthDateController.text = "${date.year}-${date.month}-${date.day}";
-                            }
-                            else {
-                              birthDateController.text = "${date.year}-${date.month}-${date.day}";
-                            }
-                            
+                            birthDateController.text = "${date?.year}-${date?.month}-${date?.day}";
                           },
                         ),
 
-                        // EMAIL
+                        // CITY
                         SizedBox(height: 20),
                         new TextFormField(
                           validator: (value) => formValidator(value),
-                          controller: emailController,
-                          keyboardType: TextInputType.emailAddress,
-                          //validator: (input)=> !input.contains("@") ? "Email should be valid" : null,
+                          controller: cityController,
+                          keyboardType: TextInputType.text,
                           decoration: new InputDecoration(
-                            hintText: "Insira seu email",
+                            hintText: "Insira a cidade",
                             enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
                                     color: Theme.of(context)
@@ -177,21 +186,64 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                             focusedBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
                                     color: Theme.of(context).accentColor)),
-                            prefixIcon: Icon(Icons.email,
+                            prefixIcon: Icon(Icons.location_city,
+                                color: Theme.of(context).accentColor),
+                          )),
+
+                        // STATE
+                        SizedBox(height: 20),
+                        new TextFormField(
+                          validator: (value) => formValidator(value),
+                          controller: stateController,
+                          keyboardType: TextInputType.text,
+                          decoration: new InputDecoration(
+                            hintText: "Insira o estado",
+                            enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Theme.of(context)
+                                        .accentColor
+                                        .withOpacity(0.2))),
+                            focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Theme.of(context).accentColor)),
+                            prefixIcon: Icon(Icons.map,
+                                color: Theme.of(context).accentColor),
+                          )),
+
+                        // GENDER
+                        SizedBox(height: 20),
+                        new DropdownButtonFormField<String>(
+                          decoration: new InputDecoration(
+                            enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Theme.of(context)
+                                        .accentColor
+                                        .withOpacity(0.2))),
+                            focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Theme.of(context).accentColor)),
+                            prefixIcon: Icon(Icons.people,
                                 color: Theme.of(context).accentColor),
                           ),
+                          value: _currentGender,
+                          items: genders.map((gender) {
+                            return DropdownMenuItem(
+                              value: gender,
+                              child: Text('$gender'),
+                            );
+                          }).toList(),
+                          onChanged: (val) {
+                            setState(() {
+                              _currentGender = val;
+                            });
+                          } ,
                         ),
 
-                        // PASSWORD
+
+                        // SCHOOLING
                         SizedBox(height: 20),
-                        new TextFormField(
-                          validator: (value) => formValidator(value),
-                          controller: passwordController,
-                          keyboardType: TextInputType.text,
-                          // validator: (input)=> input.length < 3 ? "Password invalid" : null,
-                          obscureText: hidePassword,
+                        new DropdownButtonFormField<String>(
                           decoration: new InputDecoration(
-                            hintText: "Insira sua senha",
                             enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
                                     color: Theme.of(context)
@@ -200,22 +252,21 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                             focusedBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
                                     color: Theme.of(context).accentColor)),
-                            prefixIcon: Icon(Icons.password,
+                            prefixIcon: Icon(Icons.school,
                                 color: Theme.of(context).accentColor),
-                            suffixIcon: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  hidePassword = !hidePassword;
-                                });
-                              },
-                              color: Theme.of(context)
-                                  .accentColor
-                                  .withOpacity(0.4),
-                              icon: Icon(hidePassword
-                                  ? Icons.visibility_off
-                                  : Icons.visibility),
-                            ),
                           ),
+                          value: _currentSchooling,
+                          items: schooling.map((schooling) {
+                            return DropdownMenuItem(
+                              value: schooling,
+                              child: Text('$schooling'),
+                            );
+                          }).toList(),
+                          onChanged: (val) {
+                            setState(() {
+                              _currentSchooling = val;
+                            });
+                          } ,
                         ),
 
                         // SAVE BUTTON
@@ -227,15 +278,15 @@ class _RegisterPsychologistState extends State<RegisterPsychologist> {
                             padding: EdgeInsets.symmetric(
                                 vertical: 12, horizontal: 68),
                           ),
-                          onPressed: ()  {
+                          onPressed: ()  async {
                             if (globalFormKey.currentState!.validate()) {
-                              register();
+                              await update();
+                              
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => LoginPage()));
+                                    builder: (context) => ExaminingList()));
                             }
-                            
                           },
                           child: Text("Salvar",
                               style: TextStyle(color: Colors.white)),

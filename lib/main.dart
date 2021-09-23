@@ -2,8 +2,6 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:frite/pages/login_page.dart';
-import 'package:frite/pages/save_examining_page.dart';
-import 'package:frite/pages/save_palographic_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +26,6 @@ class MyApp extends StatelessWidget {
           bodyText1: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w400, color: Colors.redAccent)
         ),
       ),
-      //home: RegisterPalographic(),
       home: LoginPage(),
     );
   }

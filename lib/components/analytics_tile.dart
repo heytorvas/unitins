@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frite/models/analytics.dart';
+import 'package:frite/pages/analytics_list.dart';
+import 'package:frite/services/analytics_service.dart';
 import 'package:frite/utils/const.dart';
 
 class AnalyticsTile extends StatefulWidget {
@@ -16,11 +18,17 @@ class _AnalyticsTileState extends State<AnalyticsTile> {
     return '$API_IMAGE/media/images/$fileName';
   }
 
+  delete() async {
+    await AnalyticsService.delete(widget.analytics.id!);
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => AnalyticsList()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListTile(
         title: Text(widget.analytics.examining!.name!),
-        subtitle: Text(widget.analytics.psychologist!.name!),
+        subtitle: Text("Psicólogo: ${widget.analytics.psychologist!.name!}"),
         onTap: () {
           showDialog(
               context: context,
@@ -71,14 +79,9 @@ class _AnalyticsTileState extends State<AnalyticsTile> {
                   ));
         },
         trailing: Container(
-          width: 100,
+          width: 50,
           child: Row(
             children: <Widget>[
-              IconButton(
-                icon: Icon(Icons.edit),
-                color: Colors.orange,
-                onPressed: () {},
-              ),
               IconButton(
                 icon: Icon(Icons.delete),
                 color: Colors.red,
@@ -102,7 +105,7 @@ class _AnalyticsTileState extends State<AnalyticsTile> {
                             ],
                           )).then((confirmed) {
                     if (confirmed) {
-                      print('F');
+                      delete();
                     }
                   });
                 },

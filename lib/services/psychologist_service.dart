@@ -20,6 +20,17 @@ class PsychologistService {
     return lists;
   }
 
+  update(int id, Psychologist psychologist) async {
+    Dio dio = Dio();
+    var token = await MyApp.storage.read(key: 'jwt');
+    print(token);
+    dio.options.headers['Authorization'] = 'Bearer $token';
+    print(psychologist.toJsonPass());
+    var response = await dio.patch("$API/psychologist/$id/", data: psychologist.toJsonPass());
+    print(response);
+    return response.statusCode;
+  }
+
   static delete(int? id) async {
     Dio dio = Dio();
     var token = await MyApp.storage.read(key: 'jwt');

@@ -20,4 +20,14 @@ class AnalyticsService {
     
     return lists;
   }
+
+  static delete(int id) async {
+    Dio dio = Dio();
+    var token = await MyApp.storage.read(key: 'jwt');
+    print(token);
+    dio.options.headers['Authorization'] = 'Bearer $token';
+    var response = await dio.delete("$API/analysis/$id/");
+    print(response);
+    return response.statusCode;
+  }
 }

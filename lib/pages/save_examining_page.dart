@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frite/models/examining.dart';
 import 'package:frite/pages/examining_list.dart';
-import 'package:frite/pages/main_menu.dart';
 import 'package:frite/services/examining_service.dart';
 import 'package:frite/utils/utils.dart';
 
@@ -41,6 +40,7 @@ class _RegisterExaminingState extends State<RegisterExamining> {
       );
     print(model);
     var token = service.registerExamining(model);
+    print(token);
   }
 
 
@@ -131,6 +131,7 @@ class _RegisterExaminingState extends State<RegisterExamining> {
                         // BIRTH DATE
                         SizedBox(height: 20),
                         new TextFormField(
+                          validator: (value) => formValidator(value),
                           controller: birthDateController,
                           keyboardType: TextInputType.datetime,
                           decoration: new InputDecoration(
@@ -155,7 +156,13 @@ class _RegisterExaminingState extends State<RegisterExamining> {
                               firstDate:DateTime(1900),
                               lastDate: DateTime(2100)
                             );
-                            birthDateController.text = "${date?.year}-${date?.month}-${date?.day}";
+                            if (date == null) {
+                              date = DateTime.now();
+                              birthDateController.text = "${date.year}-${date.month}-${date.day}";
+                            }
+                            else {
+                              birthDateController.text = "${date.year}-${date.month}-${date.day}";
+                            }
                           },
                         ),
 
