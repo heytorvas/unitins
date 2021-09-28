@@ -12,6 +12,10 @@ def set_intervals(palographic_test):
 			intervals_list.append(intervals)
 			intervals = []
 
+	for i in intervals_list:
+		if not i:
+			intervals_list.remove(i)
+
 	return intervals_list
 
 def set_plot_yield(intervals_list):
@@ -108,7 +112,7 @@ def get_distance_between_palos(intervals_list):
 		initial = interval[0]
 		for palo in range(len(interval)):
 			if interval[palo].is_last_row == True:
-				distance = calculate_distance(initial.cX, initial.cY, interval[palo].cX, interval[palo].cY)
+				distance = calculate_distance(initial.centroid_x, initial.centroid_y, interval[palo].centroid_x, interval[palo].centroid_y)
 				# print(interval[palo].roi)
 				# print('initial: ', initial.__dict__)
 				# print('final: ', interval[palo].__dict__)
@@ -120,7 +124,7 @@ def get_distance_between_palos(intervals_list):
 					break
 				
 			if interval[palo] == interval[len(interval)-1]:
-				distance = calculate_distance(initial.cX, initial.cY, interval[palo].cX, interval[palo].cY)
+				distance = calculate_distance(initial.centroid_x, initial.centroid_y, interval[palo].centroid_x, interval[palo].centroid_y)
 				# print(interval[palo].roi)
 				# print('initial: ', initial.__dict__)
 				# print('final: ', interval[palo].__dict__)

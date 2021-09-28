@@ -77,7 +77,7 @@ def crop_image(path):
         return aux[2]
 
     middle_line = max(rect_list, key=middle)
-    crop_line = middle_line[1] + middle_line[3]-15
+    crop_line = middle_line[1] + middle_line[3]
     crop_image = image[crop_line:height, 0:width]
 
     ########### BLANK SPACE ###########

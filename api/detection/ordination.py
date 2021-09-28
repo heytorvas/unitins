@@ -101,7 +101,7 @@ def set_ordination(img_path):
 
                 cX, cY = set_centroid_rectangle(xb, yb, (xb + wb), (yb + hb))
                 
-                p = Palo(index, xb, yb, wb, hb, calculate_area(wb, hb), cX, cY, xb + wb, yb + hb, calculate_distance(0,0, cX, cY), calculate_distance(cX, cY, 0, cY), calculate_distance(cX, cY, img.shape[1], cY), None, None)
+                p = Palo(index, None, xb, yb, wb, hb, calculate_area(wb, hb), cX, cY, None, None)
                 if bboxes[len(bboxes)-1] == box:
                     p.is_last_row = True
                 else:

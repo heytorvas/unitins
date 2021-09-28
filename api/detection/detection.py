@@ -1,6 +1,7 @@
 from detection.scanner.scanner import DocScanner
 from detection.image import resize_image, crop_image_header_footer, crop_image
-from detection.ordination import set_ordination
+#from detection.ordination import set_ordination
+from detection.ordering import set_ordination
 from detection.analytics import *
 from detection.util import calculate_nor
 
@@ -36,6 +37,7 @@ def main(path):
     print('\nPRODUTIVIDADE: ', total_palos, '\n')
 
     intervals_list = set_intervals(palographic_test)
+    print(intervals_list)
     dist_palo = get_distance_between_palos(intervals_list)
     print('E/5: ', dist_palo, '\n')
 
