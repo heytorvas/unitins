@@ -6,8 +6,8 @@ from api.models import Person
 class Examining(Person):
     city = models.CharField(max_length=30)
     state = models.CharField(max_length=2)
-    gender = models.IntegerField()
-    schooling = models.IntegerField()
+    gender = models.CharField(max_length=10)
+    schooling = models.CharField(max_length=30)
     
     class Meta:
         verbose_name = 'examining'

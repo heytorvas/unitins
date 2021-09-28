@@ -9,7 +9,7 @@ class Palographic(Base):
     examining = models.ForeignKey(Examining, related_name='palographic_examining', on_delete=models.CASCADE)
     psychologist = models.ForeignKey(Psychologist, related_name='palographic_psychologist', on_delete=models.CASCADE)
     test_date = models.DateField()
-    schooling = models.IntegerField()
+    schooling = models.CharField(max_length=30)
     test = models.ImageField(upload_to='images/', blank=True, null=True)
 
     class Meta:

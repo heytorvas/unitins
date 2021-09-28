@@ -18,8 +18,8 @@ URL = 'http://localhost:8000/api/v1'
 
 def get_token():
     data = {
-        "email": "admin@admin.com",
-        "password": "admin"
+        "email": "heytor@heytor.com",
+        "password": "heytor"
     }
     r = requests.post(f'{URL}/login/', data=data)
     return r.json()['token']
