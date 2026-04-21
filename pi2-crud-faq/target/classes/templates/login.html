@@ -1,0 +1,57 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Projeto Integrador II | Log in</title>
+    <div th:replace="fragments/header :: header-css"></div>
+    <div th:replace="fragments/header :: header-js"></div>
+</head>
+<body class="login-page" style="min-height: 512.391px;">
+<div class="login-box">
+    <div class="login-logo">
+        <a href="index.html"><b>Projeto</b>Integrador</a>
+    </div>
+    <div class="card">
+        <div class="card-body login-card-body">
+            <p class="login-box-msg">Realize o login para continuar</p>
+
+            <form action="index.html" method="post" th:action="@{/login}">
+                <div class="input-group mb-3">
+                    <label for="username"></label>
+                    <input class="form-control" id="username" name="username" placeholder="Login" type="text"/>
+                </div>
+                <div class="input-group mb-3">
+                    <label for="password"></label>
+                    <input class="form-control" id="password" name="password" placeholder="Senha" type="password">
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="icheck-primary">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">
+                                Lembrar-me
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                    </div>
+                </div>
+            </form>
+
+            <p class="mb-1">
+                <a href="/forgot">Esqueci minha senha</a><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+
+</body>
+</html>

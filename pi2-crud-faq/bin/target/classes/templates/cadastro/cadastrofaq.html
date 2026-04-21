@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>FAQ</title>
+
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet"
+	href="/materialize/css/materialize.min.css" media="screen,projection" />
+
+<!--Import materialize.min.css-->
+<link type="text/css" rel="stylesheet"
+	href="/materialize/css/materialize.min.css" media="screen,projection" />
+
+</head>
+<body>
+
+	<h1>Tela de Cadastro de FAQ</h1>
+	<h6>Spring Boot + Thymeleaf + Materialize CSS</h6>
+	<br />
+	<br />
+
+	<div class="row">
+		<form action="salvarfaq" id="formfaq" method="post"
+			th:object="${faq_obj}" class="col s12">
+			<!-- post igual como foi mapeado -->
+
+			<div class="row">
+				<div class="input-field col s2">
+					<label for="id" class="active">ID: </label> <input name="id"
+						th:field="*{id}" id="id" readonly="readonly" class="validate">
+				</div>
+				<div class="input-field col s6">
+					<label for="pergunta" class="active"> Pergunta: </label> <input name="pergunta"
+						th:field="*{pergunta}" id="pergunta" class="validate">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="resposta" class="active"> Resposta: </label> <input
+						name="resposta" th:field="*{resposta}" id="resposta" class="validate">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s6">
+					<input class="waves-effect waves-light btn" type="submit"
+						value="Salvar">
+
+					<button class="waves-effect waves-light btn"
+						onclick="document.getElementById('formfaq').reset();">
+						Limpar</button>
+				</div>
+			</div>
+
+		</form>
+	</div>
+
+	<br />
+	<br />
+
+	<div class="row">
+		<form action="pesquisarfaq" method="post" class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="nomepesquisa" class="active"> Pesquisar por
+						pergunta: </label> <input name="nomepesquisa" id="nomepesquisa"
+						class="validate"> <input
+						class="waves-effect waves-light btn" type="submit"
+						value="Pesquisar"> <a class="waves-effect waves-light btn"
+						href="/listafaq"> Lista de Perguntas </a>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<table class="striped">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Pergunta</th>
+				<th>Resposta</th>
+				<th>Editar</th>
+				<th>Excluir</th>
+			</tr>
+		</thead>
+
+		<tr th:each="faq : ${faq}">
+
+			<td th:text="${faq.id}"></td>
+			<td th:text="${faq.pergunta}"></td>
+			<td th:text="${faq.resposta}"></td>
+			<td><a
+				th:href="@{/editarfaq/{id_faq}(id_faq=${faq.id})}">
+					Editar </a></td>
+			<td><a
+				th:href="@{/removerfaq/{id_faq}(id_faq=${faq.id})}">
+					Excluir </a></td>
+		</tr>
+
+	</table>
+
+	<!--JavaScript at end of body for optimized loading-->
+	<script type="text/javascript" src="/materialize/js/materialize.js"></script>
+	<script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
+
+</body>
+</html>

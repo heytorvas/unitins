@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="br">
+<head>
+<title>Projeto Integrador II</title>
+<div th:replace="fragments/header :: header-css"></div>
+<div th:replace="fragments/header :: header-js"></div>
+</head>
+<body class="hold-transition sidebar-mini">
+	<div class="wrapper">
+		<div th:replace="fragments/header :: header"></div>
+		<div th:replace="fragments/sidebar :: sidebar"></div>
+		<div class="content-wrapper">
+			<div class="content-header">
+				<div class="container-fluid">
+					<div class="row mb-2">
+						<div class="col-sm-6">
+							<h1 class="m-0 text-dark">
+								FAQ <small>Cadastro de Perguntas Frequentes</small>
+							</h1>
+						</div>
+						<div class="col-sm-6">
+							<ol class="breadcrumb float-sm-right">
+								<li class="breadcrumb-item"><a href="#">Inicio</a></li>
+								<li class="breadcrumb-item active">FAQ</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="content">
+				<div class="container-fluid">
+
+
+					<div class="row">
+						<form action="salvarfaq" id="formfaq" method="post"
+							th:object="${faq_obj}" class="col-md-12">
+							<!-- post igual como foi mapeado -->
+
+							<div class="row">
+								<div class="col-md-2">
+									<label for="id" class="active">ID: </label>
+								</div>
+								<div class="col-md-6">
+									<input name="id" th:field="*{id}" id="id" readonly="readonly" class="validate">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-2">
+									<label for="pergunta" class="active"> Pergunta: </label>
+								</div>
+								<div class="col-md-9">
+									<input name="pergunta" th:field="*{pergunta}" id="pergunta" class="validate form-control">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-2">
+									<label for="resposta" class="active"> Resposta: </label>
+								</div>
+								<div class="col-md-9">
+									<textarea name="resposta" th:field="*{resposta}" id="resposta" class="validate form-control" />
+								</div>
+							</div>
+							
+							<br /> 
+
+							<div class="row">
+								<div class="col-md-12">
+									<input class="btn btn-primary" type="submit"
+										value="Salvar"> <a
+										class="btn btn-secondary" href="/listafaq">Limpar
+									</a>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<br /> <br />
+
+					<div class="row">
+						<form action="pesquisarfaq" method="post" class="col s12">
+							<div class="row">
+								<div class="col-md-2">
+									<label for="nomepesquisa" class="active"> Pesquisar por
+										pergunta: </label>
+								</div>
+								<div class="col-md-9">
+									<input name="nomepesquisa" id="nomepesquisa"
+										class="validate form-control">
+								</div>
+								<div class="col-md-1">
+									 <input class="btn btn-info" type="submit" value="Pesquisar">
+								</div>
+							</div>
+						</form>
+					</div>
+					
+					<br />
+
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Pergunta</th>
+								<th>Resposta</th>
+								<th>Editar</th>
+								<th>Excluir</th>
+							</tr>
+						</thead>
+
+						<tr th:each="faq : ${faq}">
+
+							<td th:text="${faq.id}"></td>
+							<td th:text="${faq.pergunta}"></td>
+							<td th:text="${faq.resposta}"></td>
+							<td><a th:href="@{/editarfaq/{id_faq}(id_faq=${faq.id})}">
+									Editar </a></td>
+							<td><a th:href="@{/removerfaq/{id_faq}(id_faq=${faq.id})}">
+									Excluir </a></td>
+						</tr>
+
+					</table>
+
+
+				</div>
+			</div>
+		</div>
+		<div th:replace="fragments/sidebar :: sidebar-control"></div>
+		<div th:replace="fragments/footer :: footer"></div>
+	</div>
+</body>
+</html>
