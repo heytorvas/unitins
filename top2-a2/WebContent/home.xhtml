@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:jsf="http://java.sun.com/jsf/">
+
+<h:head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	<title>CRUD</title>
+</h:head>
+
+<h:body>
+
+	<header class="o-header">
+		<div class="box navbar navbar-inverse header">
+			<h1>CRUD</h1>
+		</div>
+	</header>
+
+	<aside class="o-aside">
+		<div class="box sidebar" style="text-align: center;">
+			<ui:insert name="menu">
+				<h:form>
+					<hr />
+					<center>
+						<h:panelGrid columns="11">
+							<p:menubar activeIndex="#{param.i}">
+								<p:menuitem value="Home" outcome="home">
+									<f:param name="i" value="0" />
+								</p:menuitem>
+								<p:menuitem value="Aluno"
+									outcome="aluno">
+									<f:param name="i" value="1" />
+								</p:menuitem>
+								<p:menuitem value="Professor"
+									outcome="professor">
+									<f:param name="i" value="2" />
+								</p:menuitem>
+								<p:menuitem value="Disciplina" outcome="disciplina">
+									<f:param name="i" value="3" />
+								</p:menuitem>
+								<p:menuitem value="Período" outcome="periodo">
+									<f:param name="i" value="4" />
+								</p:menuitem>
+								<p:menuitem value="Instituição" outcome="instituicao">
+									<f:param name="i" value="5" />
+								</p:menuitem>
+								<p:menuitem value="Curso" outcome="curso">
+									<f:param name="i" value="6" />
+								</p:menuitem>
+								<p:menuitem value="Semestre" outcome="semestre">
+									<f:param name="i" value="7" />
+								</p:menuitem>
+								<p:menuitem value="Matriz" outcome="matriz-curricular">
+									<f:param name="i" value="8" />
+								</p:menuitem>
+								<p:menuitem value="Disciplina Ofertada" outcome="disciplinaofertada">
+									<f:param name="i" value="9" />
+								</p:menuitem>
+								<p:menuitem value="Frequencia" outcome="frequencia">
+									<f:param name="i" value="10" />
+								</p:menuitem>
+								<p:menuitem value="Nota" outcome="nota">
+									<f:param name="i" value="11" />
+								</p:menuitem>
+								<p:menuitem value="Matricula" outcome="matricula">
+									<f:param name="i" value="12" />
+								</p:menuitem>
+							</p:menubar>
+						</h:panelGrid>
+
+					</center>
+					<hr />
+				</h:form>
+			</ui:insert>
+		</div>
+	</aside>
+
+	<main class="o-main"> <br />
+	<ui:insert name="main">
+		<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Donec non blandit ipsum. Vestibulum neque diam, congue vel turpis
+			eget, vehicula rhoncus magna. Lorem ipsum dolor sit amet, consectetur
+			adipiscing elit. Praesent rhoncus posuere purus. Donec auctor, est et
+			sodales vulputate, sapien tortor congue erat, nec finibus mauris
+			ligula vel nulla. In bibendum arcu id placerat ullamcorper. Duis sit
+			amet risus et mauris posuere aliquet at quis risus. Curabitur mattis
+			nulla in blandit dignissim.</h3>
+		<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Donec non blandit ipsum. Vestibulum neque diam, congue vel turpis
+			eget, vehicula rhoncus magna. Lorem ipsum dolor sit amet, consectetur
+			adipiscing elit. Praesent rhoncus posuere purus. Donec auctor, est et
+			sodales vulputate, sapien tortor congue erat, nec finibus mauris
+			ligula vel nulla. In bibendum arcu id placerat ullamcorper. Duis sit
+			amet risus et mauris posuere aliquet at quis risus. Curabitur mattis
+			nulla in blandit dignissim.</h3>
+		<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Donec non blandit ipsum. Vestibulum neque diam, congue vel turpis
+			eget, vehicula rhoncus magna. Lorem ipsum dolor sit amet, consectetur
+			adipiscing elit. Praesent rhoncus posuere purus. Donec auctor, est et
+			sodales vulputate, sapien tortor congue erat, nec finibus mauris
+			ligula vel nulla. In bibendum arcu id placerat ullamcorper. Duis sit
+			amet risus et mauris posuere aliquet at quis risus. Curabitur mattis
+			nulla in blandit dignissim.</h3>
+	</ui:insert> </main>
+
+	<footer class="o-footer">
+		<hr />
+		<div class="box footer" style="text-align: center;">
+			<h:outputText value="2019 - HVAS - All rights reserved." />
+		</div>
+
+	</footer>
+
+
+</h:body>
+
+</html>

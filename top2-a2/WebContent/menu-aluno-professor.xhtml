@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition template="/home.xhtml">
+	<ui:define name="main">
+		<h:form id="form1">
+
+			<center>
+				<aside>
+				<div>
+					<ui:insert name="menu">
+						<h:form>
+							<h:panelGrid columns="2">
+								<p:menubar activeIndex="#{param.i}">
+									<p:menuitem value="Aluno" outcome="aluno">
+										<f:param name="i" value="1" />
+									</p:menuitem>
+									<p:menuitem value="Professor" outcome="professor">
+										<f:param name="i" value="2" />
+									</p:menuitem>
+								</p:menubar>
+							</h:panelGrid>
+
+						</h:form>
+					</ui:insert>
+				</div>
+				</aside>
+			</center>
+
+		</h:form>
+
+	</ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition template="/home.xhtml">
+	<ui:define name="main">
+		<h:form id="form1">
+			<p:panel header="Pesquisa">
+				<p:panelGrid columns="3">
+		    		ID:
+		    		<p:inputText value="#{disciplinaBean.idPesquisa}" />
+					<p:commandButton value="Pesquisar"
+						action="#{disciplinaBean.pesquisar}" update="form1" />
+
+				</p:panelGrid>
+			</p:panel>
+			<br />
+			<p:panel header="Cadastro">
+				<p:panelGrid columns="2">
+	   
+		    		ID:
+		   			<p:outputLabel value="#{disciplinaBean.disciplina.id}" />
+		   			
+		   			CÓDIGO:
+		   			<p:inputText value="#{disciplinaBean.disciplina.codigo}" />
+		   			
+		   			NOME:
+		    		<p:inputText value="#{disciplinaBean.disciplina.nome}" />
+	
+	        		CARGA HORÁRIA:
+		    		<p:inputText value="#{disciplinaBean.disciplina.ch}" />
+
+				</p:panelGrid>
+
+				<br />
+				<p:commandButton value="Incluir" action="#{disciplinaBean.insert}"
+					update="form1,data1" />
+
+				<p:commandButton value="Alterar" action="#{disciplinaBean.update}"
+					update="form1,data1" />
+
+				<p:commandButton value="Deletar" action="#{disciplinaBean.delete}"
+					update="form1,data1" />
+
+				<p:commandButton value="Limpar" action="#{disciplinaBean.clean}"
+					update="form1" />
+
+				<p:messages />
+			</p:panel>
+		</h:form>
+
+		<br />
+
+		<p:dataTable id="data1" var="pe" value="#{disciplinaBean.disciplinas}">
+			<f:facet name="header">
+           DISCIPLINAS
+            </f:facet>
+			<p:column headerText="ID">
+				<h:outputText value="#{pe.id}" />
+			</p:column>
+
+			<p:column headerText="CÓDIGO">
+				<h:outputText value="#{pe.codigo}" />
+			</p:column>
+
+			<p:column headerText="NOME">
+				<h:outputText value="#{pe.nome}" />
+			</p:column>
+
+			<p:column headerText="CARGA HORÁRIA">
+				<h:outputText value="#{pe.ch}" />
+			</p:column>
+
+		</p:dataTable>
+	</ui:define>
+</ui:composition>
+</html>
