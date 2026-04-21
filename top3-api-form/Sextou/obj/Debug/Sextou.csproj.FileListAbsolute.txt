@@ -1,0 +1,9 @@
+C:\Users\Heytor\source\repos\Sextou\Sextou\bin\Debug\Sextou.exe.config
+C:\Users\Heytor\source\repos\Sextou\Sextou\bin\Debug\Sextou.exe
+C:\Users\Heytor\source\repos\Sextou\Sextou\bin\Debug\Sextou.pdb
+C:\Users\Heytor\source\repos\Sextou\Sextou\obj\Debug\Sextou.csprojAssemblyReference.cache
+C:\Users\Heytor\source\repos\Sextou\Sextou\obj\Debug\Sextou.Form1.resources
+C:\Users\Heytor\source\repos\Sextou\Sextou\obj\Debug\Sextou.Properties.Resources.resources
+C:\Users\Heytor\source\repos\Sextou\Sextou\obj\Debug\Sextou.csproj.GenerateResource.cache
+C:\Users\Heytor\source\repos\Sextou\Sextou\obj\Debug\Sextou.exe
+C:\Users\Heytor\source\repos\Sextou\Sextou\obj\Debug\Sextou.pdb
