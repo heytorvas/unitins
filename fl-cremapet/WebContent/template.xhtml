@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:jsf="http://java.sun.com/jsf/">
+
+<h:head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	<title>CremaPet</title>
+	<h:outputStylesheet library="css" name="template.css" />
+	<h:outputStylesheet library="css" name="mdb.min.css" />
+	<link rel="stylesheet" href="resources/css/template.css" />
+	<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+
+</h:head>
+
+<h:body>
+
+	<body>
+
+		<div id="wrapper">
+			<!-- Sidebar -->
+			<div id="sidebar-wrapper">
+				<ui:insert name="menu">
+					<h:form>
+						<ul class="sidebar-nav">
+							<li><h:commandLink class="botao"
+									disabled="#{templateController.usuarioLogado.perfil.value == 2 || templateController.usuarioLogado.perfil.value == 1}">
+									<span style="font-size: 3.5rem;">CREMAPET</span>
+								</h:commandLink></li>
+							<li><h:commandLink class="botao"
+									disabled="#{templateController.usuarioLogado.perfil.value == 2 || templateController.usuarioLogado.perfil.value == 1}">
+									<span style="font-size: 2.5rem;">Olá,
+										#{templateController.usuarioLogado.nome}!</span>
+								</h:commandLink></li>
+							<li><h:commandLink class="botao"
+									disabled="#{templateController.usuarioLogado.perfil.value == 2}"
+									actionListener="#{templateController.redirectUsuario()}">
+									<i></i>
+									<span>Cadastro de Usuário</span>
+								</h:commandLink></li>
+							<li><h:commandLink class="botao"
+									actionListener="#{templateController.redirectCliente()}">
+									<i></i>
+									<span>Cadastro de Cliente</span>
+								</h:commandLink></li>
+							<li><h:commandLink class="botao"
+									actionListener="#{templateController.redirectPet()}">
+									<i></i>
+									<span>Cadastro de Pet</span>
+								</h:commandLink></li>
+							<li><h:commandLink class="botao"
+									actionListener="#{templateController.redirectServico()}">
+									<i></i>
+									<span>Cadastro de Serviço</span>
+								</h:commandLink></li>
+							<li><h:commandLink class="botao"
+									actionListener="#{templateController.redirectVenda()}">
+									<i></i>
+									<span>Venda</span>
+								</h:commandLink></li>
+							<li><h:commandLink class="botao" id="qtd"
+									actionListener="#{templateController.redirectCarrinho()}">
+									<i></i>
+									<span>Carrinho</span>
+								</h:commandLink></li>
+							<li><h:commandLink class="botao"
+									actionListener="#{templateController.redirectHistorico()}">
+									<i></i>
+									<span>Histórico de Vendas</span>
+								</h:commandLink></li>
+							<li><h:commandLink class="botao"
+									action="#{templateController.encerrarSessao()}">
+									<i></i>
+									<span>Sair</span>
+								</h:commandLink></li>
+						</ul>
+
+					</h:form>
+				</ui:insert>
+
+			</div>
+			<!-- /#sidebar-wrapper -->
+
+			<!-- Page Content -->
+			<div id="page-content-wrapper">
+				<ui:insert name="conteudo">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-12">
+								<h1>Hello World!</h1>
+							</div>
+						</div>
+					</div>
+				</ui:insert>
+
+			</div>
+			<!-- /#page-content-wrapper -->
+		</div>
+		<!-- /#wrapper -->
+	</body>
+</h:body>
+</html>

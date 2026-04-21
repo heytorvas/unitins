@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<ui:composition template="template.xhtml">
+	<ui:define name="conteudo">
+		<div class="container d-flex justify-content-center mt-5">
+			<div class="row justify-content-md-center">
+				<div class="col-md-5">
+					<h:form id="formPrincipal"
+						styleClass="text-center border border-light p-5">
+						<div class="form-row">
+							<h:messages id="messages" infoStyle="color:green"
+								warnStyle="color:orange" errorStyle="color:red"
+								globalOnly="false" />
+							<h:panelGrid id="panelPrincipal" styleClass="form-row mb-4"
+								columns="1">
+								<h4 class="font-weight-bold">Cadastro de Serviço</h4>
+								<h:panelGrid columns="2">
+
+									<h:panelGrid columns="1" class="mr-2 ">
+										<h:outputLabel value="Descrição: " />
+										<h:inputText id="inputDescricao"
+											value="#{servicoController.servico.descricao}"
+											styleClass="form-control form-control-lg pr-5 mr-5" />
+									</h:panelGrid>
+
+									<h:panelGrid columns="1" class="mr-2 ">
+										<h:outputLabel value="Valor: " />
+										<h:inputText id="inputValor"
+											value="#{servicoController.servico.valor}"
+											styleClass="form-control form-control-lg pr-5 mr-5" />
+									</h:panelGrid>
+
+
+								</h:panelGrid>
+								<br />
+							</h:panelGrid>
+							<br />
+							<h:panelGrid class="text-center" id="panelBotoes" columns="4"
+								style="width: 400px;">
+								<h:commandButton value="Incluir"
+									disabled="#{servicoController.servico.id != null}"
+									actionListener="#{servicoController.incluir()}">
+									<f:ajax render="formPrincipal" execute="panelPrincipal"
+										resetValues="true" />
+								</h:commandButton>
+
+								<h:commandButton value="Alterar"
+									disabled="#{servicoController.servico.id == null}"
+									actionListener="#{servicoController.alterar()}">
+									<f:ajax render="formPrincipal messages" execute="formPrincipal" />
+								</h:commandButton>
+
+								<h:commandButton value="Excluir"
+									disabled="#{servicoController.servico.id == null}"
+									actionListener="#{servicoController.excluir()}">
+									<f:ajax render="@all" execute="@this" />
+								</h:commandButton>
+
+								<h:commandButton value="Limpar"
+									action="#{servicoController.limpar()}">
+									<f:ajax render="formPrincipal inputDescricao inputValor"
+										execute="@this" />
+								</h:commandButton>
+							</h:panelGrid>
+						</div>
+					</h:form>
+				</div>
+				<div class="col-md-7">
+					<div class="datatable-row">
+						<h:form>
+							<h4 class="font-weight-bold">Infos</h4>
+							
+							<br />
+
+
+							<h:panelGrid id="panelForm" columns="1">
+
+
+								<h:panelGrid columns="2" class="mr-2 ">
+									<h:outputLabel value="Serviço: " />
+									<h:inputText value="#{servicoController.descricao}"
+										styleClass="form-control form-control-lg pr-5 mr-5" />
+								</h:panelGrid>
+
+								<br />
+
+								<h:panelGrid columns="1" class="mr-2 ">
+									<h:commandButton value="Pesquisar"
+										actionListener="#{servicoController.pesquisar}">
+										<f:ajax execute="panelForm" render="@all" />
+									</h:commandButton>
+								</h:panelGrid>
+
+							</h:panelGrid>
+
+							<br />
+							
+							<h:panelGrid id="panelDataTable">
+								<h:dataTable id="dataTable"
+									value="#{servicoController.listaServicoPesquisa()}" var="obj"
+									styleClass="table" headerClass="table-header"
+									rowClasses="table-odd-row, table-even-row">
+									<h:column>
+										<f:facet name="header">Id</f:facet>
+										<h:outputLabel value="#{obj.id}" />
+									</h:column>
+									<h:column>
+										<f:facet name="header">Descrição</f:facet>
+										<h:commandLink value="#{obj.descricao}" style="color: black;"
+											actionListener="#{servicoController.editar(obj)}">
+											<f:ajax
+												render="formPrincipal:panelPrincipal formPrincipal:panelBotoes"
+												execute="formPrincipal:dataTable" />
+										</h:commandLink>
+									</h:column>
+									<h:column>
+										<f:facet name="header">Valor</f:facet>
+										<h:outputLabel value="#{obj.valor}" />
+									</h:column>
+								</h:dataTable>
+							</h:panelGrid>
+						</h:form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,143 @@
+/* =( Layout )=
+--------------------------------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+}
+
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+body {
+  overflow-x: hidden;
+}
+
+/* Toggle Styles */
+#wrapper {
+  padding-left: 0;
+}
+#wrapper #sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 50px;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: black;
+}
+#wrapper #sidebar-wrapper .sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#wrapper #sidebar-wrapper .sidebar-nav .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+#wrapper #sidebar-wrapper .sidebar-nav .sidebar-brand .botao {
+  color: #999999;
+}
+#wrapper #sidebar-wrapper .sidebar-nav .sidebar-brand .botao:hover {
+  color: #fff;
+  background: none;
+}
+#wrapper #sidebar-wrapper .sidebar-nav li .botao {
+  width: 250px;
+  display: block;
+  text-decoration: none;
+  color: #999999;
+  padding: 10px 15px;
+}
+#wrapper #sidebar-wrapper .sidebar-nav li .botao:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+#wrapper #sidebar-wrapper .sidebar-nav li .botao span {
+  display: none;
+}
+#wrapper #page-content-wrapper {
+  margin-left: 50px;
+  width: calc(100% - 50px);
+  position: absolute;
+  padding: 15px;
+}
+#wrapper.toggled {
+  padding-left: 250px;
+}
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+#wrapper.toggled #sidebar-wrapper .sidebar-nav li .botao span {
+  display: inline;
+  margin-left: 15px;
+}
+#wrapper.toggled #page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  margin-right: -250px;
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #wrapper {
+    padding-left: 250px;
+  }
+  #wrapper #sidebar-wrapper {
+    width: 250px;
+  }
+  #wrapper #sidebar-wrapper .sidebar-nav li .botao span {
+    display: inline;
+    margin-left: 15px;
+  }
+  #wrapper #page-content-wrapper {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    margin-left: 0;
+  }
+  #wrapper.toggled {
+    padding-left: 50px;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 50px;
+  }
+  #wrapper.toggled #sidebar-wrapper .sidebar-nav li .botao {
+    width: inherit;
+  }
+  #wrapper.toggled #sidebar-wrapper .sidebar-nav li .botao span {
+    display: none;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
+/* =( Commons )=
+--------------------------------------------------------------------------- */
+.fa-2x {
+  font-size: 1.8rem;
+}
+

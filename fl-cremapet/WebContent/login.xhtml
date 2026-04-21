@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf/"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<title>Login</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<h:outputStylesheet library="css" name="login.css" />
+	<link rel="stylesheet" href="resources/css/login.css" />
+</h:head>
+<body>
+	<h:body>
+		<div class="login">
+
+			<div class="login-triangle"></div>
+
+			<h2 class="login-header">LOGIN</h2>
+
+			<form class="login-container">
+				<h:form>
+					<h:panelGrid columns="1">
+
+						<h:inputText class="input inputEmail" type="email"
+							pt:placeholder="Email" value="#{loginController.usuario.login}" />
+
+						<h:inputSecret class="input inputSenha" type="password"
+							pt:placeholder="Senha" value="#{loginController.usuario.senha}" />
+
+						<h:commandButton class="input inputBotao" type="submit"
+							value="Entrar" action="#{loginController.logar()}" />
+
+					</h:panelGrid>
+				</h:form>
+
+			</form>
+		</div>
+	</h:body>
+</body>
+
+</html>
