@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:jsf="http://java.sun.com/jsf/">
+
+<h:head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	<title>Movie Theater System</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<h:outputStylesheet library="css" name="template.css" />
+
+
+</h:head>
+
+<h:body>
+
+	<header class="o-header">
+		<div class="box navbar navbar-inverse header">
+			<h1>Movie Theater System</h1>
+			<div style="text-align: center;">
+				<h:form>
+					<h:outputLabel
+						value="Hello, #{templateController.usuarioLogado.nome}!" />
+					<h:commandLink value=" (Logout)"
+						action="#{templateController.encerrarSessao}" style="color:white" />
+				</h:form>
+			</div>
+
+		</div>
+	</header>
+
+	<aside class="o-aside">
+		<div class="box sidebar" style="text-align: center;">
+			<ui:insert name="menu">
+				<h:form>
+					<hr />
+					<center>
+						<h:panelGrid columns="5">
+							<h:commandButton value="User Register"
+								disabled="#{templateController.usuarioLogado.perfil.value == 1}"
+								class="button"
+								action="#{templateController.redirecionar('/CrudCinema/faces/pages/usuario2.xhtml')}" />
+							<h:commandButton value="Movie Register"
+								disabled="#{templateController.usuarioLogado.perfil.value == 1}"
+								class="button"
+								action="#{templateController.redirecionar('/CrudCinema/faces/pages/servico.xhtml')}" />
+							<h:commandButton value="Box Office" class="button"
+								action="#{templateController.redirecionar('/CrudCinema/faces/pages/vendaservico.xhtml')}" />
+							<h:commandButton
+								value="Cart (#{templateController.qtdItensCarrinho})"
+								class="button"
+								action="#{templateController.redirecionar('/CrudCinema/faces/pages/carrinho.xhtml')}" />
+							<h:commandButton value="Sale History" class="button"
+								action="#{templateController.redirecionar('/CrudCinema/faces/pages/historico.xhtml')}" />
+
+						</h:panelGrid>
+					</center>
+					<hr />
+				</h:form>
+			</ui:insert>
+		</div>
+	</aside>
+
+	<main class="o-main"> <br />
+	<ui:insert name="conteudo">
+		<div class="container">
+			<center>
+				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Donec non blandit ipsum. Vestibulum neque diam, congue vel turpis
+					eget, vehicula rhoncus magna. Lorem ipsum dolor sit amet,
+					consectetur adipiscing elit. Praesent rhoncus posuere purus. Donec
+					auctor, est et sodales vulputate, sapien tortor congue erat, nec
+					finibus mauris ligula vel nulla. In bibendum arcu id placerat
+					ullamcorper. Duis sit amet risus et mauris posuere aliquet at quis
+					risus. Curabitur mattis nulla in blandit dignissim.</h3>
+				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Donec non blandit ipsum. Vestibulum neque diam, congue vel turpis
+					eget, vehicula rhoncus magna. Lorem ipsum dolor sit amet,
+					consectetur adipiscing elit. Praesent rhoncus posuere purus. Donec
+					auctor, est et sodales vulputate, sapien tortor congue erat, nec
+					finibus mauris ligula vel nulla. In bibendum arcu id placerat
+					ullamcorper. Duis sit amet risus et mauris posuere aliquet at quis
+					risus. Curabitur mattis nulla in blandit dignissim.</h3>
+				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Donec non blandit ipsum. Vestibulum neque diam, congue vel turpis
+					eget, vehicula rhoncus magna. Lorem ipsum dolor sit amet,
+					consectetur adipiscing elit. Praesent rhoncus posuere purus. Donec
+					auctor, est et sodales vulputate, sapien tortor congue erat, nec
+					finibus mauris ligula vel nulla. In bibendum arcu id placerat
+					ullamcorper. Duis sit amet risus et mauris posuere aliquet at quis
+					risus. Curabitur mattis nulla in blandit dignissim.</h3>
+
+			</center>
+		</div>
+	</ui:insert> </main>
+
+	<footer class="o-footer">
+		<hr />
+		<div class="box footer" style="text-align: center;">
+			<h:outputText value="2019 - HVAS - All rights reserved." />
+		</div>
+
+	</footer>
+
+
+</h:body>
+</html>

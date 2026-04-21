@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<ui:composition template="../template.xhtml">
+	<ui:define name="conteudo">
+
+
+		<div class="container">
+
+			<div class="navbar navbar-inverse">
+				<div class="navbar-brand navbar-movie">Sale
+					History</div>
+			</div>
+
+
+			<h:form styleClass="form-horizontal">
+				<div class="md-3">
+					<h:dataTable value="#{historicoController.listaVenda}" var="obj"
+						styleClass="table table-striped table-hover">
+						
+						<h:column>
+							<f:facet name="header">Id</f:facet>
+							<h:outputLabel value="#{obj.id}" />
+						</h:column>
+
+						<h:column>
+							<f:facet name="header">Date</f:facet>
+							<h:outputLabel value="#{obj.data}">
+								<f:convertDateTime type="localDate" pattern="dd-MM-yyyy" />
+							</h:outputLabel>
+						</h:column>
+
+						<h:column>
+							<f:facet name="header">Customer</f:facet>
+							<h:outputLabel value="#{obj.cliente}" />
+						</h:column>
+
+						<h:column>
+							<f:facet name="header">Total Sale</f:facet>
+							<h:outputLabel value="#{obj.totalVenda}">
+								<f:convertNumber locale="pt_BR" currencySymbol="R$"
+									type="currency" />
+							</h:outputLabel>
+						</h:column>
+
+
+						<h:column>
+							<f:facet name="header">Action</f:facet>
+							<h:commandButton value="Details ..."
+								actionListener="#{historicoController.detalhes(obj)}">
+								<f:ajax execute="@this" render="@none" />
+							</h:commandButton>
+						</h:column>
+
+
+					</h:dataTable>
+
+				</div>
+			</h:form>
+
+		</div>
+
+	</ui:define>
+</ui:composition>
+
+</html>
