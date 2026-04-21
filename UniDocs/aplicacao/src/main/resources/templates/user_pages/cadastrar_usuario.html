@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Unidocs</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+	<h1>Cadastrar Usuario</h1>
+
+	<form method="post" th:object="${usuario}"
+		th:action="@{/usuarios/cadastrar_usuario}">
+
+		<div th:if="${#fields.hasAnyErrors()}">
+			<div th:each="erro: ${#fields.detailedErrors()}">
+				<span th:text="${erro.message}">Mensagem Erro [1]</span>
+			</div>
+		</div>
+
+		<div th:if="${!#strings.isEmpty(mensagem)}">
+			<span th:text="${mensagem}">Mensagem Sucesso</span>
+		</div>
+
+		
+		<label for=nome>Nome:</label> 
+		<input id="nome" type="text"
+			th:field="*{nome}" /> <br></br> 
+		
+		<label for=email>Email:</label>
+		<input id="email" th:field="*{email}" type="email"
+			pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" /> <br></br> 
+			
+		<label for=senha>Senha:</label> 
+		<input id="senha" type="password"
+			th:field="*{senha}" /> <br></br> 
+			
+		<label for=cpf>CPF:</label> 
+		<input id="cpf" type="text"
+			th:field="*{cpf}" /> <br></br> 
+			
+		<label for=matricula>Matricula:</label> 
+		<input id="matricula" type="text"
+			th:field="*{matricula}" /> <br></br> 
+			
+		<button type="submit">Salvar</button>
+	</form>
+
+	<h1>Listar Usuários</h1>
+
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>NOME</th>
+			<th>EMAIL</th>
+			<th>SENHA</th>
+			<th>CPF</th>
+			<th>MATRICULA</th>
+		</tr>
+		<tr th:each="usuario : ${lista}">
+			<td th:text="${usuario.id}">1</td>
+			<td th:text="${usuario.nome}">Teste</td>
+			<td th:text="${usuario.email}">teste@teste.com</td>
+			<td th:text="${usuario.senha}">teste123</td>
+			<td th:text="${usuario.cpf}">98765432146</td>
+			<td th:text="${usuario.matricula}">10101010</td>
+			<td>
+				<form method="POST"
+					th:action="@{/usuarios/editar_usuario/{id}(id=${usuario.id})}">
+					<button type="submit">Editar</button>
+				</form>
+			</td>
+			<td>
+				<form method="POST"
+					th:action="@{/usuarios/excluir_usuario/{id}(id=${usuario.id})}">
+					<button type="submit">Deletar</button>
+				</form>
+			</td>
+		</tr>
+	</table>
+	<br></br>
+
+	<br></br>
+
+	<a href="../../index.html">Index</a>
+	
+<script type="text/javascript" th:src="@{/js/jquery-1.2.6.pack.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery.maskedinput-1.1.4.pack.js}"/></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#cpf").mask("999.999.999-99");
+	});
+</script>
+	
+</body>
+</html>
