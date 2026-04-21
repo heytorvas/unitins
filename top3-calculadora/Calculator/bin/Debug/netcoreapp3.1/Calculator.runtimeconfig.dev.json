@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Heytor\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Heytor\\.nuget\\packages"
+    ]
+  }
+}
