@@ -1,0 +1,9 @@
+- login / senha (while, if)
+- menu (while, switch case = cadastrar, 		consultar, alterar, deletar)
+
+funcionario cadastra o cliente e cria usuario e senha pro cliente para poder acessar o seu menu
+
+
+
+
+			
