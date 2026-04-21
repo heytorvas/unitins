@@ -1,0 +1,122 @@
+@startuml
+
+class Person {
+    name : String
+    'nome da pessoa
+    cpf : String
+    'cpf da pessoa
+    birth_date: Date
+    'data de nascimento da pessoa
+}
+
+class Psychologist {
+    email : String
+    'email da pessoa
+    password : String
+    'senha da pessoa
+}
+
+class Examining {
+    
+}
+
+enum Schooling {
+    ELEMENTARY_SCHOOL : int
+    MIDDLE_SCHOOL : int
+    HIGH_SCHOOL : int
+    BACHELORS_DEGREE : int
+    MASTERS_DEGREE : int
+    DOCTORATE : int
+    POST_DOCTORAL : int
+}
+
+class City {
+    name : String
+}
+
+class State {
+    name : String
+    uf : String
+}
+
+class Row {
+    ' número da linha
+    number : int
+    ' distancia da proxima linha do lado esquerdo
+    distance_to_next_row_left : int
+    ' distancia da proxima linha do lado esquerdo
+    distance_to_next_row_right : int
+    margin_left : int
+    margin_right : int
+    angle : int
+}
+
+enum Gender {
+    FEMALE : int
+    MALE : int
+}
+
+class Palo {
+    size : int
+    angle : int
+    ' maior que 90: direita | menor que 90: esquerda | = 90: reto
+}
+
+enum Hook {
+    NONE : int
+    LEFT : int
+    RIGHT : int
+}
+
+class Interval {
+    amount_palo : int
+    distance_between_palos : int
+}
+
+class Palographic {
+    amount_row : int
+    amount_palo : int
+    application_date : Date
+    first_palo_margin_top_right_row : int
+    last_palo_margin_top_left_row : int
+    ' distance_between_test_line_to_first_palo
+    ' distance_between_test_line_to_last_palo
+    margin_top_left : int
+    margin_top_right : int 
+}
+
+class Base {
+    id : int
+    create_date : Date
+}
+
+note top of Base
+Todas as classes herdam de Base.
+(Por questão de melhor visualização,
+os relacionamentos de herança para
+esta classe não foram aplicadas)
+end note
+
+Person "*" --> "1" City : "natureless"
+Person "1" <-- "1" Psychologist
+Person "1" <-- "1" Examining
+
+Examining "*" --> "1" Gender
+Examining "*" --> "1" Schooling
+
+Palographic "*" o-down-> "1" Examining
+Palographic "*" o-down-> "1" Psychologist
+Palographic "1" o-down-> "*" Interval
+Palographic "1" *-down-> "*" Row
+Palographic "*" --> "1" Schooling : "examining_schooling"
+
+Interval "1" *--> "1" Palo : "major_palo"
+Interval "1" *--> "1" Palo : "minor_palo"
+Interval "1" *-down-> "*" Palo
+
+City "*" --> "1" State
+
+Palo "*" --> "1" Hook : "top"
+Palo "*" --> "1" Hook : "bottom"
+
+@enduml
