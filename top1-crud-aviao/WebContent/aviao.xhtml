@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<title>Cadastro de Companhia Aérea</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<h:outputStylesheet library="css" name="style.css" />
+</h:head>
+
+<h:body>
+	<div class="form">
+		<h1>Cadastro</h1>
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Cia. Aérea</h3>
+				<h:form>
+					<h:panelGrid columns="2">
+
+						<h:outputLabel value="Id:  " />
+						<h:inputText value="#{empresaController.empresa.id}"
+							disabled="#{empresaController.empresa.id != null}" />
+
+						<h:outputLabel value="Nome: " />
+						<h:inputText value="#{empresaController.empresa.nome}" />
+
+						<h:outputLabel value="Ano de Fundação:  " />
+						<h:inputText value="#{empresaController.empresa.anoFundacao}" />
+
+						<h:outputLabel value="Sede:  " />
+						<h:inputText value="#{empresaController.empresa.sede}" />
+
+					</h:panelGrid>
+					<h:panelGrid columns="4">
+						<h:commandButton class="btn-block" value="Incluir"
+							disabled="#{empresaController.empresa.id != null}"
+							actionListener="#{empresaController.incluir}" />
+						<h:commandButton class="btn-block" value="Alterar"
+							disabled="#{empresaController.empresa.id == null}"
+							actionListener="#{empresaController.alterar}" />
+						<h:commandButton class="btn-block" value="Excluir"
+							disabled="#{empresaController.empresa.id == null}"
+							actionListener="#{empresaController.excluir}" />
+						<h:commandButton class="btn-block" value="Limpar"
+							actionListener="#{empresaController.limpar}" />
+					</h:panelGrid>
+				</h:form>
+			</div>
+			<div class="col-md-6">
+				<h3>Avião</h3>
+				<h:form>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="Marca: " />
+						<h:selectOneMenu value="#{empresaController.empresa.avioes.marca}">
+							<f:selectItem itemLabel="Selecione..." />
+							<f:selectItems
+								value="#{empresaController.empresa.avioes.listaMarca}"
+								var="marca" itemLabel="#{marca.label}" itemValue="#{marca}" />
+						</h:selectOneMenu>
+
+						<h:outputLabel value="Modelo:  " />
+						<h:inputText value="#{empresaController.empresa.avioes.modelo}" />
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:commandButton class="btn-block" value="Incluir"
+							disabled="#{empresaController.empresa.id == null}"
+							actionListener="#{empresaController.empresa.incluirAviao}" />
+						<h:commandButton class="btn-block" value="Limpar"
+							actionListener="#{empresaController.empresa.limparAviao}" />
+					</h:panelGrid>
+				</h:form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<h:form>
+					<div class="table-wrapper-scroll-y scrollbar">
+						<h:dataTable class="table table-bordered table-striped mb-0"
+							value="#{empresaController.listaEmpresa}" var="obj">
+							<h:column>
+								<f:facet name="header">Id</f:facet>
+								<h:outputLabel value="#{obj.id}" />
+							</h:column>
+
+							<h:column>
+								<f:facet name="header">Nome</f:facet>
+								<h:commandLink value="#{obj.nome}"
+									actionListener="#{empresaController.editar(obj)}" />
+
+							</h:column>
+
+							<h:column>
+								<f:facet name="header">Ano</f:facet>
+								<h:commandLink value="#{obj.anoFundacao}"
+									actionListener="#{empresaController.editar(obj)}" />
+							</h:column>
+
+							<h:column>
+								<f:facet name="header">Sede</f:facet>
+								<h:commandLink value="#{obj.sede}"
+									actionListener="#{empresaController.editar(obj)}" />
+							</h:column>
+
+						</h:dataTable>
+					</div>
+				</h:form>
+			</div>
+			<div class="col-md-6">
+				<h:form>
+					<div class="table-wrapper-scroll-y scrollbar">
+						<h:dataTable class="table table-bordered table-striped mb-0"
+							value="#{empresaController.empresa.listaAvioes}" var="obj">
+							<h:column>
+								<f:facet name="header">Marca</f:facet>
+								<h:outputLabel value="#{obj.marca.label}" />
+							</h:column>
+
+							<h:column>
+								<f:facet name="header">Modelo</f:facet>
+								<h:outputLabel value="#{obj.modelo}" />
+							</h:column>
+						</h:dataTable>
+					</div>
+				</h:form>
+			</div>
+		</div>
+
+	</div>
+</h:body>
+
+</html>

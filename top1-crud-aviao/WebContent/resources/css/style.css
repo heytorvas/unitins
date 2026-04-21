@@ -1,0 +1,51 @@
+body {
+	background-image: url("img/wallpaper.jpg");
+	background-repeat: no-repeat;
+	background-size: auto;
+	margin: 0;
+}
+
+label{
+	font-weight: bold;
+}
+
+.btn-block{
+	margin: 1vh auto;
+}
+.scrollbar {
+  position: relative;
+  height: 200px;
+  overflow: auto;
+}
+.table-wrapper-scroll-y {
+  display: block;
+  margin: 1vh auto;
+}
+
+.form {
+	width: 740px;
+	height: 570px;
+	background: #e6e6e6;
+	border-radius: 8px;
+	box-shadow: 0 0 40px -10px #000;
+	margin: calc(50vh - 290px) auto;
+	padding: 10px 30px;
+	max-width: calc(100vw - 40px);
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	position: relative;
+}
+h1, h3{
+	text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+	.form{
+		height: 800px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.form{
+		height: 920px;
+	}
+}
