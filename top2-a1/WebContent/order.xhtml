@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition template="/index.xhtml">
+	<ui:define name="main">
+		<h:form id="form1">
+			<p:panel header="Search">
+				<p:panelGrid columns="3">
+		    		ID:
+		    		<p:inputText value="#{orderBean.idSearch}" />
+					<p:commandButton value="Search" action="#{orderBean.searchId}"
+						update="form1" />
+
+				</p:panelGrid>
+			</p:panel>
+			<br />
+			<p:panel header="Infos Orders">
+				<p:panelGrid columns="2">
+	   
+		    		ID:
+		   			<p:outputLabel value="#{orderBean.order.id}" />
+		   			
+		   			TOTAL PRICE:
+		    		<p:outputLabel value="#{orderBean.order.totalPrice}" />
+	
+	        		DATE:
+		    		<p:inputText type="date" value="#{orderBean.order.date}"
+						pattern="yyyy-MM-dd">
+						<f:convertDateTime type="localDate" pattern="yyyy-MM-dd" />
+					</p:inputText>
+
+					CUSTOMER:
+					<p:selectOneMenu value="#{orderBean.idCustomer}">
+						<f:selectItem itemLabel="Select One" noSelectionOption="true" />
+						<f:selectItems value="#{customerBean.customers}" var="c"
+							itemValue="#{c.id}" itemLabel="#{c.nameCustomer}" />
+					</p:selectOneMenu>
+					
+					PRODUCTS:
+					<h:selectManyCheckbox value="#{orderBean.idProduto}">
+						<f:selectItems value="#{productBean.products}" var="p"
+							itemValue="#{p.id}" itemLabel="#{p.nameProduct}" />
+					</h:selectManyCheckbox>
+					
+				</p:panelGrid>
+
+				<br />
+				<p:commandButton value="Create" action="#{orderBean.insert}"
+					update="form1,data1" />
+
+				<p:commandButton value="Update" action="#{orderBean.update}"
+					update="form1,data1" />
+
+				<p:commandButton value="Delete" action="#{orderBean.delete}"
+					update="form1,data1" />
+
+				<p:commandButton value="Clear" action="#{orderBean.clean}"
+					update="form1" />
+
+				<p:messages />
+			</p:panel>
+		</h:form>
+
+		<br />
+
+		<p:panel id="panel1" header="List All Orders">
+
+			<p:dataTable id="data1" var="c" value="#{orderBean.orders}">
+				<p:column headerText="ID">
+					<h:outputText value="#{c.id}" />
+				</p:column>
+
+				<p:column headerText="TOTAL PRICE">
+					<h:outputText value="#{c.totalPrice}" />
+				</p:column>
+
+				<p:column headerText="DATE">
+					<h:outputText value="#{c.date}">
+						<f:convertDateTime type="localDate" pattern="dd-MM-yyyy" />
+					</h:outputText>
+				</p:column>
+
+				<p:column headerText="CUSTOMER">
+					<h:outputText value="#{c.customer.nameCustomer}" />
+				</p:column>
+
+				<p:column headerText="PRODUCTS">
+					<h:selectOneMenu value="#{c.product}">
+						<f:selectItems value="#{c.product}" var="p"
+							itemLabel="#{p.nameProduct}" />
+					</h:selectOneMenu>
+				</p:column>
+
+			</p:dataTable>
+		</p:panel>
+</ui:define>
+</ui:composition>
+</html>

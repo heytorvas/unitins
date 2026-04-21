@@ -1,0 +1,43 @@
+body {
+	display: grid;
+	font-family: Arial, sans-serif;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas: "header header header" "aside aside aside"
+		"main main main" "footer footer footer";
+}
+
+.o-header {
+	grid-area: header;
+}
+
+.o-aside {
+	grid-area: aside;
+	vertical-align: middle;
+	text-align: center;
+	background: #fff;
+}
+
+.o-main {
+	grid-area: main;
+}
+
+.o-footer {
+	grid-area: footer;
+}
+
+.box {
+	border-radius: 0px;
+	padding: 0px;
+	font-size: 150%;
+	margin: 0;
+	border: 0;
+}
+
+.header {
+	color: #000;
+	background-color: #fff;
+	vertical-align: middle;
+	text-align: center;
+	height: 100px;
+}

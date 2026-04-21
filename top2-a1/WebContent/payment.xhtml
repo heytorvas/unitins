@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition template="/index.xhtml">
+	<ui:define name="main">
+		<h:form id="form1">
+			<p:panel header="Search">
+				<p:panelGrid columns="3">
+		    		ID:
+		    		<p:inputText value="#{paymentBean.idSearch}" />
+					<p:commandButton value="Search" action="#{paymentBean.searchId}"
+						update="form1" />
+
+				</p:panelGrid>
+			</p:panel>
+			<br />
+			<p:panel header="Infos Payments">
+				<p:panelGrid columns="2">
+	   
+		    		ID:
+		   			<p:outputLabel value="#{paymentBean.payment.id}" />
+		   			
+		   			ORDER:
+					<p:selectOneMenu value="#{paymentBean.idOrder}">
+						<f:selectItem itemLabel="Select One" noSelectionOption="true" />
+						<f:selectItems value="#{orderBean.orders}" var="c"
+							itemValue="#{c.id}" itemLabel="#{c.id}" />
+					</p:selectOneMenu>
+					
+	        		DATE:
+		    		<p:inputText type="date" value="#{paymentBean.payment.date}"
+						pattern="yyyy-MM-dd">
+						<f:convertDateTime type="localDate" pattern="yyyy-MM-dd" />
+					</p:inputText>
+
+					PAYMENT TYPE:
+					<p:selectOneMenu value="#{paymentBean.idPaymentType}">
+						<f:selectItem itemLabel="Select One" noSelectionOption="true" />
+						<f:selectItems value="#{paymentTypeBean.paymentTypes}" var="pt"
+							itemValue="#{pt.id}" itemLabel="#{pt.label}" />
+					</p:selectOneMenu>
+				</p:panelGrid>
+
+				<br />
+				<p:commandButton value="Create" action="#{paymentBean.insert}"
+					update="form1,data1" />
+
+				<p:commandButton value="Update" action="#{paymentBean.update}"
+					update="form1,data1" />
+
+				<p:commandButton value="Delete" action="#{paymentBean.delete}"
+					update="form1,data1" />
+
+				<p:commandButton value="Clear" action="#{paymentBean.clean}"
+					update="form1" />
+
+				<p:messages />
+			</p:panel>
+		</h:form>
+
+		<br />
+
+		<p:panel id="panel1" header="List All Payments">
+
+			<p:dataTable id="data1" var="pay" value="#{paymentBean.payments}">
+				<p:column headerText="ID">
+					<h:outputText value="#{pay.id}" />
+				</p:column>
+				
+				<p:column headerText="ORDER">
+					<h:outputText value="#{pay.orderDB.id}" />
+				</p:column>
+
+				<p:column headerText="DATE">
+					<h:outputText value="#{pay.date}">
+						<f:convertDateTime type="localDate" pattern="dd-MM-yyyy" />
+					</h:outputText>
+				</p:column>
+
+				<p:column headerText="PAYMENT TYPE">
+					<h:outputText value="#{pay.paymentType.label}" />
+				</p:column>
+			</p:dataTable>
+
+		</p:panel>
+	</ui:define>
+</ui:composition>
+</html>
