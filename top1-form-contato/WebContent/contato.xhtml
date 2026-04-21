@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<h:outputStylesheet name="css/style.css" />
+
+	<title>Formulário de Contato</title>
+</h:head>
+<h:body>
+	<div class="form">
+		<h:form>
+			<h2>FORMULÁRIO</h2>
+
+			<h:outputLabel class="textoForm" value="Nome: " />
+        	<h:inputText class="inputForm" value="#{contatoController.contato.nome}"/>
+
+			<h:outputLabel class="textoForm" value="Email: " />
+        	<h:inputText class="inputForm" value="#{contatoController.contato.email}"/>
+
+			<h:outputLabel class="textoForm" value="Mensagem: "/>
+     		<h:inputText class="inputForm" value="#{contatoController.contato.mensagem}" />
+
+			<h:commandButton class="botao" value="Enviar" action="#{contatoController.enviar}" />
+		</h:form>
+	</div>
+
+</h:body>
+</html>

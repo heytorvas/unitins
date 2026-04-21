@@ -1,0 +1,70 @@
+body {
+	background: #4DC48B;
+	margin: 0;
+}
+
+.form {
+	width: 340px;
+	height: 450px;
+	background: #e6e6e6;
+	border-radius: 8px;
+	box-shadow: 0 0 40px -10px #000;
+	margin: calc(50vh - 220px) auto;
+	padding: 10px 30px;
+	max-width: calc(100vw - 40px);
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	position: relative;
+}
+
+h2 {
+	font-size: 30px;
+	margin: 10px 0;
+	padding-bottom: 10px;
+	width: 180px;
+	color: #78788c;
+	border-bottom: 3px solid #78788c;
+}
+
+.inputForm {
+	width: 100%;
+	padding: 15px;
+	box-sizing: border-box;
+	background: none;
+	outline: none;
+	resize: none;
+	border: 0;
+	font-family: 'Montserrat', sans-serif;
+	transition: all .3s;
+	border-bottom: 2px solid #bebed2;
+}
+
+.inputForm:focus {
+	border-bottom: 2px solid #78788c;
+}
+
+.textoForm:before {
+	content: attr(type);
+	display: block;
+	margin: 28px 0 0;
+	font-size: 16px;
+	color: #5a5a5a;
+}
+
+.botao {
+	float: right;
+	padding: 8px 12px;
+	margin: 20px 0 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	border: 2px solid #78788c;
+	background: 0;
+	color: #5a5a6e;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.botao:hover {
+	background: #78788c;
+	color: #fff;
+}
