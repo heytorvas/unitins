@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	<h:outputStylesheet library="css" name="bootstrap.css" />
+	<h:outputStylesheet library="css" name="style.css" />
+	<link rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+		crossorigin="anonymous" />
+
+	<!--[if IE]><link rel="shortcut icon" href="resources/img/favicon.ico" /><![endif]-->
+	<link rel="icon" href="resources/img/favicon.ico" />
+
+	<title>Projeto Irrigação</title>
+</h:head>
+
+<h:body>
+
+	<center>
+
+		<div class="destaque bg-success">
+			<img class="titulo-projeto logo" src="resources/img/logo.png" />
+		</div>
+
+		<div class="container">
+			<h:form>
+				<div class="row corpoInfo">
+					<div class="col lg-6">
+						<div class="card">
+							<div class="card-header">
+								<i class="fas fa-thermometer-half"></i> Temperatura
+							</div>
+							<div class="card-body">
+								<h:inputHidden id="execTemp"
+									value="#{irrigacaoController.dados}"></h:inputHidden>
+								<h:outputText id="temperaturaArId"
+									value="#{irrigacaoController.temperaturaAr}" />
+								<br></br>
+							</div>
+						</div>
+					</div>
+
+					<div class="col lg-6">
+						<div class="card">
+							<div class="card-header">
+								<i class="fas fa-tint"></i> Umidade do Ar
+							</div>
+							<div class="card-body">
+								<h:inputHidden id="execUmid"
+									value="#{irrigacaoController.dados}"></h:inputHidden>
+								<h:outputText id="umidadeArId"
+									value="#{irrigacaoController.umidadeAr}" />
+								<br></br>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row corpoInfo">
+
+					<div class="col lg-6">
+						<div class="card">
+							<div class="card-header">
+								<i class="fas fa-lightbulb"></i> Luminosidade
+							</div>
+							<div class="card-body">
+								<h:inputHidden id="execLum" value="#{irrigacaoController.dados}"></h:inputHidden>
+								<h:outputText id="luminosidadeId"
+									value="#{irrigacaoController.luminosidade}" />
+								<br></br>
+							</div>
+						</div>
+					</div>
+
+					<div class="col lg-6">
+						<div class="card">
+							<div class="card-header">
+								<img src="https://img.icons8.com/ios-glyphs/40/000000/soil.png" />
+								Leitura do Solo
+							</div>
+							<div class="card-body">
+								<h:inputHidden id="execSolo"
+									value="#{irrigacaoController.dados}"></h:inputHidden>
+								<h:outputText id="statusSoloId"
+									value="#{irrigacaoController.statusSolo}" />
+								<br></br>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row corpoInfo">
+					<div class="col lg-6">
+						<h:commandButton value="Atualizar"
+							styleClass="btn btn-success btn-lg">
+							<f:ajax execute="execUmid execTemp execLum execSolo"
+								render="umidadeArId temperaturaArId luminosidadeId statusSoloId" />
+						</h:commandButton>
+					</div>
+				</div>
+				<div class="row corpoInfoBotao">
+					<div class="col lg-6">
+						<h:commandButton value="Gráficos" styleClass="btn btn-info btn-lg"
+							action="#{botaoController.entrarGrafico}">
+						</h:commandButton>
+						<br></br> <br></br>
+					</div>
+				</div>
+
+			</h:form>
+		</div>
+	</center>
+</h:body>
+</html>

@@ -1,0 +1,2907 @@
+﻿Leitura:		 12
+Umidade do AR:		56.70%
+Temperatura do AR:	25.90ºC
+Luminosidade:		823
+Leitura do solo:	Seco
+
+Leitura:		 13
+Umidade do AR:		56.70%
+Temperatura do AR:	25.90ºC
+Luminosidade:		822
+Leitura do solo:	Seco
+
+Leitura:		 14
+Umidade do AR:		56.70%
+Temperatura do AR:	25.90ºC
+Luminosidade:		820
+Leitura do solo:	Seco
+
+Leitura:		 15
+Umidade do AR:		56.70%
+Temperatura do AR:	25.90ºC
+Luminosidade:		821
+Leitura do solo:	Seco
+
+Leitura:		 16
+Umidade do AR:		56.80%
+Temperatura do AR:	25.90ºC
+Luminosidade:		822
+Leitura do solo:	Seco
+
+Leitura:		 17
+Umidade do AR:		56.70%
+Temperatura do AR:	25.80ºC
+Luminosidade:		822
+Leitura do solo:	Seco
+
+Leitura:		 18
+Umidade do AR:		56.70%
+Temperatura do AR:	25.80ºC
+Luminosidade:		819
+Leitura do solo:	Seco
+
+Leitura:		 19
+Umidade do AR:		56.90%
+Temperatura do AR:	25.90ºC
+Luminosidade:		819
+Leitura do solo:	Seco
+
+Leitura:		 20
+Umidade do AR:		56.90%
+Temperatura do AR:	25.90ºC
+Luminosidade:		819
+Leitura do solo:	Seco
+
+Leitura:		 21
+Umidade do AR:		56.90%
+Temperatura do AR:	25.90ºC
+Luminosidade:		820
+Leitura do solo:	Seco
+
+Leitura:		 22
+Umidade do AR:		56.90%
+Temperatura do AR:	25.90ºC
+Luminosidade:		814
+Leitura do solo:	Seco
+
+Leitura:		 23
+Umidade do AR:		57.00%
+Temperatura do AR:	26.10ºC
+Luminosidade:		822
+Leitura do solo:	Seco
+
+Leitura:		 24
+Umidade do AR:		56.90%
+Temperatura do AR:	25.90ºC
+Luminosidade:		822
+Leitura do solo:	Seco
+
+Leitura:		 25
+Umidade do AR:		56.70%
+Temperatura do AR:	25.80ºC
+Luminosidade:		823
+Leitura do solo:	Seco
+
+Leitura:		 26
+Umidade do AR:		56.70%
+Temperatura do AR:	25.80ºC
+Luminosidade:		822
+Leitura do solo:	Seco
+
+Leitura:		 27
+Umidade do AR:		56.70%
+Temperatura do AR:	25.90ºC
+Luminosidade:		819
+Leitura do solo:	Seco
+
+Leitura:		 28
+Umidade do AR:		56.70%
+Temperatura do AR:	25.90ºC
+Luminosidade:		822
+Leitura do solo:	Seco
+
+Leitura:		 29
+Umidade do AR:		56.60%
+Temperatura do AR:	25.80ºC
+Luminosidade:		822
+Leitura do solo:	Seco
+
+Leitura:		 30
+Umidade do AR:		56.60%
+Temperatura do AR:	25.90ºC
+Luminosidade:		821
+Leitura do solo:	Seco
+
+Leitura:		 31
+Umidade do AR:		56.50%
+Temperatura do AR:	25.80ºC
+Luminosidade:		820
+Leitura do solo:	Seco
+
+Leitura:		 32
+Umidade do AR:		56.50%
+Temperatura do AR:	25.80ºC
+Luminosidade:		820
+Leitura do solo:	Seco
+
+Leitura:		 33
+Umidade do AR:		56.50%
+Temperatura do AR:	25.80ºC
+Luminosidade:		821
+Leitura do solo:	Seco
+
+Leitura:		 34
+Umidade do AR:		56.60%
+Temperatura do AR:	25.90ºC
+Luminosidade:		818
+Leitura do solo:	Seco
+
+Leitura:		 35
+Umidade do AR:		56.60%
+Temperatura do AR:	25.90ºC
+Luminosidade:		823
+Leitura do solo:	Seco
+
+Leitura:		 36
+Umidade do AR:		56.50%
+Temperatura do AR:	25.80ºC
+Luminosidade:		823
+Leitura do solo:	Seco
+
+Leitura:		 37
+Umidade do AR:		56.50%
+Temperatura do AR:	25.90ºC
+Luminosidade:		823
+Leitura do solo:	Seco
+
+Leitura:		 38
+Umidade do AR:		56.50%
+Temperatura do AR:	25.90ºC
+Luminosidade:		823
+Leitura do solo:	Seco
+
+Leitura:		 39
+Umidade do AR:		56.50%
+Temperatura do AR:	25.80ºC
+Luminosidade:		824
+Leitura do solo:	Seco
+
+Leitura:		 40
+Umidade do AR:		56.40%
+Temperatura do AR:	25.80ºC
+Luminosidade:		826
+Leitura do solo:	Seco
+
+Leitura:		 41
+Umidade do AR:		56.40%
+Temperatura do AR:	25.80ºC
+Luminosidade:		822
+Leitura do solo:	Seco
+
+Leitura:		 42
+Umidade do AR:		56.40%
+Temperatura do AR:	25.90ºC
+Luminosidade:		828
+Leitura do solo:	Seco
+
+Leitura:		 43
+Umidade do AR:		56.40%
+Temperatura do AR:	25.80ºC
+Luminosidade:		823
+Leitura do solo:	Seco
+
+Leitura:		 44
+Umidade do AR:		56.40%
+Temperatura do AR:	25.80ºC
+Luminosidade:		826
+Leitura do solo:	Seco
+
+Leitura:		 45
+Umidade do AR:		56.40%
+Temperatura do AR:	25.90ºC
+Luminosidade:		825
+Leitura do solo:	Seco
+
+Leitura:		 46
+Umidade do AR:		56.30%
+Temperatura do AR:	25.80ºC
+Luminosidade:		824
+Leitura do solo:	Seco
+
+Leitura:		 47
+Umidade do AR:		56.30%
+Temperatura do AR:	25.90ºC
+Luminosidade:		826
+Leitura do solo:	Seco
+
+Leitura:		 48
+Umidade do AR:		56.20%
+Temperatura do AR:	25.80ºC
+Luminosidade:		826
+Leitura do solo:	Seco
+
+Leitura:		 49
+Umidade do AR:		56.20%
+Temperatura do AR:	25.80ºC
+Luminosidade:		827
+Leitura do solo:	Seco
+
+Leitura:		 50
+Umidade do AR:		56.10%
+Temperatura do AR:	25.80ºC
+Luminosidade:		818
+Leitura do solo:	Seco
+
+Leitura:		 51
+Umidade do AR:		56.10%
+Temperatura do AR:	25.80ºC
+Luminosidade:		828
+Leitura do solo:	Seco
+
+Leitura:		 52
+Umidade do AR:		56.00%
+Temperatura do AR:	25.80ºC
+Luminosidade:		826
+Leitura do solo:	Seco
+
+Leitura:		 53
+Umidade do AR:		55.90%
+Temperatura do AR:	25.80ºC
+Luminosidade:		827
+Leitura do solo:	Seco
+
+Leitura:		 54
+Umidade do AR:		56.00%
+Temperatura do AR:	25.80ºC
+Luminosidade:		826
+Leitura do solo:	Seco
+
+Leitura:		 55
+Umidade do AR:		56.00%
+Temperatura do AR:	25.80ºC
+Luminosidade:		825
+Leitura do solo:	Seco
+
+Leitura:		 56
+Umidade do AR:		56.00%
+Temperatura do AR:	25.80ºC
+Luminosidade:		828
+Leitura do solo:	Seco
+
+
+Iniciando SD Card...Cartao SD iniciado com sucesso!
+[2161] Getting IP...
+[3837] IP:172.16.90.59
+[3838] 
+    ___  __          __
+   / _ )/ /_ _____  / /__
+  / _  / / // / _ \/  '_/
+ /____/_/\_, /_//_/_/\_\
+        /___/ v0.6.1 on Arduino Mega
+
+[3956] Connecting to blynk-cloud.com:80
+[4318] Ready (ping: 131ms).
+Leitura:		 1
+Umidade do AR:		55.70%
+Temperatura do AR:	25.70ºC
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 2
+Umidade do AR:		55.60%
+Temperatura do AR:	25.70ºC
+Luminosidade:		814
+Leitura do solo:	Solo Seco
+
+Leitura:		 3
+Umidade do AR:		55.70%
+Temperatura do AR:	25.70ºC
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 4
+Umidade do AR:		55.90%
+Temperatura do AR:	25.70ºC
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 5
+Umidade do AR:		55.70%
+Temperatura do AR:	25.70ºC
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 6
+Umidade do AR:		56.10%
+Temperatura do AR:	25.70ºC
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 7
+Umidade do AR:		56.20%
+Temperatura do AR:	25.70ºC
+Luminosidade:		795
+Leitura do solo:	Solo Seco
+
+Leitura:		 8
+Umidade do AR:		56.20%
+Temperatura do AR:	25.70ºC
+Luminosidade:		801
+Leitura do solo:	Solo Seco
+
+Leitura:		 9
+Umidade do AR:		56.20%
+Temperatura do AR:	25.70ºC
+Luminosidade:		798
+Leitura do solo:	Solo Seco
+
+Leitura:		 10
+Umidade do AR:		56.60%
+Temperatura do AR:	25.70ºC
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 11
+Umidade do AR:		56.40%
+Temperatura do AR:	25.70ºC
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 12
+Umidade do AR:		55.70%
+Temperatura do AR:	25.70ºC
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 13
+Umidade do AR:		55.30%
+Temperatura do AR:	25.70ºC
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 14
+Umidade do AR:		55.20%
+Temperatura do AR:	25.70ºC
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 15
+Umidade do AR:		55.20%
+Temperatura do AR:	25.70ºC
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 16
+Umidade do AR:		55.20%
+Temperatura do AR:	25.70ºC
+Luminosidade:		782
+Leitura do solo:	Solo Seco
+
+Leitura:		 17
+Umidade do AR:		55.00%
+Temperatura do AR:	25.80ºC
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 18
+Umidade do AR:		55.20%
+Temperatura do AR:	25.70ºC
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 19
+Umidade do AR:		55.00%
+Temperatura do AR:	25.70ºC
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 20
+Umidade do AR:		54.90%
+Temperatura do AR:	25.70ºC
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 21
+Umidade do AR:		54.80%
+Temperatura do AR:	25.70ºC
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 22
+Umidade do AR:		54.80%
+Temperatura do AR:	25.70ºC
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 23
+Umidade do AR:		54.80%
+Temperatura do AR:	25.70ºC
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 24
+Umidade do AR:		54.70%
+Temperatura do AR:	25.70ºC
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 25
+Umidade do AR:		54.80%
+Temperatura do AR:	25.70ºC
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 26
+Umidade do AR:		54.70%
+Temperatura do AR:	25.70ºC
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 27
+Umidade do AR:		54.60%
+Temperatura do AR:	25.70ºC
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 28
+Umidade do AR:		54.50%
+Temperatura do AR:	25.70ºC
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 29
+Umidade do AR:		54.60%
+Temperatura do AR:	25.70ºC
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+                                                                                               
+Iniciando SD Card...Cartao SD iniciado com sucesso!
+[2161] Getting IP...
+[4789] IP:172.16.90.59
+[4790] 
+    ___  __          __
+   / _ )/ /_ _____  / /__
+  / _  / / // / _ \/  '_/
+ /____/_/\_, /_//_/_/\_\
+        /___/ v0.6.1 on Arduino Mega
+
+[4908] Connecting to blynk-cloud.com:80
+[5265] Ready (ping: 130ms).
+Leitura:		 1
+Umidade do AR:		54.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 2
+Umidade do AR:		54.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 3
+Umidade do AR:		53.90%
+Temperatura do AR:	25.60@C
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 4
+Umidade do AR:		53.90%
+Temperatura do AR:	25.60@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 5
+Umidade do AR:		53.80%
+Temperatura do AR:	25.60@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 6
+Umidade do AR:		53.80%
+Temperatura do AR:	25.60@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 7
+Umidade do AR:		53.80%
+Temperatura do AR:	25.60@C
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 8
+Umidade do AR:		54.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 9
+Umidade do AR:		53.80%
+Temperatura do AR:	25.50@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 10
+Umidade do AR:		53.80%
+Temperatura do AR:	25.50@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 11
+Umidade do AR:		53.80%
+Temperatura do AR:	25.50@C
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 12
+Umidade do AR:		53.80%
+Temperatura do AR:	25.50@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 13
+Umidade do AR:		53.80%
+Temperatura do AR:	25.50@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 14
+Umidade do AR:		53.90%
+Temperatura do AR:	25.50@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 15
+Umidade do AR:		53.90%
+Temperatura do AR:	25.50@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 16
+Umidade do AR:		54.00%
+Temperatura do AR:	25.50@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 17
+Umidade do AR:		54.00%
+Temperatura do AR:	25.50@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 18
+Umidade do AR:		53.90%
+Temperatura do AR:	25.40@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 19
+Umidade do AR:		54.00%
+Temperatura do AR:	25.50@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 20
+Umidade do AR:		54.00%
+Temperatura do AR:	25.50@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 21
+Umidade do AR:		54.10%
+Temperatura do AR:	25.50@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 22
+Umidade do AR:		53.90%
+Temperatura do AR:	25.50@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 23
+Umidade do AR:		53.90%
+Temperatura do AR:	25.50@C
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 24
+Umidade do AR:		53.80%
+Temperatura do AR:	25.40@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 25
+Umidade do AR:		53.70%
+Temperatura do AR:	25.50@C
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 26
+Umidade do AR:		53.60%
+Temperatura do AR:	25.50@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 27
+Umidade do AR:		53.70%
+Temperatura do AR:	25.40@C
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 28
+Umidade do AR:		53.90%
+Temperatura do AR:	25.50@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 29
+Umidade do AR:		53.60%
+Temperatura do AR:	25.50@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 15
+Umidade do AR:		53.40%
+Temperatura do AR:	25.80@C
+Luminosidade:		783
+Leitura do solo:	Solo Seco
+
+
+Iniciando SD Card...Cartao SD iniciado com sucesso!
+[2161] Getting IP...
+[4789] IP:172.16.90.59
+[4790] 
+    ___  __          __
+   / _ )/ /_ _____  / /__
+  / _  / / // / _ \/  '_/
+ /____/_/\_, /_//_/_/\_\
+        /___/ v0.6.1 on Arduino Mega
+
+[4908] Connecting to blynk-cloud.com:80
+[5265] Ready (ping: 130ms).
+Leitura:		 1
+Umidade do AR:		53.60%
+Temperatura do AR:	25.70@C
+Luminosidade:		815
+Leitura do solo:	Solo Seco
+
+Leitura:		 2
+Umidade do AR:		53.50%
+Temperatura do AR:	25.80@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 3
+Umidade do AR:		53.10%
+Temperatura do AR:	25.70@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 4
+Umidade do AR:		53.10%
+Temperatura do AR:	25.80@C
+Luminosidade:		816
+Leitura do solo:	Solo Seco
+
+Leitura:		 5
+Umidade do AR:		53.00%
+Temperatura do AR:	25.80@C
+Luminosidade:		813
+Leitura do solo:	Solo Seco
+
+Leitura:		 6
+Umidade do AR:		52.80%
+Temperatura do AR:	25.70@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 7
+Umidade do AR:		52.80%
+Temperatura do AR:	25.80@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 8
+Umidade do AR:		52.80%
+Temperatura do AR:	25.70@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 9
+Umidade do AR:		52.70%
+Temperatura do AR:	25.70@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 10
+Umidade do AR:		52.60%
+Temperatura do AR:	25.70@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 11
+Umidade do AR:		52.60%
+Temperatura do AR:	25.70@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 12
+Umidade do AR:		52.80%
+Temperatura do AR:	25.70@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 13
+Umidade do AR:		52.60%
+Temperatura do AR:	25.70@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 14
+Umidade do AR:		52.50%
+Temperatura do AR:	25.70@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 15
+Umidade do AR:		52.50%
+Temperatura do AR:	25.70@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 16
+Umidade do AR:		52.50%
+Temperatura do AR:	25.70@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 17
+Umidade do AR:		52.50%
+Temperatura do AR:	25.70@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 18
+Umidade do AR:		52.30%
+Temperatura do AR:	25.70@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 19
+Umidade do AR:		52.30%
+Temperatura do AR:	25.70@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 20
+Umidade do AR:		52.30%
+Temperatura do AR:	25.70@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 21
+Umidade do AR:		52.20%
+Temperatura do AR:	25.60@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 22
+Umidade do AR:		52.20%
+Temperatura do AR:	25.60@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 23
+Umidade do AR:		52.20%
+Temperatura do AR:	25.60@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 24
+Umidade do AR:		52.30%
+Temperatura do AR:	25.60@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 25
+Umidade do AR:		52.20%
+Temperatura do AR:	25.60@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 26
+Umidade do AR:		52.30%
+Temperatura do AR:	25.60@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 27
+Umidade do AR:		52.10%
+Temperatura do AR:	25.60@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 28
+Umidade do AR:		52.10%
+Temperatura do AR:	25.60@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 29
+Umidade do AR:		52.10%
+Temperatura do AR:	25.60@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 30
+Umidade do AR:		51.80%
+Temperatura do AR:	25.60@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 31
+Umidade do AR:		51.80%
+Temperatura do AR:	25.60@C
+Luminosidade:		815
+Leitura do solo:	Solo Seco
+
+Leitura:		 32
+Umidade do AR:		51.90%
+Temperatura do AR:	25.60@C
+Luminosidade:		743
+Leitura do solo:	Solo Seco
+
+Leitura:		 33
+Umidade do AR:		52.10%
+Temperatura do AR:	25.60@C
+Luminosidade:		211
+Leitura do solo:	Solo Seco
+
+Leitura:		 34
+Umidade do AR:		53.50%
+Temperatura do AR:	25.50@C
+Luminosidade:		816
+Leitura do solo:	Solo Seco
+
+Leitura:		 35
+Umidade do AR:		52.70%
+Temperatura do AR:	25.50@C
+Luminosidade:		816
+Leitura do solo:	Solo Seco
+
+Leitura:		 36
+Umidade do AR:		52.10%
+Temperatura do AR:	25.50@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 37
+Umidade do AR:		51.90%
+Temperatura do AR:	25.50@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 38
+Umidade do AR:		51.80%
+Temperatura do AR:	25.50@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 39
+Umidade do AR:		51.80%
+Temperatura do AR:	25.50@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 40
+Umidade do AR:		51.90%
+Temperatura do AR:	25.50@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 41
+Umidade do AR:		51.80%
+Temperatura do AR:	25.50@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 42
+Umidade do AR:		51.90%
+Temperatura do AR:	25.50@C
+Luminosidade:		816
+Leitura do solo:	Solo Seco
+
+Leitura:		 43
+Umidade do AR:		51.80%
+Temperatura do AR:	25.40@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 44
+Umidade do AR:		51.70%
+Temperatura do AR:	25.40@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 45
+Umidade do AR:		51.70%
+Temperatura do AR:	25.40@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 46
+Umidade do AR:		51.70%
+Temperatura do AR:	25.40@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 47
+Umidade do AR:		51.70%
+Temperatura do AR:	25.40@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 48
+Umidade do AR:		51.60%
+Temperatura do AR:	25.40@C
+Luminosidade:		816
+Leitura do solo:	Solo Seco
+
+Leitura:		 49
+Umidade do AR:		51.60%
+Temperatura do AR:	25.40@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 50
+Umidade do AR:		51.20%
+Temperatura do AR:	25.40@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 51
+Umidade do AR:		51.30%
+Temperatura do AR:	25.40@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 52
+Umidade do AR:		51.30%
+Temperatura do AR:	25.40@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 53
+Umidade do AR:		51.20%
+Temperatura do AR:	25.40@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 54
+Umidade do AR:		51.40%
+Temperatura do AR:	25.40@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 55
+Umidade do AR:		51.20%
+Temperatura do AR:	25.40@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 56
+Umidade do AR:		51.30%
+Temperatura do AR:	25.40@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 57
+Umidade do AR:		51.40%
+Temperatura do AR:	25.30@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 58
+Umidade do AR:		51.40%
+Temperatura do AR:	25.30@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 59
+Umidade do AR:		51.50%
+Temperatura do AR:	25.30@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 60
+Umidade do AR:		51.30%
+Temperatura do AR:	25.30@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 61
+Umidade do AR:		51.20%
+Temperatura do AR:	25.30@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 62
+Umidade do AR:		51.20%
+Temperatura do AR:	25.30@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 63
+Umidade do AR:		51.20%
+Temperatura do AR:	25.30@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 64
+Umidade do AR:		51.40%
+Temperatura do AR:	25.30@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 65
+Umidade do AR:		51.30%
+Temperatura do AR:	25.30@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 66
+Umidade do AR:		51.20%
+Temperatura do AR:	25.30@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 67
+Umidade do AR:		51.10%
+Temperatura do AR:	25.30@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 68
+Umidade do AR:		51.10%
+Temperatura do AR:	25.30@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 69
+Umidade do AR:		51.20%
+Temperatura do AR:	25.30@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 70
+Umidade do AR:		51.20%
+Temperatura do AR:	25.30@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 71
+Umidade do AR:		51.40%
+Temperatura do AR:	25.30@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 72
+Umidade do AR:		51.60%
+Temperatura do AR:	25.30@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 73
+Umidade do AR:		51.50%
+Temperatura do AR:	25.30@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 74
+Umidade do AR:		51.50%
+Temperatura do AR:	25.30@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 75
+Umidade do AR:		51.60%
+Temperatura do AR:	25.30@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 76
+Umidade do AR:		51.90%
+Temperatura do AR:	25.40@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 77
+Umidade do AR:		52.10%
+Temperatura do AR:	25.40@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 78
+Umidade do AR:		52.20%
+Temperatura do AR:	25.40@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 79
+Umidade do AR:		52.10%
+Temperatura do AR:	25.40@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 80
+Umidade do AR:		52.10%
+Temperatura do AR:	25.40@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 81
+Umidade do AR:		52.00%
+Temperatura do AR:	25.40@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 82
+Umidade do AR:		51.70%
+Temperatura do AR:	25.40@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 83
+Umidade do AR:		51.70%
+Temperatura do AR:	25.40@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 84
+Umidade do AR:		51.90%
+Temperatura do AR:	25.40@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 85
+Umidade do AR:		52.00%
+Temperatura do AR:	25.40@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 86
+Umidade do AR:		52.00%
+Temperatura do AR:	25.40@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 87
+Umidade do AR:		51.90%
+Temperatura do AR:	25.40@C
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 88
+Umidade do AR:		52.00%
+Temperatura do AR:	25.40@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 89
+Umidade do AR:		52.30%
+Temperatura do AR:	25.40@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 90
+Umidade do AR:		52.10%
+Temperatura do AR:	25.40@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 91
+Umidade do AR:		52.20%
+Temperatura do AR:	25.40@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 92
+Umidade do AR:		52.30%
+Temperatura do AR:	25.40@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 93
+Umidade do AR:		52.40%
+Temperatura do AR:	25.40@C
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 94
+Umidade do AR:		52.90%
+Temperatura do AR:	25.40@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 95
+Umidade do AR:		53.10%
+Temperatura do AR:	25.40@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 96
+Umidade do AR:		53.30%
+Temperatura do AR:	25.40@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 97
+Umidade do AR:		53.50%
+Temperatura do AR:	25.50@C
+Luminosidade:		816
+Leitura do solo:	Solo Seco
+
+Leitura:		 98
+Umidade do AR:		54.30%
+Temperatura do AR:	25.50@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 99
+Umidade do AR:		53.80%
+Temperatura do AR:	25.50@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 100
+Umidade do AR:		53.70%
+Temperatura do AR:	25.50@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 101
+Umidade do AR:		54.10%
+Temperatura do AR:	25.60@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 102
+Umidade do AR:		54.20%
+Temperatura do AR:	25.60@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 103
+Umidade do AR:		53.90%
+Temperatura do AR:	25.60@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 104
+Umidade do AR:		53.30%
+Temperatura do AR:	25.60@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 105
+Umidade do AR:		53.40%
+Temperatura do AR:	25.60@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 106
+Umidade do AR:		53.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 107
+Umidade do AR:		53.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 108
+Umidade do AR:		52.90%
+Temperatura do AR:	25.70@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 109
+Umidade do AR:		52.90%
+Temperatura do AR:	25.70@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 110
+Umidade do AR:		53.00%
+Temperatura do AR:	25.70@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 111
+Umidade do AR:		52.90%
+Temperatura do AR:	25.70@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 112
+Umidade do AR:		52.90%
+Temperatura do AR:	25.70@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 113
+Umidade do AR:		52.90%
+Temperatura do AR:	25.70@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 114
+Umidade do AR:		53.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 115
+Umidade do AR:		52.80%
+Temperatura do AR:	25.60@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 116
+Umidade do AR:		52.60%
+Temperatura do AR:	25.70@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 117
+Umidade do AR:		52.40%
+Temperatura do AR:	25.70@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 118
+Umidade do AR:		52.10%
+Temperatura do AR:	25.60@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 119
+Umidade do AR:		52.10%
+Temperatura do AR:	25.60@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 120
+Umidade do AR:		52.10%
+Temperatura do AR:	25.70@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 121
+Umidade do AR:		52.10%
+Temperatura do AR:	25.60@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 122
+Umidade do AR:		52.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 123
+Umidade do AR:		52.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 124
+Umidade do AR:		51.90%
+Temperatura do AR:	25.60@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 125
+Umidade do AR:		51.90%
+Temperatura do AR:	25.60@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 126
+Umidade do AR:		51.90%
+Temperatura do AR:	25.60@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 127
+Umidade do AR:		51.80%
+Temperatura do AR:	25.60@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 128
+Umidade do AR:		51.70%
+Temperatura do AR:	25.60@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 129
+Umidade do AR:		51.60%
+Temperatura do AR:	25.60@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 130
+Umidade do AR:		51.70%
+Temperatura do AR:	25.60@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 131
+Umidade do AR:		51.60%
+Temperatura do AR:	25.50@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 132
+Umidade do AR:		51.70%
+Temperatura do AR:	25.60@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 133
+Umidade do AR:		51.80%
+Temperatura do AR:	25.60@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 134
+Umidade do AR:		51.70%
+Temperatura do AR:	25.60@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 135
+Umidade do AR:		51.40%
+Temperatura do AR:	25.60@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 136
+Umidade do AR:		51.10%
+Temperatura do AR:	25.50@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 137
+Umidade do AR:		51.10%
+Temperatura do AR:	25.60@C
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 138
+Umidade do AR:		51.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 139
+Umidade do AR:		51.10%
+Temperatura do AR:	25.50@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 140
+Umidade do AR:		51.00%
+Temperatura do AR:	25.50@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 141
+Umidade do AR:		51.00%
+Temperatura do AR:	25.50@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 142
+Umidade do AR:		51.10%
+Temperatura do AR:	25.50@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 143
+Umidade do AR:		50.90%
+Temperatura do AR:	25.40@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 144
+Umidade do AR:		51.10%
+Temperatura do AR:	25.40@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 145
+Umidade do AR:		51.00%
+Temperatura do AR:	25.40@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 146
+Umidade do AR:		50.80%
+Temperatura do AR:	25.40@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 147
+Umidade do AR:		50.80%
+Temperatura do AR:	25.40@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 148
+Umidade do AR:		50.70%
+Temperatura do AR:	25.40@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 149
+Umidade do AR:		50.70%
+Temperatura do AR:	25.40@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 150
+Umidade do AR:		50.80%
+Temperatura do AR:	25.40@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 151
+Umidade do AR:		50.80%
+Temperatura do AR:	25.40@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 152
+Umidade do AR:		50.80%
+Temperatura do AR:	25.40@C
+Luminosidade:		813
+Leitura do solo:	Solo Seco
+
+Leitura:		 153
+Umidade do AR:		50.80%
+Temperatura do AR:	25.40@C
+Luminosidade:		814
+Leitura do solo:	Solo Seco
+
+Leitura:		 154
+Umidade do AR:		50.70%
+Temperatura do AR:	25.40@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 155
+Umidade do AR:		50.50%
+Temperatura do AR:	25.40@C
+Luminosidade:		801
+Leitura do solo:	Solo Seco
+
+Leitura:		 156
+Umidade do AR:		50.70%
+Temperatura do AR:	25.40@C
+Luminosidade:		811
+Leitura do solo:	Solo Seco
+
+Leitura:		 157
+Umidade do AR:		50.60%
+Temperatura do AR:	25.40@C
+Luminosidade:		810
+Leitura do solo:	Solo Seco
+
+Leitura:		 158
+Umidade do AR:		50.40%
+Temperatura do AR:	25.40@C
+Luminosidade:		812
+Leitura do solo:	Solo Seco
+
+Leitura:		 159
+Umidade do AR:		50.40%
+Temperatura do AR:	25.40@C
+Luminosidade:		807
+Leitura do solo:	Solo Seco
+
+Leitura:		 160
+Umidade do AR:		50.30%
+Temperatura do AR:	25.40@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 161
+Umidade do AR:		50.60%
+Temperatura do AR:	25.50@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 162
+Umidade do AR:		50.30%
+Temperatura do AR:	25.50@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 163
+Umidade do AR:		50.10%
+Temperatura do AR:	25.50@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 164
+Umidade do AR:		50.00%
+Temperatura do AR:	25.50@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 165
+Umidade do AR:		50.10%
+Temperatura do AR:	25.50@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 166
+Umidade do AR:		50.00%
+Temperatura do AR:	25.50@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 167
+Umidade do AR:		49.90%
+Temperatura do AR:	25.50@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 168
+Umidade do AR:		49.80%
+Temperatura do AR:	25.50@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 169
+Umidade do AR:		49.70%
+Temperatura do AR:	25.50@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 170
+Umidade do AR:		49.60%
+Temperatura do AR:	25.50@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 171
+Umidade do AR:		49.70%
+Temperatura do AR:	25.60@C
+Luminosidade:		818
+Leitura do solo:	Solo Seco
+
+Leitura:		 172
+Umidade do AR:		49.50%
+Temperatura do AR:	25.50@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 173
+Umidade do AR:		49.50%
+Temperatura do AR:	25.60@C
+Luminosidade:		814
+Leitura do solo:	Solo Seco
+
+Leitura:		 174
+Umidade do AR:		49.50%
+Temperatura do AR:	25.60@C
+Luminosidade:		788
+Leitura do solo:	Solo Seco
+
+Leitura:		 175
+Umidade do AR:		49.80%
+Temperatura do AR:	25.60@C
+Luminosidade:		796
+Leitura do solo:	Solo Seco
+
+Leitura:		 176
+Umidade do AR:		49.70%
+Temperatura do AR:	25.60@C
+Luminosidade:		798
+Leitura do solo:	Solo Seco
+
+Leitura:		 177
+Umidade do AR:		50.20%
+Temperatura do AR:	25.60@C
+Luminosidade:		811
+Leitura do solo:	Solo Seco
+
+Leitura:		 178
+Umidade do AR:		49.70%
+Temperatura do AR:	25.60@C
+Luminosidade:		779
+Leitura do solo:	Solo Seco
+
+Leitura:		 179
+Umidade do AR:		50.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 180
+Umidade do AR:		50.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		816
+Leitura do solo:	Solo Seco
+
+Leitura:		 181
+Umidade do AR:		49.60%
+Temperatura do AR:	25.60@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 182
+Umidade do AR:		49.20%
+Temperatura do AR:	25.70@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 183
+Umidade do AR:		49.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 184
+Umidade do AR:		49.00%
+Temperatura do AR:	25.70@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 185
+Umidade do AR:		49.00%
+Temperatura do AR:	25.70@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 186
+Umidade do AR:		48.90%
+Temperatura do AR:	25.70@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 187
+Umidade do AR:		48.90%
+Temperatura do AR:	25.70@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 188
+Umidade do AR:		48.80%
+Temperatura do AR:	25.70@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 189
+Umidade do AR:		48.80%
+Temperatura do AR:	25.70@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 190
+Umidade do AR:		48.70%
+Temperatura do AR:	25.60@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 191
+Umidade do AR:		48.80%
+Temperatura do AR:	25.70@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 192
+Umidade do AR:		48.80%
+Temperatura do AR:	25.70@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 193
+Umidade do AR:		48.70%
+Temperatura do AR:	25.60@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 194
+Umidade do AR:		48.80%
+Temperatura do AR:	25.60@C
+Luminosidade:		829
+Leitura do solo:	Solo Seco
+
+Leitura:		 195
+Umidade do AR:		48.80%
+Temperatura do AR:	25.60@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 196
+Umidade do AR:		48.90%
+Temperatura do AR:	25.60@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 197
+Umidade do AR:		49.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 198
+Umidade do AR:		49.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 199
+Umidade do AR:		49.20%
+Temperatura do AR:	25.60@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 200
+Umidade do AR:		49.20%
+Temperatura do AR:	25.60@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 201
+Umidade do AR:		49.40%
+Temperatura do AR:	25.60@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 202
+Umidade do AR:		49.40%
+Temperatura do AR:	25.60@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 203
+Umidade do AR:		49.30%
+Temperatura do AR:	25.60@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 204
+Umidade do AR:		49.30%
+Temperatura do AR:	25.60@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 205
+Umidade do AR:		49.10%
+Temperatura do AR:	25.60@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 206
+Umidade do AR:		49.00%
+Temperatura do AR:	25.50@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 207
+Umidade do AR:		49.10%
+Temperatura do AR:	25.60@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 208
+Umidade do AR:		48.90%
+Temperatura do AR:	25.60@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 209
+Umidade do AR:		48.90%
+Temperatura do AR:	25.60@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 210
+Umidade do AR:		49.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 211
+Umidade do AR:		48.90%
+Temperatura do AR:	25.50@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 212
+Umidade do AR:		49.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 213
+Umidade do AR:		49.00%
+Temperatura do AR:	25.50@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 214
+Umidade do AR:		49.20%
+Temperatura do AR:	25.60@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 215
+Umidade do AR:		49.20%
+Temperatura do AR:	25.60@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 216
+Umidade do AR:		49.40%
+Temperatura do AR:	25.50@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 217
+Umidade do AR:		49.50%
+Temperatura do AR:	25.50@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 218
+Umidade do AR:		49.60%
+Temperatura do AR:	25.50@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 219
+Umidade do AR:		49.80%
+Temperatura do AR:	25.50@C
+Luminosidade:		804
+Leitura do solo:	Solo Seco
+
+Leitura:		 220
+Umidade do AR:		49.90%
+Temperatura do AR:	25.50@C
+Luminosidade:		806
+Leitura do solo:	Solo Seco
+
+Leitura:		 221
+Umidade do AR:		50.30%
+Temperatura do AR:	25.50@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 222
+Umidade do AR:		50.30%
+Temperatura do AR:	25.50@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 223
+Umidade do AR:		50.50%
+Temperatura do AR:	25.60@C
+Luminosidade:		830
+Leitura do solo:	Solo Seco
+
+Leitura:		 224
+Umidade do AR:		50.80%
+Temperatura do AR:	25.60@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 225
+Umidade do AR:		51.20%
+Temperatura do AR:	25.70@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 226
+Umidade do AR:		51.50%
+Temperatura do AR:	25.60@C
+Luminosidade:		830
+Leitura do solo:	Solo Seco
+
+Leitura:		 227
+Umidade do AR:		51.50%
+Temperatura do AR:	25.60@C
+Luminosidade:		829
+Leitura do solo:	Solo Seco
+
+Leitura:		 228
+Umidade do AR:		51.40%
+Temperatura do AR:	25.60@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 229
+Umidade do AR:		51.60%
+Temperatura do AR:	25.60@C
+Luminosidade:		829
+Leitura do solo:	Solo Seco
+
+Leitura:		 230
+Umidade do AR:		51.40%
+Temperatura do AR:	25.60@C
+Luminosidade:		829
+Leitura do solo:	Solo Seco
+
+Leitura:		 231
+Umidade do AR:		51.30%
+Temperatura do AR:	25.60@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 232
+Umidade do AR:		51.30%
+Temperatura do AR:	25.70@C
+Luminosidade:		830
+Leitura do solo:	Solo Seco
+
+Leitura:		 233
+Umidade do AR:		51.70%
+Temperatura do AR:	25.70@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 234
+Umidade do AR:		51.50%
+Temperatura do AR:	25.60@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 235
+Umidade do AR:		51.60%
+Temperatura do AR:	25.70@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 236
+Umidade do AR:		51.50%
+Temperatura do AR:	25.60@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 237
+Umidade do AR:		51.40%
+Temperatura do AR:	25.60@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 238
+Umidade do AR:		51.50%
+Temperatura do AR:	25.60@C
+Luminosidade:		829
+Leitura do solo:	Solo Seco
+
+Leitura:		 239
+Umidade do AR:		51.50%
+Temperatura do AR:	25.60@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 240
+Umidade do AR:		51.70%
+Temperatura do AR:	25.60@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 241
+Umidade do AR:		52.00%
+Temperatura do AR:	25.60@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 242
+Umidade do AR:		52.00%
+Temperatura do AR:	25.50@C
+Luminosidade:		829
+Leitura do solo:	Solo Seco
+
+Leitura:		 243
+Umidade do AR:		52.20%
+Temperatura do AR:	25.60@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 244
+Umidade do AR:		52.30%
+Temperatura do AR:	25.60@C
+Luminosidade:		830
+Leitura do solo:	Solo Seco
+
+Leitura:		 245
+Umidade do AR:		52.50%
+Temperatura do AR:	25.50@C
+Luminosidade:		829
+Leitura do solo:	Solo Seco
+
+Leitura:		 246
+Umidade do AR:		52.40%
+Temperatura do AR:	25.50@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 247
+Umidade do AR:		52.30%
+Temperatura do AR:	25.50@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 248
+Umidade do AR:		52.00%
+Temperatura do AR:	25.40@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 249
+Umidade do AR:		52.00%
+Temperatura do AR:	25.40@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 250
+Umidade do AR:		51.90%
+Temperatura do AR:	25.40@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 251
+Umidade do AR:		51.80%
+Temperatura do AR:	25.40@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 252
+Umidade do AR:		51.70%
+Temperatura do AR:	25.40@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 253
+Umidade do AR:		51.80%
+Temperatura do AR:	25.40@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 254
+Umidade do AR:		51.70%
+Temperatura do AR:	25.40@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 255
+Umidade do AR:		51.60%
+Temperatura do AR:	25.40@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 256
+Umidade do AR:		51.60%
+Temperatura do AR:	25.30@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 257
+Umidade do AR:		51.50%
+Temperatura do AR:	25.30@C
+Luminosidade:		828
+Leitura do solo:	Solo Seco
+
+Leitura:		 258
+Umidade do AR:		51.40%
+Temperatura do AR:	25.30@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 259
+Umidade do AR:		51.40%
+Temperatura do AR:	25.30@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 260
+Umidade do AR:		51.30%
+Temperatura do AR:	25.30@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 261
+Umidade do AR:		51.30%
+Temperatura do AR:	25.30@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 262
+Umidade do AR:		51.10%
+Temperatura do AR:	25.30@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 263
+Umidade do AR:		51.10%
+Temperatura do AR:	25.30@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 264
+Umidade do AR:		51.00%
+Temperatura do AR:	25.30@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 265
+Umidade do AR:		50.90%
+Temperatura do AR:	25.30@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 266
+Umidade do AR:		50.80%
+Temperatura do AR:	25.30@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 267
+Umidade do AR:		50.70%
+Temperatura do AR:	25.30@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 268
+Umidade do AR:		50.60%
+Temperatura do AR:	25.30@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 269
+Umidade do AR:		50.50%
+Temperatura do AR:	25.30@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 270
+Umidade do AR:		50.50%
+Temperatura do AR:	25.30@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 271
+Umidade do AR:		50.50%
+Temperatura do AR:	25.30@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 272
+Umidade do AR:		50.30%
+Temperatura do AR:	25.30@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 273
+Umidade do AR:		50.20%
+Temperatura do AR:	25.20@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 274
+Umidade do AR:		50.20%
+Temperatura do AR:	25.20@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 275
+Umidade do AR:		50.20%
+Temperatura do AR:	25.20@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 276
+Umidade do AR:		50.20%
+Temperatura do AR:	25.20@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 277
+Umidade do AR:		50.10%
+Temperatura do AR:	25.30@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 278
+Umidade do AR:		50.00%
+Temperatura do AR:	25.20@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 279
+Umidade do AR:		50.00%
+Temperatura do AR:	25.20@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 280
+Umidade do AR:		50.00%
+Temperatura do AR:	25.20@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 281
+Umidade do AR:		49.90%
+Temperatura do AR:	25.20@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 282
+Umidade do AR:		49.90%
+Temperatura do AR:	25.20@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 283
+Umidade do AR:		49.90%
+Temperatura do AR:	25.20@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 284
+Umidade do AR:		49.90%
+Temperatura do AR:	25.20@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 285
+Umidade do AR:		49.90%
+Temperatura do AR:	25.20@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 286
+Umidade do AR:		49.70%
+Temperatura do AR:	25.10@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 287
+Umidade do AR:		49.90%
+Temperatura do AR:	25.10@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 288
+Umidade do AR:		50.00%
+Temperatura do AR:	25.00@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 289
+Umidade do AR:		50.00%
+Temperatura do AR:	25.00@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 290
+Umidade do AR:		50.00%
+Temperatura do AR:	25.00@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 291
+Umidade do AR:		50.30%
+Temperatura do AR:	25.00@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 292
+Umidade do AR:		50.70%
+Temperatura do AR:	25.00@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 293
+Umidade do AR:		50.80%
+Temperatura do AR:	25.00@C
+Luminosidade:		826
+Leitura do solo:	Solo Seco
+
+Leitura:		 294
+Umidade do AR:		51.20%
+Temperatura do AR:	25.00@C
+Luminosidade:		824
+Leitura do solo:	Solo Seco
+
+Leitura:		 295
+Umidade do AR:		51.50%
+Temperatura do AR:	25.00@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 296
+Umidade do AR:		51.50%
+Temperatura do AR:	25.00@C
+Luminosidade:		827
+Leitura do solo:	Solo Seco
+
+Leitura:		 297
+Umidade do AR:		51.60%
+Temperatura do AR:	25.00@C
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 298
+Umidade do AR:		52.50%
+Temperatura do AR:	25.00@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 299
+Umidade do AR:		52.80%
+Temperatura do AR:	25.00@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 300
+Umidade do AR:		52.80%
+Temperatura do AR:	25.10@C
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 301
+Umidade do AR:		52.70%
+Temperatura do AR:	25.10@C
+Luminosidade:		820
+Leitura do solo:	Solo Seco
+
+Leitura:		 302
+Umidade do AR:		52.70%
+Temperatura do AR:	25.10@C
+Luminosidade:		823
+Leitura do solo:	Solo Seco
+
+Leitura:		 303
+Umidade do AR:		52.70%
+Temperatura do AR:	25.10@C
+Luminosidade:		825
+Leitura do solo:	Solo Seco
+
+Leitura:		 304
+Umidade do AR:		53.00%
+Temperatura do AR:	25.10@C
+Luminosidade:		785
+Leitura do solo:	Solo Seco
+
+Leitura:		 305
+Umidade do AR:		53.70%
+Temperatura do AR:	25.10@C
+Luminosidade:		774
+Leitura do solo:	Solo Seco
+
+Leitura:		 306
+Umidade do AR:		53.50%
+Temperatura do AR:	25.20@C
+Luminosidade:		815
+Leitura do solo:	Solo Seco
+
+Leitura:		 307
+Umidade do AR:		53.40%
+Temperatura do AR:	25.20@C
+Luminosidade:		768
+Leitura do solo:	Solo Seco
+
+Leitura:		 308
+Umidade do AR:		53.70%
+Temperatura do AR:	25.20@C
+Luminosidade:		794
+Leitura do solo:	Solo Seco
+
+Leitura:		 309
+Umidade do AR:		53.80%
+Temperatura do AR:	25.20@C
+Luminosidade:		789
+Leitura do solo:	Solo Seco
+
+Leitura:		 310
+Umidade do AR:		53.80%
+Temperatura do AR:	25.30@C
+Luminosidade:		810
+Leitura do solo:	Solo Seco
+
+Leitura:		 311
+Umidade do AR:		53.80%
+Temperatura do AR:	25.30@C
+Luminosidade:		807
+Leitura do solo:	Solo Seco
+
+Leitura:		 312
+Umidade do AR:		53.90%
+Temperatura do AR:	25.30@C
+Luminosidade:		811
+Leitura do solo:	Solo Ideal
+
+Leitura:		 313
+Umidade do AR:		54.00%
+Temperatura do AR:	25.30@C
+Luminosidade:		821
+Leitura do solo:	Solo Encharcado
+
+Leitura:		 314
+Umidade do AR:		54.30%
+Temperatura do AR:	25.30@C
+Luminosidade:		824
+Leitura do solo:	Solo Encharcado
+
+Leitura:		 315
+Umidade do AR:		54.40%
+Temperatura do AR:	25.30@C
+Luminosidade:		822
+Leitura do solo:	Solo Seco
+
+Leitura:		 316
+Umidade do AR:		54.50%
+Temperatura do AR:	25.40@C
+Luminosidade:		811
+Leitura do solo:	Solo Seco
+
+Leitura:		 317
+Umidade do AR:		54.60%
+Temperatura do AR:	25.30@C
+Luminosidade:		813
+Leitura do solo:	Solo Seco
+
+Leitura:		 318
+Umidade do AR:		54.60%
+Temperatura do AR:	25.40@C
+Luminosidade:		821
+Leitura do solo:	Solo Seco
+
+Leitura:		 319
+Umidade do AR:		54.60%
+Temperatura do AR:	25.30@C
+Luminosidade:		817
+Leitura do solo:	Solo Seco
+
+Leitura:		 320
+Umidade do AR:		54.90%
+Temperatura do AR:	25.40@C
+Luminosidade:		806
+Leitura do solo:	Solo Seco
+
+Leitura:		 321
+Umidade do AR:		55.10%
+Temperatura do AR:	25.40@C
+Luminosidade:		737
+Leitura do solo:	Solo Ideal
+
+Leitura:		 322
+Umidade do AR:		57.00%
+Temperatura do AR:	25.40@C
+Luminosidade:		747
+Leitura do solo:	Solo Seco
+
+Leitura:		 323
+Umidade do AR:		57.60%
+Temperatura do AR:	25.40@C
+Luminosidade:		801
+Leitura do solo:	Solo Ideal
+
+Leitura:		 324
+Umidade do AR:		57.90%
+Temperatura do AR:	25.60@C
+Luminosidade:		817
+Leitura do solo:	Solo Ideal
+
+Leitura:		 325
+Umidade do AR:		56.80%
+Temperatura do AR:	25.60@C
+Luminosidade:		781
+Leitura do solo:	Solo Encharcado
+
+Leitura:		 326
+Umidade do AR:		57.30%
+Temperatura do AR:	25.60@C
+Luminosidade:		714
+Leitura do solo:	Solo Ideal
+
+Leitura:		 327
+Umidade do AR:		57.50%
+Temperatura do AR:	25.60@C
+Luminosidade:		715
+Leitura do solo:	Solo Encharcado
+
+Leitura:		 328
+Umidade do AR:		58.60%
+Temperatura do AR:	25.60@C
+Luminosidade:		752
+Leitura do solo:	Solo Seco
+
+Leitura:		 329
+Umidade do AR:		58.60%
+Temperatura do AR:	25.60@C
+Luminosidade:		768
+Leitura do solo:	Solo Seco
+
+Leitura:		 330
+Umidade do AR:		58.50%
+Temperatura do AR:	25.60@C
+Luminosidade:		785
+Leitura do solo:	Solo Seco
+
+Leitura:		 331
+Umidade do AR:		58.40%
+Temperatura do AR:	25.70@C
+Luminosidade:		819
+Leitura do solo:	Solo Seco
+
+Leitura:		 332
+Umidade do AR:		57.80%
+Temperatura do AR:	25.80@C
+Luminosidade:		771
+Leitura do solo:	Solo Ideal
+
+Leitura:		 333
+Umidade do AR:		57.40%
+Temperatura do AR:	26.00@C
+Luminosidade:		795
+Leitura do solo:	Solo Ideal
+
+Leitura:		 334
+Umidade do AR:		57.60%
+Temperatura do AR:	26.00@C
+Luminosidade:		804
+Leitura do solo:	Solo Ideal
+
+Leitura:		 335
+Umidade do AR:		58.50%
+Temperatura do AR:	26.00@C
+Luminosidade:		811
+Leitura do solo:	Solo Ideal
+
+Leitura:		 336
+Umidade do AR:		58.20%
+Temperatura do AR:	26.10@C
+Luminosidade:		796
+Leitura do solo:	Solo Ideal
+
+Leitura:		 337
+Umidade do AR:		58.40%
+Temperatura do AR:	26.10@C
+Luminosidade:		780
+Leitura do solo:	Solo Seco
+
+Leitura:		 338
+Umidade do AR:		57.80%
+Temperatura do AR:	26.20@C
+Luminosidade:		765
+Leitura do solo:	Solo Seco
+
+Leitura:		 339
+Umidade do AR:		57.20%
+Temperatura do AR:	26.20@C
+Luminosidade:		794
+Leitura do solo:	Solo Encharcado
+
+Leitura:		 340
+Umidade do AR:		57.40%
+Temperatura do AR:	26.20@C
+Luminosidade:		816
+Leitura do solo:	Solo Encharcado
+
+Leitura:		 341
+Umidade do AR:		57.70%
+Temperatura do AR:	26.30@C
+Luminosidade:		769
+Leitura do solo:	Solo Seco
+
+Leitura:		 342
+Umidade do AR:		57.70%
+Temperatura do AR:	26.30@C
+Luminosidade:		752
+Leitura do solo:	Solo Seco
+
+Leitura:		 343
+Umidade do AR:		57.90%
+Temperatura do AR:	26.30@C
+Luminosidade:		783
+Leitura do solo:	Solo Ideal
+
+Leitura:		 344
+Umidade do AR:		57.90%
+Temperatura do AR:	26.30@C
+Luminosidade:		818
+Leitura do solo:	Solo Ideal
+
+Leitura:		 345
+Umidade do AR:		58.10%
+Temperatura do AR:	26.30@C
+Luminosidade:		816
+Leitura do solo:	Solo Ideal
+
+Leitura:		 346
+Umidade do AR:		58.00%
+Temperatura do AR:	26.30@C
+Luminosidade:		203
+Leitura do solo:	Solo Ideal
+
+Leitura:		 347
+Umidade do AR:		58.50%
+Temperatura do AR:	26.30@C
+Luminosidade:		819
+Leitura do solo:	Solo Ideal
+
+Leitura:		 348
+Umidade do AR:		58.50%
+Temperatura do AR:	26.30@C
+Luminosidade:		819
+Leitura do solo:	Solo Ideal
+
+Leitura:		 349
+Umidade do AR:		58.50%
+Temperatura do AR:	26.30@C
+Luminosidade:		818
+Leitura do solo:	Solo Ideal
+
+Leitura:		 350
+Umidade do AR:		58.90%
+Temperatura do AR:	26.30@C
+Luminosidade:		822
+Leitura do solo:	Solo Ideal
+
+Leitura:		 351
+Umidade do AR:		58.90%
+Temperatura do AR:	26.40@C
+Luminosidade:		822
+Leitura do solo:	Solo Ideal
+
+Leitura:		 352
+Umidade do AR:		58.90%
+Temperatura do AR:	26.40@C
+Luminosidade:		823
+Leitura do solo:	Solo Ideal
+
+Leitura:		 353
+Umidade do AR:		58.90%
+Temperatura do AR:	26.40@C
+Luminosidade:		821
+Leitura do solo:	Solo Ideal
+
+Leitura:		 354
+Umidade do AR:		58.50%
+Temperatura do AR:	26.40@C
+Luminosidade:		809
+Leitura do solo:	Solo Ideal
+
+Leitura:		 355
+Umidade do AR:		58.70%
+Temperatura do AR:	26.30@C
+Luminosidade:		820
+Leitura do solo:	Solo Ideal
+
+Leitura:		 356
+Umidade do AR:		58.50%
+Temperatura do AR:	26.40@C
+Luminosidade:		823
+Leitura do solo:	Solo Ideal
+
+Leitura:		 357
+Umidade do AR:		58.10%
+Temperatura do AR:	26.40@C
+Luminosidade:		821
+Leitura do solo:	Solo Ideal
+
+Leitura:		 358
+Umidade do AR:		58.00%
+Temperatura do AR:	26.40@C
+Luminosidade:		814
+Leitura do solo:	Solo Ideal
+
+Leitura:		 359
+Umidade do AR:		58.00%
+Temperatura do AR:	26.30@C
+Luminosidade:		820
+Leitura do solo:	Solo Ideal
+
+Leitura:		 360
+Umidade do AR:		59.00%
+Temperatura do AR:	26.30@C
+Luminosidade:		823
+Leitura do solo:	Solo Ideal
+
+Leitura:		 361
+Umidade do AR:		59.00%
+Temperatura do AR:	26.40@C
+Luminosidade:		826
+Leitura do solo:	Solo Ideal
+
+Leitura:		 362
+Umidade do AR:		57.60%
+Temperatura do AR:	26.40@C
+Luminosidade:		822
+Leitura do solo:	Solo Ideal
+
+Leitura:		 363
+Umidade do AR:		57.40%
+Temperatura do AR:	26.40@C
+Luminosidade:		826
+Leitura do solo:	Solo Ideal
+
+Leitura:		 364
+Umidade do AR:		57.30%
+Temperatura do AR:	26.40@C
+Luminosidade:		824
+Leitura do solo:	Solo Ideal
+
+Leitura:		 365
+Umidade do AR:		57.30%
+Temperatura do AR:	26.40@C
+Luminosidade:		817
+Leitura do solo:	Solo Ideal
+
+Leitura:		 366
+Umidade do AR:		57.40%
+Temperatura do AR:	26.40@C
+Luminosidade:		802
+Leitura do solo:	Solo Ideal
+
+Leitura:		 367
+Umidade do AR:		57.70%
+Temperatura do AR:	26.40@C
+Luminosidade:		763
+Leitura do solo:	Solo Seco
+
+Leitura:		 368
+Umidade do AR:		57.60%
+Temperatura do AR:	26.30@C
+Luminosidade:		766
+Leitura do solo:	Solo Seco
+
+Leitura:		 369
+Umidade do AR:		57.00%
+Temperatura do AR:	26.40@C
+Luminosidade:		789
+Leitura do solo:	Solo Encharcado
+
+Leitura:		 370
+Umidade do AR:		57.30%
+Temperatura do AR:	26.40@C
+Luminosidade:		810
+Leitura do solo:	Solo Encharcado
+
+Leitura:		 371
+Umidade do AR:		56.80%
+Temperatura do AR:	26.30@C
+Luminosidade:		816
+Leitura do solo:	Solo Encharcado
+
+Leitura:		 372
+Umidade do AR:		56.80%
+Temperatura do AR:	26.30@C
+Luminosidade:		809
+Leitura do solo:	Solo Encharcado
+
+Leitura:		 373
+Umidade do AR:		56.50%
+Temperatura do AR:	26.30@C
+Luminosidade:		803
+Leitura do solo:	Solo Encharcado
+
+Leitura:		 374
+Umidade do AR:		56.40%
+Temperatura do AR:	26.20@C
+Luminosidade:		812
+Leitura do solo:	Solo Encharcado
+
