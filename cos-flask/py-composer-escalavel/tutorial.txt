@@ -1,0 +1,29 @@
+Comandos:
+
+docker swarm init
+#iniciar um orquestrador swarm
+
+docker-compose up
+#pra baixar e instalar e configurar as imagens
+
+docker-compose down --volumes
+#desligar programas
+
+docker stack deploy --compose-file docker-compose.yml aplicacao
+#iniciar programas
+
+docker service ls -f name=aplicacao
+#verificar se esta funcionando
+
+docker stack rm aplicacao
+#remover o orquestrador swarm
+
+=============================================================
+
+Referencia:
+
+https://www.elastic.co/guide/en/apm/get-started/current/quick-start-overview.html
+
+https://medium.com/@ruanbekker/setup-your-first-python-flask-web-application-on-docker-swarm-aecf7c5f4cc3
+
+https://docs.docker.com/engine/swarm/stack-deploy/

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Sistema de busca por CEP</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>  
+  <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script>
+
+  function getCep() {
+    input_cep = document.getElementById("textbox_cep").value;
+
+    $.getJSON('/ws/cep/'+ input_cep, 
+        function(data) {
+          if (data.length == 0) {
+            alert("CEP nao encontrado");
+            document.getElementById("identificador_cep").value = "CEP: ";
+            document.getElementById("identificador_endereco").value = "Endereco completo: ";
+            document.getElementById("identificador_cidade").value = "Cidade: ";
+            document.getElementById("identificador_estado").value = "Estado: ";
+          }
+
+          else{
+            document.getElementById("identificador_cep").value = "CEP: "+ data[0][0];
+            document.getElementById("identificador_endereco").value = "Endereco completo: "+ data[0][1];
+            document.getElementById("identificador_cidade").value = "Cidade: "+ data[0][2];
+            document.getElementById("identificador_estado").value = "Estado: "+ data[0][3];
+          }
+        }
+    );
+
+  }
+
+  </script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <center>
+
+      <div>
+        <h2>Sistema de busca por CEP</h2>
+        <br></br>
+      </div>
+
+      <form method="GET" action='#'>
+        <input type="text" id="textbox_cep" placeholder="Insira o CEP">
+        <input type="submit" onclick="getCep()" class="btn btn-primary" value="Buscar">
+        <br></br>
+      </form>
+
+      <div>
+        <input type="text" readonly class="form-control-plaintext form-control form-control-lg" id="identificador_cep" value="CEP: ">
+        <input type="text" readonly class="form-control-plaintext form-control form-control-lg" id="identificador_endereco" value="Endereco completo: ">
+        <input type="text" readonly class="form-control-plaintext form-control form-control-lg" id="identificador_cidade" value="Cidade: ">
+        <input type="text" readonly class="form-control-plaintext form-control form-control-lg" id="identificador_estado" value="Estado: ">
+      </div>
+
+    </center>
+
+  </div>
+
+</body>
+</html>
